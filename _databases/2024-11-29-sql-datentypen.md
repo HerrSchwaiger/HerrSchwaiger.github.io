@@ -1,8 +1,11 @@
 ---
-layout: post
+layout: posts
 title: "SQL-Datentypen: Eine Einführung"
 date: 2024-11-29
-categories: sql datenbanken
+permalink: /databases/datentypen
+category: databases
+header:
+    teaser:  "assets/images/datentypen.png"
 ---
 
 # SQL-Datentypen: Eine Einführung
