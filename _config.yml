@@ -27,7 +27,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  herrschwaiger
 
 # Build settings
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 
 minimal_mistakes_skin: "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 locale: "de-DE"
@@ -43,6 +43,7 @@ include: ["_pages"]
 search: true
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
 
 collections:
   databases:
