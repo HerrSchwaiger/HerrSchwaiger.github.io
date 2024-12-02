@@ -1,10 +1,8 @@
 ---
 layout: posts
-title: About
+title: Über ByteConnect
 permalink: /about/
 ---
-
-# Über ByteConnect
 
 **ByteConnect GmbH** ist eine rein fiktive IT-Firma, die für schulische Zwecke im Rahmen des Informatikunterrichts entwickelt wurde. Diese Website dient als Beispiel für ein Intranet und stellt eine Grundlage für handlungsorientiertes Lernen dar.
 
