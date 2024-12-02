@@ -6,6 +6,9 @@ permalink: /databases/datentypen
 category: databases
 header:
     teaser:  "assets/images/datentypen.png"
+    overlay_color: "#000" # Hintergrund-Overlay-Farbe
+    overlay_filter: "0.7" # Transparenz des Overlays
+    overlay_image: /assets/images/datentypen.png # Hintergrundbild
 ---
 
 SQL (Structured Query Language) bietet eine Vielzahl von Datentypen, um Daten strukturiert und effizient zu speichern. In diesem Beitrag betrachten wir die wichtigsten Datentypen für numerische, textuelle, logische und zeitbezogene Daten: **INT**, **DECIMAL**, **CHAR**, **VARCHAR**, **BOOLEAN**, und **DATE**. Für jeden Datentyp erklären wir, was er darstellt, wie er deklariert wird und welche Parameter angepasst werden können.
