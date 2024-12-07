@@ -17,7 +17,7 @@ feature_row:
     alt: "Effiziente Datenbank-Lösungen"
     title: "Effiziente Datenbank-Lösungen"
     excerpt: "Optimale Speicherung und Organisation Ihrer Daten – für schnellen Zugriff und hohe Skalierbarkeit."
-    url: "/databases/"
+    url: "/Datenbanken/"
   - image_path: /assets/images/feature-1.png
     alt: "Cloud Computing"
     title: "Cloud Computing"

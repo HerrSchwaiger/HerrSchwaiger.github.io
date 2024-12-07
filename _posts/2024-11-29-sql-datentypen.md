@@ -2,9 +2,9 @@
 layout: posts
 title: "SQL-Datentypen: Eine Einführung"
 date: 2024-11-29
-permalink: /databases/datentypen
+permalink: /Datenbanken/datentypen
 categories: 
-  - databases
+  - Datenbanken
 tags: 
   - basic
   - SQL-Datentypen

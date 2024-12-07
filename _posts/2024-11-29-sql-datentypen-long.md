@@ -2,9 +2,9 @@
 layout: posts
 title: "SQL-Datentypen: Für Entwickler"
 date: 2024-11-29
-permalink: /databases/datentypen_long
+permalink: /Datenbanken/datentypen_long
 categories: 
-  - databases
+  - Datenbanken
 tags: 
   - advanced
   - SQL-Datentypen

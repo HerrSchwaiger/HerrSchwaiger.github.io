@@ -2,8 +2,8 @@
 layout: category
 title: "Datenbanken"
 excerpt: "Optimale Speicherung und Organisation Ihrer Daten – für schnellen Zugriff und hohe Skalierbarkeit."
-permalink: /databases/  # Die URL der Seite
-taxonomy: databases
+permalink: /Datenbanken/  # Die URL der Seite
+taxonomy: Datenbanken
 entries_layout: grid
 classes: wide
 header:

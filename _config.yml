@@ -40,7 +40,9 @@ logo: "assets/images/logo.png"
 
 include: ["_pages"]
 
+breadcrumbs: true  # disabled by default
 search: true
+
 plugins:
   - jekyll-feed
   - jekyll-include-cache
