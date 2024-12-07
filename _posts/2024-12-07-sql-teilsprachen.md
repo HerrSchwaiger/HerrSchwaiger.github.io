@@ -1,12 +1,12 @@
 ---
-layout: posts
+layout: single
 title: "SQL-Teilsprachen: Ein Überblick"
 date: 2024-12-07
 permalink: /Datenbanken/teilsprachen
 categories:
     - Datenbanken
 tags:
-    - basic
+    - Basic
     - SQL-Teilsprachen
 header:
     teaser:  "assets/images/teilsprachen.png"

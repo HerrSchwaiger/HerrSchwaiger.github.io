@@ -1,12 +1,12 @@
 ---
-layout: posts
+layout: single
 title: "SQL-Datentypen: Für Entwickler"
 date: 2024-11-29
 permalink: /Datenbanken/datentypen_long
 categories: 
   - Datenbanken
 tags: 
-  - advanced
+  - Advanced
   - SQL-Datentypen
 header:
     teaser:  "assets/images/datentypen2.png"

@@ -59,6 +59,17 @@ tag_archive:
   type: liquid
   path: /tags/
 
+words_per_minute: 100
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      read_time: true
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

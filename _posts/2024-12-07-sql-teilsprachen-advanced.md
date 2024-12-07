@@ -1,12 +1,12 @@
 ---
-layout: posts
+layout: single
 title: "SQL-Teilsprachen: Vertiefte Einblicke"
 date: 2024-12-07
 permalink: /Datenbanken/SQL-Teilsprachen-advanced
 categories:
     - Datenbanken
 tags:
-    - advanced
+    - Advanced
     - SQL-Teilsprachen
 header:
     teaser:  "assets/images/teilsprachen2.png"
