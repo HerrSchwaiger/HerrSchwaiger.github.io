@@ -3,7 +3,11 @@ layout: posts
 title: "SQL-Datentypen: Für Entwickler"
 date: 2024-11-29
 permalink: /databases/datentypen_long
-category: databases
+categories: 
+  - databases
+tags: 
+  - advanced
+  - SQL-Datentypen
 header:
     teaser:  "assets/images/datentypen2.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe

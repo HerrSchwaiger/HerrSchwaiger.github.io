@@ -45,10 +45,18 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-collections:
-  databases:
-    output: true # Sorgt dafür, dass die Seiten generiert werden
-    permalink: /databases/:path/
+#collections:
+#  databases:
+#    output: true # Sorgt dafür, dass die Seiten generiert werden
+#    permalink: /databases/:path/
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

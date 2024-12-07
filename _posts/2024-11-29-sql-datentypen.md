@@ -3,7 +3,11 @@ layout: posts
 title: "SQL-Datentypen: Eine Einführung"
 date: 2024-11-29
 permalink: /databases/datentypen
-category: databases
+categories: 
+  - databases
+tags: 
+  - basic
+  - SQL-Datentypen
 header:
     teaser:  "assets/images/datentypen.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
