@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Datenbank-Normalisierung"
-date: 2024-12-09
+date: 2024-12-08
 permalink: /Datenbanken/normalisierung
 categories:
     - Datenbanken
