@@ -97,7 +97,7 @@ Eine Tabelle ist genau dann in zweiter Normalform (2.NF), wenn sie in der 1.NF i
 | 3232   | 9000    | Kryptographie   |
 | 6792   | 5522    | Leiter Hardware |
 
-Die Rolle hängt weder direkt nur von der "PersNr" noch nur von der "ProjNr", sondern von beiden.
+Die Rolle hängt weder direkt nur von der "PersNr" noch nur von der "ProjNr" ab, sondern von beiden.
 {: .notice--warning}
 
 ---
