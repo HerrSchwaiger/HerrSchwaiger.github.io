@@ -40,9 +40,13 @@ vorkommen. Dies bedeutet, dass nicht mehrere Informationen in einer Zelle stehen
 
 **Kriterium:** Alle Attribute müssen atomar sein.
 
-**Problem:** Das Attribut „Name“ ist nicht atomar.
+**Problem:** 
+1. Das Attribut „Name“ ist nicht atomar.
+2. ProjNr und KurzBez sind haben teilweise zwei Werte in einer Zeile
 
-**Lösung:** Aufteilung des Namens in „Vorname“ und „Nachname“.
+**Lösung:** 
+1. Aufteilung des Namens in „Vorname“ und „Nachname“.
+2. Aufteilung der Doppel-Werte auf zwei Zeilen
 
 **Nach der Aufteilung:**
 
