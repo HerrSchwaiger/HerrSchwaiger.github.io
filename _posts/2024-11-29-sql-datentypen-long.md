@@ -31,6 +31,10 @@ column_name DECIMAL(precision, scale)
 ```
 Ein typisches Beispiel ist `DECIMAL(10, 2)`, das Zahlen bis zu 10 Stellen speichern kann, von denen zwei für Nachkommastellen reserviert sind, wie `12345678.90`. Der Speicherbedarf variiert je nach Präzision.
 
+**Vorsicht:** In SQL werden Einheiten (wie z. B. “kg” oder “€”) nicht in den Daten gespeichert, sondern nur die reinen Werte, während die Einheiten bei Bedarf durch die Anwendung oder Abfragen hinzugefügt werden.
+{: .notice--warning}
+
+
 Der Datentyp **CHAR** ist optimiert für kurze Zeichenfolgen mit einer festen Länge. Dies macht ihn effizient bei konstanten Daten wie Kürzeln oder Codes. Unbenutzte Stellen werden automatisch mit Leerzeichen aufgefüllt, was **CHAR** im Vergleich zu variablen Datentypen wie **VARCHAR** für bestimmte Anwendungen performanter macht.
 **Deklaration:**
 ```sql
