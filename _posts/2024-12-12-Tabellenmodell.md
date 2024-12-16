@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Tabellenmodell"
-date: 2024-12-09
+date: 2024-12-12
 permalink: /Datenbanken/tabellenmodell
 categories:
     - Datenbanken

@@ -8,6 +8,7 @@ categories:
 tags:
     - Basic
     - SQL-Teilsprachen
+    - SQL
 header:
     teaser:  "assets/images/teilsprachen.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe

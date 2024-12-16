@@ -8,6 +8,7 @@ categories:
 tags:
     - Advanced
     - SQL-Teilsprachen
+    - SQL
 header:
     teaser:  "assets/images/teilsprachen2.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe

@@ -8,6 +8,7 @@ categories:
 tags: 
   - Basic
   - SQL-Datentypen
+  - SQL
 
 words_per_minute: 170
 

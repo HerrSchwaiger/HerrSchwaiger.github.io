@@ -8,6 +8,7 @@ categories:
 tags: 
   - Advanced
   - SQL-Datentypen
+  - SQL
 header:
     teaser:  "assets/images/datentypen2.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
