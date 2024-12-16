@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "SQL-Teilsprachen: Vertiefte Einblicke"
+title: "SQL-Teilsprachen: Advanced"
 date: 2024-12-07
 permalink: /Datenbanken/SQL-Teilsprachen-advanced
 categories:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "SQL-Datentypen: Für Entwickler"
+title: "SQL-Datentypen: Advanced"
 date: 2024-11-29
 permalink: /Datenbanken/datentypen_long
 categories: 

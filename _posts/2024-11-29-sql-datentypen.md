@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "SQL-Datentypen: Eine Einführung"
+title: "SQL-Datentypen: Basic"
 date: 2024-11-29
 permalink: /Datenbanken/datentypen
 categories: 

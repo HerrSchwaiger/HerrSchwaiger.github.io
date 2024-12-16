@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "SQL-Teilsprachen: Ein Überblick"
+title: "SQL-Teilsprachen: Basic"
 date: 2024-12-07
 permalink: /Datenbanken/teilsprachen
 categories:
