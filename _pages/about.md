@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: single
 title: Über ByteConnect
 permalink: /about/
 ---
