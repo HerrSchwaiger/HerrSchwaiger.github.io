@@ -14,24 +14,26 @@ header:
 
 feature_row:
   - image_path: /assets/images/datenbank.png
-    alt: "Effiziente Datenbank-Lösungen"
-    title: "Effiziente Datenbank-Lösungen"
+    alt: "Datenbank-Lösungen"
+    title: "Datenbank-Lösungen"
     excerpt: "Optimale Speicherung und Organisation Ihrer Daten – für schnellen Zugriff und hohe Skalierbarkeit."
     url: "/Datenbanken/"
-  - image_path: /assets/images/feature-1.png
-    alt: "Cloud Computing"
-    title: "Cloud Computing"
-    excerpt: "Effiziente und skalierbare IT-Lösungen."
-    #url: "/cloud-computing/"
     btn_label: "Mehr erfahren"
     btn_class: "btn--primary"
-  - image_path: /assets/images/feature-2.png
-    alt: "IT-Sicherheit"
-    title: "IT-Sicherheit"
-    excerpt: "Schützen Sie Ihre Daten und Netzwerke."
-    #url: "/it-security/"
+  - image_path: /assets/images/anwendungsentwicklung.png
+    alt: "Anwendungsentwicklung"
+    title: "Anwendungsentwicklung"
+    excerpt: "Von der ersten Codezeile bis zur fertigen Softwarelösung – praxisnah, kreativ und zukunftsorientiert."
+    url: "/Anwendungsentwicklung/"
     btn_label: "Mehr erfahren"
-    btn_class: "btn--secondary"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/netzwerktechnik.png
+    alt: "Netzwerktechnik"
+    title: "Netzwerktechnik"
+    excerpt: "Von der Einrichtung moderner Infrastrukturen bis zur Optimierung von Datenströmen – effizient, sicher und zukunftsorientiert"
+    url: "/Netzwerktechnik/"
+    btn_label: "Mehr erfahren"
+    btn_class: "btn--primary"
 ---
 
 # Willkommen im ByteConnect-Intranet
