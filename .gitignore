@@ -6,3 +6,4 @@ vendor
 Gemfile.lock
 .vscode
 _posts/.obsidian
+.DS_Store
