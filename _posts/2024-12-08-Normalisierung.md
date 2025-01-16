@@ -6,8 +6,8 @@ permalink: /Datenbanken/normalisierung
 categories:
     - Datenbanken
 tags:
-    - Basic
     - Normalisierung
+difficulty: "medium"
 header:
     teaser:  "assets/images/normalisierung.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe

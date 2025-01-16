@@ -6,10 +6,9 @@ permalink: /Datenbanken/datentypen
 categories: 
   - Datenbanken
 tags: 
-  - Basic
   - SQL-Datentypen
   - SQL
-
+difficulty: "easy"
 words_per_minute: 170
 
 header:

@@ -6,9 +6,9 @@ permalink: /Datenbanken/SQL-Teilsprachen-advanced
 categories:
     - Datenbanken
 tags:
-    - Advanced
     - SQL-Teilsprachen
     - SQL
+difficulty: "hard"
 header:
     teaser:  "assets/images/teilsprachen2.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe

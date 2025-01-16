@@ -6,9 +6,9 @@ permalink: /Datenbanken/teilsprachen
 categories:
     - Datenbanken
 tags:
-    - Basic
     - SQL-Teilsprachen
     - SQL
+difficulty: "easy"
 header:
     teaser:  "assets/images/teilsprachen.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe

@@ -6,9 +6,9 @@ permalink: /Datenbanken/tabellenmodell
 categories:
     - Datenbanken
 tags:
-    - Basic
     - Normalisierung
     - Tabellenmodell
+difficulty: "medium"
 header:
     teaser:  "assets/images/tabellenmodell.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe

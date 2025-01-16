@@ -6,9 +6,9 @@ permalink: /Datenbanken/sql-cheatsheet
 categories:
   - Datenbanken
 tags:
-  - Basic
   - SQL
 words_per_minute: 170
+difficulty: "easy"
 header:
   teaser: assets/images/cheatsheet.png
   overlay_color: "#000"

@@ -1,8 +1,9 @@
 ---
 layout: single
-title: "Use-Case-Diagramm"
+title: "Use-Case-Diagramm  "
 date: 2025-01-14
 permalink: /Datenbanken/use-case
+difficulty: "hard"
 categories:
     - Anwendungsentwicklung
 tags:

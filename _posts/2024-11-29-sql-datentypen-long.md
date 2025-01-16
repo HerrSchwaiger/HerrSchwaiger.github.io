@@ -6,9 +6,9 @@ permalink: /Datenbanken/datentypen_long
 categories: 
   - Datenbanken
 tags: 
-  - Advanced
   - SQL-Datentypen
   - SQL
+difficulty: "hard"
 header:
     teaser:  "assets/images/datentypen2.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
