@@ -1,44 +1,49 @@
 ---
 layout: single
-title: "Ticket #34: Fehler beim erstellen einer Tabelle"
-date: 2025-01-16
-permalink: /Tickets/SunShineGmbH_16012025
+title: "Ticket #7: Tabellen lassen sich nicht erstellen"
+date: 2025-01-15
+permalink: /Tickets/SuperSolutions_15012025
 read_time : false
 categories:
     - Tickets
 ---
 
-**Priorität:** Niedrig;  
+**Priorität:** Hoch;  
 **Status:** Offen;  
-**Kunde:** Sunshine GmbH;
+**Kunde:** SuperSolutionsAG;
 
-Sehr geehrtes ByteConnect-Team,
+Sehr geehrte ByteConnect GmbH,
 
-im Rahmen unserer Digitalisierung versuchte ich die **Kategorie** und **Produkt** Tabellen zu erstellen.
-Leider gibt SQL immer einen Fehler aus: 
-```
-    Can't create table `sunshinegmbh`.`produkte` (errno: 150 "Foreign key constraint is incorrectly formed")
-```
+um endlich unsere Mitarbeiter-Informationen digital zu speichern
+haben wir versucht mit folgendem Code die nötigen Tabellen zu erstellen:
 
-Ich habe den folgenden Code ausgeführt:
 ```sql
-CREATE TABLE Kategorie (
-    KategorieID INT,
-    Name VARCHAR(100)
+CREATE TABLE Teams (
+    TeamID INT PRIMARY KEY,
+    TeamName VARCHAR(100),
+    Teamleiter INT,
+    FOREIGN KEY (Teamleiter) REFERENCES Mitarbeiter(MitarbeiterID)
 );
-CREATE TABLE Produkte (
-    ProduktID INT PRIMARY KEY,
-    Preis Decimal(5,2),
-    Kategorie VARCHAR(100),
-    FOREIGN KEY (Kategorie) REFERENCES Kategorie(KategorieID)
-);
-````
 
-Bitte helfen Sie mir.
+CREATE TABLE Mitarbeiter (
+    MitarbeiterID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    TeamID INT,
+    FOREIGN KEY (TeamID) REFERENCES Teams(TeamID)
+);
+```
+Dabei kommen immer die folgenden Fehler:
+
+```
+Can't create table `supersolutionsag`.`teams` (errno: 150 "Foreign key constraint is incorrectly formed")
+Can't create table `supersolutionsag`.`mitarbeiter` (errno: 150 "Foreign key constraint is incorrectly formed")
+```
+
+Wie können wir das Problem endlich beheben?
 
 Mit freundlichen Grüßen,  
-Hans Sommer  
-Sunshine GmbH
+Friedrich Kaspar  
+SuperSolutions AG
 
 <!-- Platzhalter für die Info-Box -->
 <div id="response-box" class="notice" style="display: none;">
