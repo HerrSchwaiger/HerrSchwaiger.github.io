@@ -10,10 +10,10 @@ tags:
   - SQL
 difficulty: "easy"
 header:
-    teaser:  "assets/images/createTableEasy.png"
+    teaser:  "assets/images/CreateTableEasy.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
     overlay_filter: "0.7" # Transparenz des Overlays
-    overlay_image: /assets/images/createTableEasy.png # Hintergrundbild
+    overlay_image: /assets/images/CreateTableEasy.png # Hintergrundbild
 ---
 
 Die SQL-Anweisung `CREATE TABLE` wird verwendet, um Tabellen in einer Datenbank zu erstellen. Dabei spielen zwei wichtige Konzepte eine zentrale Rolle: **PRIMARY KEY** und **FOREIGN KEY**.
