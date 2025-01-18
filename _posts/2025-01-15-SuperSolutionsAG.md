@@ -18,7 +18,7 @@ um endlich unsere Mitarbeiter-Informationen digital zu speichern
 haben wir versucht mit folgendem Code die nötigen Tabellen zu erstellen:
 
 ```sql
-CREATE TABLE Teams (
+CREATE TABLE Team (
     TeamID INT PRIMARY KEY,
     TeamName VARCHAR(100),
     Teamleiter INT,
