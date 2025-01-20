@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "SQL-Datentypen: Advanced"
+title: "SQL-Datentypen"
 date: 2024-11-29
-permalink: /Datenbanken/datentypen_long
+permalink: /Datenbanken/datentypen_Hard
 categories: 
   - Datenbanken
 tags: 

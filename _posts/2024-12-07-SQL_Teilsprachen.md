@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "SQL-Teilsprachen: Basic"
+title: "SQL-Teilsprachen"
 date: 2024-12-07
 permalink: /Datenbanken/teilsprachen
 categories:
@@ -8,7 +8,7 @@ categories:
 tags:
     - SQL-Teilsprachen
     - SQL
-difficulty: "easy"
+difficulty: "medium"
 header:
     teaser:  "assets/images/teilsprachen.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe

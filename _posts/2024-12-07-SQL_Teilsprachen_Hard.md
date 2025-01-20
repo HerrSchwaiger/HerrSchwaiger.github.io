@@ -2,7 +2,7 @@
 layout: single
 title: "SQL-Teilsprachen: Advanced"
 date: 2024-12-07
-permalink: /Datenbanken/SQL-Teilsprachen-advanced
+permalink: /Datenbanken/SQL-Teilsprachen-Hard
 categories:
     - Datenbanken
 tags:

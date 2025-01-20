@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "SQL-Datentypen: Basic"
+title: "SQL-Datentypen"
 date: 2024-11-29
 permalink: /Datenbanken/datentypen
 categories: 
@@ -8,7 +8,7 @@ categories:
 tags: 
   - SQL-Datentypen
   - SQL
-difficulty: "easy"
+difficulty: "medium"
 words_per_minute: 170
 
 header:
