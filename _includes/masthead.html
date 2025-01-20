@@ -1,0 +1,75 @@
+<style>
+  /* Badge styling */
+.badge {
+  display: inline-block;
+  background-color: red; /* Badge color */
+  color: white; /* Text color */
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 50%; /* Makes it a circle */
+  padding: 2px 6px; /* Adjust size */
+  position: absolute; /* Position relative to parent */
+  top: -10px; /* Position above the parent element */
+  right: -10px; /* Position to the right */
+  min-width: 20px; /* Minimum size to fit numbers */
+  height: 20px; /* Fixed height for consistency */
+  transform: translate(50%, -50%); /* Fine-tune positioning */
+}
+
+/* Parent link styling (to ensure proper positioning) */
+#tickets-link {
+  position: relative; /* Ensure badge positions relative to this element */
+}
+</style>
+
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        {% unless logo_path == empty %}
+          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+        {% endunless %}
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          {{ site.masthead_title | default: site.title }}
+          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+        </a>
+        <ul class="visible-links">
+          {%- for link in site.data.navigation.main -%}
+            <li class="masthead__menu-item">
+              <a
+                href="{{ link.url | relative_url }}"
+                {% if link.description %} title="{{ link.description }}"{% endif %}
+                {% if link.target %} target="{{ link.target }}"{% endif %}
+                {% if link.title == "Tickets" %}
+                  id="tickets-link"
+                {% endif %}
+              >
+                {{ link.title }}
+                {% if link.title == "Tickets" %}
+                <a href="/tickets" id="tickets-link">
+                  <span id="ticket-count" class="badge"><i class="fa-solid fa-3"></i></span>
+                </a>
+                {% endif %}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+        {% if site.search == true %}
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+          <i class="fas fa-search"></i>
+        </button>
+        {% endif %}
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

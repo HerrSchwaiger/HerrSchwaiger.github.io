@@ -1,6 +1,7 @@
 main:
   - title: "Tickets"
     url: "/Tickets/"
+    id: "tickets-link"
   - title: "About"
     url: /about/
   - title: "Tags"
