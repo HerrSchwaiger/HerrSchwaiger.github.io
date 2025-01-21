@@ -4,6 +4,9 @@ title: "INSERT INTO"
 date: 2025-01-20
 permalink: /Datenbanken/insert-into-easy/
 categories: Datenbanken
+tags:
+- SQL
+- INSERT INTO
 difficulty: easy
 header:
     teaser: "assets/images/insertIntoEasy.png"

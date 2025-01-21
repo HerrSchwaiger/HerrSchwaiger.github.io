@@ -4,6 +4,9 @@ title: "INSERT INTO"
 date: 2025-01-20
 permalink: /Datenbanken/Insert-Into-Hard/
 categories: Datenbanken
+tags:
+- SQL
+- INSERT INTO
 difficulty: hard
 header:
     teaser: "assets/images/insertIntoHard.png"

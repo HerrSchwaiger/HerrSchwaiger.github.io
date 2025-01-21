@@ -5,6 +5,9 @@ date: 2025-01-20
 permalink: /sql/insert-into
 categories: Datenbanken
 difficulty: medium
+tags:
+- SQL
+- INSERT INTO
 header:
     teaser:  "assets/images/insertInto.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
