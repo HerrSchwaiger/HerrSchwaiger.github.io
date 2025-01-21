@@ -1,44 +1,48 @@
 ---
 layout: single
-title: "Ticket #34: Fehler beim erstellen einer Tabelle"
+title: "Ticket #154: Foreign Key Constraint?"
 date: 2025-01-16
-permalink: /Tickets/SunShineGmbH_16012025
+permalink: /Tickets/BuchWurm_18012025
 read_time : false
+tags:
+  - BuchWurm
 categories:
-    - Tickets
+  - Tickets
 ---
 
-**Priorität:** Niedrig;  
+**Priorität:** Mittel;  
 **Status:** Offen;  
-**Kunde:** Sunshine GmbH;
+**Kunde:** BuchWurm;
 
-Sehr geehrtes ByteConnect-Team,
+Hallo,
 
-im Rahmen unserer Digitalisierung versuchte ich die **Kategorie** und **Produkt** Tabellen zu erstellen.
-Leider gibt SQL immer einen Fehler aus: 
+wir verzweifeln langsam an diesem blöden SQL. Wir versuchen nun seit Tagen unsere Buch und Autor Tabellen zu erstellen aber scheitern immer wieder am selben Fehler:
+
 ```
-    Can't create table `sunshinegmbh`.`produkte` (errno: 150 "Foreign key constraint is incorrectly formed")
+ Can't create table `buchwurm`.`buch` (errno: 150 "Foreign key constraint is incorrectly formed")
 ```
 
-Ich habe den folgenden Code ausgeführt:
+Das ist unser Code:
 ```sql
-CREATE TABLE Kategorie (
-    KategorieID INT,
-    Name VARCHAR(100)
+CREATE TABLE Autor (
+    AutorID INT PRIMARY KEY,
+    Nachname VARCHAR(50),
+    Vorname VARCHAR(100),
+    Geburtsdatum DATE
 );
-CREATE TABLE Produkte (
-    ProduktID INT PRIMARY KEY,
-    Preis Decimal(5,2),
-    Kategorie VARCHAR(100),
-    FOREIGN KEY (Kategorie) REFERENCES Kategorie(KategorieID)
+
+CREATE TABLE Buch (
+    BuchID INT PRIMARY KEY,
+    Titel VARCHAR(50),
+    AutorID VARCHAR(50),
+    FOREIGN KEY (AutorID) REFERENCES Autor(AutorID)
 );
-````
+```
 
-Bitte helfen Sie mir.
+Bitte helft uns wir wissen einfach nicht mehr weiter!
 
-Mit freundlichen Grüßen,  
-Hans Sommer  
-Sunshine GmbH
+Danke und viele Grüße,  
+BuchWurm
 
 <!-- Platzhalter für die Info-Box -->
 <div id="response-box" class="notice" style="display: none;">

@@ -1,11 +1,14 @@
 ---
 layout: single
 title: "Ticket #7: Tabellen lassen sich nicht erstellen"
-date: 2025-01-15
-permalink: /Tickets/SuperSolutions_15012025
+date: 2025-01-18
+permalink: /Tickets/SuperSolutions_18012025
 read_time : false
+tags:
+  - SuperSolutionsAG
 categories:
-    - Tickets
+  - Tickets
+published: false
 ---
 
 **Priorität:** Hoch;  
