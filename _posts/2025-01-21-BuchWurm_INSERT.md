@@ -1,48 +1,54 @@
 ---
 layout: single
-title: "Ticket #34: Fehler beim erstellen einer Tabelle"
-date: 2025-01-18
-permalink: /Tickets/#34/
-read_time : false
+title: "Ticket #347: Problem mit Datenbankeinträgen"
+date: 2025-01-21
+permalink: /Tickets/347
+categories: 
+    - Tickets
 tags:
-  - SunshineGmbH
-categories:
-  - Tickets
-published: false
+    - BuchWurm
 ---
 
-**Priorität:** Niedrig;  
+**Priorität:** Hoch;  
 **Status:** Offen;  
-**Kunde:** Sunshine GmbH;
+**Kunde:** BuchWurm;
 
-Sehr geehrtes ByteConnect-Team,
+Moin, 
 
-im Rahmen unserer Digitalisierung versuchte ich die **Kategorie** und **Produkt** Tabellen zu erstellen.
-Leider gibt SQL immer einen Fehler aus: 
-```
-    Can't create table `sunshinegmbh`.`produkte` (errno: 150 "Foreign key constraint is incorrectly formed")
-```
+könnt ihr uns mal bitte erklären, wie wir diese verdammten Daten in unsere Tabellen rein bekommen? Wir haben schon gefühlt alles ausprobiert aber nix klappt bei dem Mist. 
+#### Die Daten
 
-Ich habe den folgenden Code ausgeführt:
+| Vorname | Geburtsdatum | Nachname | Titel         |
+|---------|--------------|----------|---------------|
+| Sophia  | 1980-04-15   | Meyer    | Das Licht     |
+| Anna    | 1990-07-30   | Fischer  | Gluecklich    |
+| Sophia  | 1980-04-15   | Meyer    | Der Verfall   |
+| Chris   | 1965-12-12   | Hansen   | Atemnot       |
+| Anna    | 1990-07-30   | Fischer  | Reiselust     |
+
+#### Unsere Tabellen
+
 ```sql
-CREATE TABLE Kategorie (
-    KategorieID INT,
-    Name VARCHAR(100),
-    ImSale BOOLEAN
+CREATE TABLE Autor (
+    ID INT PRIMARY KEY,
+    Nachname VARCHAR(50),
+    Vorname VARCHAR(50),
+    Geburtsdatum DATE
 );
-CREATE TABLE Produkte (
-    ProduktID INT PRIMARY KEY,
-    Preis Decimal(5,2),
-    Kategorie VARCHAR(100),
-    FOREIGN KEY (Kategorie) REFERENCES Kategorie(KategorieID)
+
+CREATE TABLE Buch (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Titel VARCHAR(100),
+    AutorID INT,
+    FOREIGN KEY (AutorID) REFERENCES Autor(ID)
 );
-````
+```
 
-Bitte helfen Sie mir.
+Mit Excel hatten wir solche Probleme nicht.
+Schaut euch das an und meldet euch so schnell wie möglich zurück. Wir brauchen eine Lösung, und zwar gestern.
 
-Mit freundlichen Grüßen,  
-Hans Sommer  
-Sunshine GmbH
+Grüße,  
+BuchWurm
 
 <!-- Platzhalter für die Info-Box -->
 <div id="response-box" class="notice" style="display: none;">
