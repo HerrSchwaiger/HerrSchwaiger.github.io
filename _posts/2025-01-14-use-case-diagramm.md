@@ -7,7 +7,6 @@ difficulty: "hard"
 categories:
     - Anwendungsentwicklung
 tags:
-    - Advanced
     - UML
     - Use-Case-Diagramm
 header:
