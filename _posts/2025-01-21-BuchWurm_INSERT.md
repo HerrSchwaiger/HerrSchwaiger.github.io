@@ -7,6 +7,7 @@ categories:
     - Tickets
 tags:
     - BuchWurm
+read_time: false
 ---
 
 **Priorität:** Hoch;  
