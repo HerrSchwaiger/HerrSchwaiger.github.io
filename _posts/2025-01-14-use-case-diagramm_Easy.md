@@ -30,7 +30,8 @@ Die Hauptbestandteile eines Use-Case-Diagramms sind:
 
 3. **Beziehungen**:
    - **Include**: Zeigt an, dass ein Use-Case einen anderen zwingend einbindet. Beispiel: `Zimmer buchen` schließt `Zahlung durchführen` ein.
-   - **Extend**: Zeigt optional erweiterte Funktionen. Beispiel: `Massage buchen` erweitert `Zimmer buchen`.
+   - **Extend**: Zeigt optional erweiterte Funktionen. Beispiel: `Massage buchen` erweitert `Zimmer buchen`. Die Bedingung kann mithilfe eines Rechtecks dargestellt werden.
+    In unserem Beispiel muss ein Termin frei sein, damit eine Massage gebucht werden kann.
    - **Generalisierung**: Ein `Kunde` kann alles was ein `Benutzer` auch kann, und zusätzlich alle Anwendungsfälle die mit Ihm direkt verbunden sind.
 
 4. **Systemgrenze**:
