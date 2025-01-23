@@ -12,7 +12,7 @@ header:
     overlay_filter: "0.7"
     overlay_image: /assets/images/useCaseEasy.png
 ---
-Ein Use-Case-Diagramm gehört zur **Unified Modeling Language (UML)** und dient dazu, die Funktionalitäten eines Systems aus Sicht der Benutzer darzustellen. Es zeigt, welche Akteure mit dem System interagieren und welche Anwendungsfälle (Use-Cases) ihnen zur Verfügung stehen. Wir erklären die einzelnen Bestandteile eines Use-Case-Diagramms an dem Beispiel einer Hotel-Buchungs-Software.
+Ein Use-Case-Diagramm gehört zur **Unified Modeling Language (UML)** und dient dazu, die Funktionalitäten eines Systems aus Sicht der Benutzer darzustellen. Es zeigt, welche Akteure mit dem System interagieren und welche Anwendungsfälle (Use Cases) ihnen zur Verfügung stehen. Wir erklären die einzelnen Bestandteile eines Use-Case-Diagramms an dem Beispiel einer Hotelbuchungs-Software.
 
 
 ![image-center](/assets/images/buchung_easy.png){: .align-center}
@@ -24,15 +24,15 @@ Die Hauptbestandteile eines Use-Case-Diagramms sind:
    - Ein Akteur kann eine Person, ein anderes System oder ein Gerät sein, das mit dem System interagiert.
    - Beispiel im Diagramm: `Kunde`, `Benutzer`, und `Zahlungssystem`.
 
-2. **Anwendungsfälle (Use-Cases)**:
+2. **Anwendungsfälle (Use Cases)**:
    - Ovale repräsentieren die Anwendungsfälle, also die spezifischen Funktionen des Systems.
    - Beispiel: `Zimmer suchen`, `Zimmer buchen`.
 
 3. **Beziehungen**:
-   - **Include**: Zeigt an, dass ein Use-Case einen anderen zwingend einbindet. Beispiel: `Zimmer buchen` schließt `Zahlung durchführen` ein.
+   - **Include**: Zeigt an, dass ein Use Case einen anderen zwingend einbindet. Beispiel: `Zimmer buchen` schließt `Zahlung durchführen` ein.
    - **Extend**: Zeigt optional erweiterte Funktionen. Beispiel: `Massage buchen` erweitert `Zimmer buchen`. Die Bedingung kann mithilfe eines Rechtecks dargestellt werden.
     In unserem Beispiel muss ein Termin frei sein, damit eine Massage gebucht werden kann.
-   - **Generalisierung**: Ein `Kunde` kann alles was ein `Benutzer` auch kann, und zusätzlich alle Anwendungsfälle die mit Ihm direkt verbunden sind.
+   - **Generalisierung**: Ein `Kunde` kann alles, was ein `Benutzer` auch kann, und zusätzlich alle Anwendungsfälle, die mit ihm direkt verbunden sind.
 
 4. **Systemgrenze**:
    - Ein Rechteck definiert die Grenze des Systems und zeigt, welche Anwendungsfälle dazu gehören.
