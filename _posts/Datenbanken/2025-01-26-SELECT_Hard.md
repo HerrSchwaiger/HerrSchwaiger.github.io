@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "SELECT"
-date: 2025-01-26
+date: 2025-01-26 00:00:03
 permalink: /Datenbanken/SELECT-Hard/
 categories:
   - Datenbanken

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "SQL-Datentypen"
-date: 2024-11-29
+date: 2024-11-29 00:00:02
 permalink: /Datenbanken/datentypen
 categories: 
   - Datenbanken

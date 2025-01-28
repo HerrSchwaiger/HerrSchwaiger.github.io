@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "SQL-Teilsprachen"
-date: 2024-12-07
+date: 2024-12-07 00:00:02
 permalink: /Datenbanken/teilsprachen
 categories:
     - Datenbanken

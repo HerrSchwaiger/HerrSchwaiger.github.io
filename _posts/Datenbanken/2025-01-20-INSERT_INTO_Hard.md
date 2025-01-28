@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "INSERT INTO"
-date: 2025-01-20
+date: 2025-01-20 00:00:03
 permalink: /Datenbanken/Insert-Into-Hard/
 categories: Datenbanken
 tags:

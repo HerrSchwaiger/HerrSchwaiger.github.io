@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "SQL-Teilsprachen: Advanced"
-date: 2024-12-07
+title: "SQL-Teilsprachen"
+date: 2024-12-07 00:00:03
 permalink: /Datenbanken/SQL-Teilsprachen-Hard
 categories:
     - Datenbanken

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "INSERT INTO"
-date: 2025-01-20
+date: 2025-01-20 00:00:01
 permalink: /Datenbanken/insert-into-easy/
 categories: Datenbanken
 tags:

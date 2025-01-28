@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "CREATE TABLE"
-date: 2025-01-16
+date: 2025-01-16 00:00:02
 permalink: /Datenbanken/create-table
 categories:
   - Datenbanken
