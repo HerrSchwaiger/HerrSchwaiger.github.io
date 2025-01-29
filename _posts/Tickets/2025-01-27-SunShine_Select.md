@@ -9,8 +9,8 @@ tags:
   - SQL
   - SELECT
   - SunshineGmbH
-
 read_time: false
+published: false
 ---
 
 **Priorität:** Mittel; 
