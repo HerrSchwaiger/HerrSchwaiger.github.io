@@ -27,11 +27,11 @@ Für eine Kundenanfrage benötigen wir eine SQL-Abfrage, um aus unserer Tabelle 
 
 #### Unsere Tabelle:
 **Bestellung**
-- **bestell_id**: Eindeutige ID der Bestellung. (INT)
-- **kunde_id**: ID des Kunden. (INT)
-- **status**: Status der Bestellung (z. B. "offen", "abgeschlossen"). (VARCHAR(50))
-- **bestelldatum**: Datum der Bestellung. (DATE)
-- **gesamtbetrag**: Gesamtbetrag der Bestellung. (DECIMAL(10,2))
+- **Bestell_id**: Eindeutige ID der Bestellung. (INT)
+- **Kunde_id**: ID des Kunden. (INT)
+- **Status**: Status der Bestellung (z. B. "offen", "abgeschlossen"). (VARCHAR(50))
+- **Bestelldatum**: Datum der Bestellung. (DATE)
+- **Gesamtbetrag**: Gesamtbetrag der Bestellung. (DECIMAL(10,2))
 
 Formulieren Sie uns die passende SQL-Abfrage bitte zum nächstmöglichen Zeitpunkt.
 
