@@ -31,7 +31,6 @@ Für eine Kundenanfrage benötigen wir eine SQL-Abfrage, um aus unserer Tabelle 
 - **Kunde_id**: ID des Kunden. (INT)
 - **Status**: Status der Bestellung (z. B. "offen", "abgeschlossen"). (VARCHAR(50))
 - **Bestelldatum**: Datum der Bestellung. (DATE)
-- **Gesamtbetrag**: Gesamtbetrag der Bestellung. (DECIMAL(10,2))
 
 Formulieren Sie uns die passende SQL-Abfrage bitte zum nächstmöglichen Zeitpunkt.
 
