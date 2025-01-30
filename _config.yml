@@ -69,6 +69,13 @@ defaults:
     values:
       read_time: true
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-5DSLWWS1RS"
+    anonymize_ip: false # default
+
+
 
 
 # Exclude from processing.
