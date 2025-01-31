@@ -2,7 +2,7 @@
   /* Badge styling */
 .badge {
   display: inline-block;
-  background-color: red; /* Badge color */
+  background-color: #0092ca; /* Badge color */
   color: white; /* Text color */
   font-size: 12px;
   font-weight: bold;
@@ -25,6 +25,7 @@
 </style>
 
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
+{% assign open_tickets_count = site.categories.Tickets | where: "open", true | size %}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -51,7 +52,9 @@
                 {{ link.title }}
                 {% if link.title == "Tickets" %}
                 <a href="/tickets" id="tickets-link">
-                  <span id="ticket-count" class="badge"><i class="fa-solid fa-2"></i></span>
+                    {% if open_tickets_count > 0 %}
+                    <span id="ticket-count" class="badge"><i class="fa-solid fa-{{ open_tickets_count }}"></i></span>
+                    {% endif %}
                 </a>
                 {% endif %}
               </a>
