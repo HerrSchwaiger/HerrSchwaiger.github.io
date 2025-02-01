@@ -14,16 +14,20 @@ header:
 {% assign open_tickets = site.categories.Tickets | where: "open", true %}
 {% assign closed_tickets = site.categories.Tickets | where: "open", false %}
 
+{% if open_tickets.size > 0 %}
 <h2>Offene Tickets ({{ open_tickets | size }})</h2>
 <ul>
   {% for ticket in open_tickets %}
     <li><a style="color:#0092ca;" href="{{ ticket.url }}">{{ ticket.title }}</a></li>
   {% endfor %}
 </ul>
+{% endif %}
 
+{% if closed_tickets.size > 0 %}
 <h2>Geschlossene Tickets ({{ closed_tickets | size }})</h2>
 <ul>
   {% for ticket in closed_tickets %}
     <li style="color:gray;"><a href="{{ ticket.url }}">{{ ticket.title }}</a></li>
   {% endfor %}
 </ul>
+{% endif %}
