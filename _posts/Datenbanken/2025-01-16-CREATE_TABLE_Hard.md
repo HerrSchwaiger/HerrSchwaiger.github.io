@@ -16,7 +16,7 @@ header:
     overlay_image: /assets/images/createTableHard.png # Hintergrundbild
 ---
 
-The `CREATE TABLE` statement in SQL is fundamental for defining the structure of a database. Beyond basic table creation, advanced features like `PRIMARY KEY`, `UNIQUE KEY`, `NOT NULL`, `AUTO INCREMENT`, `FOREIGN KEY`, `CREATE TABLE LIKE`, and `CREATE TABLE SELECT` enable developers to efficiently design complex database schemas and manage data with greater flexibility.
+The `CREATE TABLE` statement in SQL is fundamental for defining the structure of a database. Beyond basic table creation, advanced features like `PRIMARY KEY`, `UNIQUE KEY`, `NOT NULL`, `AUTO INCREMENT`,  `CREATE TABLE LIKE`, and `CREATE TABLE SELECT` enable developers to efficiently design complex database schemas and manage data with greater flexibility.
 
 ---
 
@@ -97,24 +97,6 @@ CREATE TABLE Users (
 ```
 - The `Email` column must contain unique values.
 - The combination of `Username` and `Email` must also be unique.
-
----
-
-## `FOREIGN KEY`
-A `FOREIGN KEY` establishes a relationship between two tables, ensuring referential integrity by enforcing valid references to another table’s `PRIMARY KEY`.
-
-### Example:
-```sql
-CREATE TABLE Orders (
-    OrderID INT AUTO_INCREMENT PRIMARY KEY,
-    CustomerID INT,
-    OrderDate DATE NOT NULL,
-    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
-);
-```
-- `CustomerID` in the `Orders` table must reference an existing `CustomerID` in the `Customers` table.
-- If a referenced customer is deleted, the default behavior in MariaDB is `RESTRICT`, preventing the deletion.
-
 ---
 
 ## `CREATE TABLE LIKE`
@@ -163,7 +145,6 @@ SELECT * FROM Orders WHERE OrderDate < '2025-01-01';
 - **`NOT NULL`**: Prevents columns from containing `NULL` values.
 - **`AUTO INCREMENT`**: Automatically generates unique numbers for rows.
 - **`UNIQUE KEY`**: Enforces uniqueness for one or more columns.
-- **`FOREIGN KEY`**: Establishes relationships between tables.
 - **`CREATE TABLE LIKE`**: Duplicates table structure without data.
 - **`CREATE TABLE SELECT`**: Creates and populates a table based on a query.
 

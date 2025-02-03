@@ -15,7 +15,7 @@ header:
     overlay_filter: "0.7" # Transparenz des Overlays
     overlay_image: /assets/images/createTable.png # Hintergrundbild
 ---
-Die SQL-Anweisung `CREATE TABLE` ist eine der grundlegendsten Operationen, um eine Datenbankstruktur aufzubauen. Mit ihr werden Tabellen erstellt, die später Daten aufnehmen können. In diesem Beitrag beschäftigen wir uns mit vier wichtigen Konzepten: **PRIMARY KEY**, **AUTO INCREMENT**, **FOREIGN KEY** und **NOT NULL**. Diese Elemente sind essenziell, um Daten konsistent und relational zu speichern.
+Die SQL-Anweisung `CREATE TABLE` ist eine der grundlegendsten Operationen, um eine Datenbankstruktur aufzubauen. Mit ihr werden Tabellen erstellt, die später Daten aufnehmen können. In diesem Beitrag beschäftigen wir uns mit vier wichtigen Konzepten: **PRIMARY KEY**, **AUTO INCREMENT** und **NOT NULL**. Diese Elemente sind essenziell, um Daten konsistent und relational zu speichern.
 
 ---
 
@@ -88,37 +88,12 @@ In diesem Beispiel müssen sowohl der Name als auch die Abteilung jedes Mitarbei
 
 ---
 
-## `FOREIGN KEY`
-Ein `FOREIGN KEY` definiert eine Beziehung zwischen zwei Tabellen, indem er auf den `PRIMARY KEY` einer anderen Tabelle verweist. Dies stellt sicher, dass die Daten konsistent und relational bleiben.
-
-### Beispiel:
-Zwei Tabellen: **Bestellungen** und **Kunden**.
-
-```sql
-CREATE TABLE Kunden (
-    KundeID INT AUTO_INCREMENT PRIMARY KEY,
-    Name VARCHAR(100)
-);
-
-CREATE TABLE Bestellungen (
-    BestellungID INT AUTO_INCREMENT PRIMARY KEY,
-    KundeID INT,
-    BestellDatum DATE,
-    FOREIGN KEY (KundeID) REFERENCES Kunden(KundeID)
-);
-```
-
-- Die Tabelle **Bestellungen** referenziert die Tabelle **Kunden** über `KundeID`.
-- Standardmäßig erlaubt MariaDB keine Löschung eines Datensatzes in der referenzierten Tabelle (z. B. `Kunden`), wenn dieser noch in einer anderen Tabelle referenziert wird (z. B. `Bestellungen`). Um dieses Verhalten anzupassen, können Optionen wie `ON DELETE CASCADE` oder `ON DELETE SET NULL` verwendet werden.
-
----
 
 ## Zusammenfassung
-Mit `PRIMARY KEY`, `AUTO INCREMENT`, `FOREIGN KEY` und `NOT NULL` kannst du:
+Mit `PRIMARY KEY`, `AUTO INCREMENT` und `NOT NULL` kannst du:
 
 1. **Daten eindeutig identifizieren** (PRIMARY KEY).
 2. **Automatisch IDs generieren** (AUTO INCREMENT).
-3. **Tabellen relational verknüpfen** (FOREIGN KEY).
-4. **Wichtige Felder verpflichtend machen** (NOT NULL).
+3. **Wichtige Felder verpflichtend machen** (NOT NULL).
 
 Ein korrektes Datenbankdesign sorgt dafür, dass die Daten konsistent bleiben und leicht abgefragt werden können. Nutze diese Funktionen, um leistungsstarke, skalierbare Datenbanken zu erstellen.
