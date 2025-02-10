@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Use-Case-Diagramm"
+title: "Use Case Diagramm"
 date: 2025-01-14 00:00:01
 permalink: /Anwendungsentwicklung/Use-Case-Easy/
 categories: Anwendungsentwicklung
@@ -12,13 +12,13 @@ header:
     overlay_filter: "0.7"
     overlay_image: /assets/images/useCaseEasy.png
 ---
-Ein Use-Case-Diagramm gehört zur **Unified Modeling Language (UML)** und dient dazu, die Funktionalitäten eines Systems aus Sicht der Benutzer darzustellen. Es zeigt, welche Akteure mit dem System interagieren und welche Anwendungsfälle (Use Cases) ihnen zur Verfügung stehen. Wir erklären die einzelnen Bestandteile eines Use-Case-Diagramms an dem Beispiel einer Hotelbuchungs-Software.
+Ein Use Case Diagramm gehört zur **Unified Modeling Language (UML)** und dient dazu, die Funktionalitäten eines Systems aus Sicht der Benutzer darzustellen. Es zeigt, welche Akteure mit dem System interagieren und welche Anwendungsfälle (Use Cases) ihnen zur Verfügung stehen. Wir erklären die einzelnen Bestandteile eines Use Case Diagramms an dem Beispiel einer Hotelbuchungs-Software.
 
 
 ![image-center](/assets/images/buchung_easy.png){: .align-center}
 
-### Elemente eines Use-Case-Diagramms
-Die Hauptbestandteile eines Use-Case-Diagramms sind:
+### Elemente eines Use Case Diagramms
+Die Hauptbestandteile eines Use Case Diagramms sind:
 
 1. **Akteure**:
    - Ein Akteur kann eine Person, ein anderes System oder ein Gerät sein, das mit dem System interagiert.
@@ -37,10 +37,10 @@ Die Hauptbestandteile eines Use-Case-Diagramms sind:
 4. **Systemgrenze**:
    - Ein Rechteck definiert die Grenze des Systems und zeigt, welche Anwendungsfälle dazu gehören.
 
-### Vorteile von Use-Case-Diagrammen
+### Vorteile von Use Case Diagrammen
 - **Übersichtlichkeit**: Sie bieten eine einfache, visuelle Darstellung der Systemfunktionalitäten.
 - **Kommunikation**: Erleichtern die Verständigung zwischen Entwicklern, Kunden und Stakeholdern.
 - **Strukturierung**: Helfen, Anforderungen systematisch zu dokumentieren.
 
 ### Fazit
-Ein Use-Case-Diagramm ist ein wertvolles Werkzeug für die Planung und Dokumentation von Systemanforderungen. Es erlaubt einen klaren Überblick darüber, wie ein System benutzt werden kann und welche Rollen und Funktionen beteiligt sind.
+Ein Use Case Diagramm ist ein wertvolles Werkzeug für die Planung und Dokumentation von Systemanforderungen. Es erlaubt einen klaren Überblick darüber, wie ein System benutzt werden kann und welche Rollen und Funktionen beteiligt sind.

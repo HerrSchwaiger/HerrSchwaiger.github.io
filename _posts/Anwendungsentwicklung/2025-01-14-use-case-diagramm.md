@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Use-Case-Diagramm  "
+title: "Use Case Diagramm"
 date: 2025-01-14 00:00:02
 permalink: /Datenbanken/use-case/
 difficulty: "medium"
@@ -73,4 +73,4 @@ Unser Beispiel kann man mit solch einer Beziehung erweitern, indem man mit `Suit
 ![image-center](/assets/images/buchung_hard2.png){: .align-center}
 
 ### Fazit
-Ein Use-Case-Diagramm ist ein wertvolles Werkzeug für die Planung und Dokumentation von Systemanforderungen. Es erlaubt einen klaren Überblick darüber, wie ein System benutzt werden kann und welche Rollen und Funktionen beteiligt sind.
+Ein Use Case Diagramm ist ein wertvolles Werkzeug für die Planung und Dokumentation von Systemanforderungen. Es erlaubt einen klaren Überblick darüber, wie ein System benutzt werden kann und welche Rollen und Funktionen beteiligt sind.
