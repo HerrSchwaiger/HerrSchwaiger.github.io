@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "Use-Case-Diagramm  "
-date: 2025-01-14
-permalink: /Datenbanken/use-case
+date: 2025-01-14 00:00:02
+permalink: /Datenbanken/use-case/
 difficulty: "medium"
 categories:
     - Anwendungsentwicklung
@@ -70,7 +70,7 @@ Der allgemeine Anwendungsfall vererbt seine Kommunikationsbeziehung(en) an den s
 Unser Beispiel kann man mit solch einer Beziehung erweitern, indem man mit `Suite suchen` den Use Case `Zimmer suchen` spezialisiert:
 
 
-![image-center](/assets/images/buchung_hard.png){: .align-center}
+![image-center](/assets/images/buchung_hard2.png){: .align-center}
 
 ### Fazit
 Ein Use-Case-Diagramm ist ein wertvolles Werkzeug für die Planung und Dokumentation von Systemanforderungen. Es erlaubt einen klaren Überblick darüber, wie ein System benutzt werden kann und welche Rollen und Funktionen beteiligt sind.

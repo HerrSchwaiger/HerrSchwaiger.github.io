@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "Use-Case-Diagramm"
-date: 2025-01-14
-permalink: /Anwendungsentwicklung/Use-Case-Diagramm-Easy/
+date: 2025-01-14 00:00:01
+permalink: /Anwendungsentwicklung/Use-Case-Easy/
 categories: Anwendungsentwicklung
 tags: [Use-Case-Diagramm, UML]
 difficulty: easy
