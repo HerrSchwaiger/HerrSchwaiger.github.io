@@ -2,7 +2,7 @@
 layout: single
 title: "Datenbank-Normalisierung"
 date: 2024-12-08
-permalink: /Datenbanken/normalisierung
+permalink: /Datenbanken/normalisierung-medium/
 categories:
     - Datenbanken
 tags:

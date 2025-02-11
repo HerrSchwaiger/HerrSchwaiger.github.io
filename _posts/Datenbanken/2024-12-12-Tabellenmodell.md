@@ -2,7 +2,7 @@
 layout: single
 title: "Tabellenmodell"
 date: 2024-12-12
-permalink: /Datenbanken/tabellenmodell
+permalink: /Datenbanken/tabellenmodell-medium/
 categories:
     - Datenbanken
 tags:

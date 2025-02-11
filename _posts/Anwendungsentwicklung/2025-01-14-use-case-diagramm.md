@@ -2,7 +2,7 @@
 layout: single
 title: "Use Case Diagramm"
 date: 2025-01-14 00:00:02
-permalink: /Datenbanken/use-case/
+permalink: /Datenbanken/use-case-medium/
 difficulty: "medium"
 categories:
     - Anwendungsentwicklung

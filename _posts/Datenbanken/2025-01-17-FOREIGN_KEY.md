@@ -2,7 +2,7 @@
 layout: single
 title: "FOREIGN KEY"
 date: 2025-01-17 00:00:02
-permalink: /Datenbanken/foreign-key
+permalink: /Datenbanken/foreign-key-medium/
 categories:
   - Datenbanken
 tags:

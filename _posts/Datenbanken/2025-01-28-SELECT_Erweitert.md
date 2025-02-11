@@ -2,7 +2,7 @@
 layout: single
 title: "Erweiterte SELECT-Funktionen"
 date: 2025-01-28 00:00:02
-permalink: /Datenbanken/Select-Erweitert/
+permalink: /Datenbanken/Select-Erweitert-medium/
 categories:
   - Datenbanken
 tags:

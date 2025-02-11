@@ -2,7 +2,7 @@
 layout: single
 title: "INSERT INTO"
 date: 2025-01-20 00:00:02
-permalink: /sql/insert-into
+permalink: /sql/insert-into-medium/
 categories: Datenbanken
 difficulty: medium
 tags:
