@@ -9,7 +9,7 @@ tags:
   - SQL
   - SELECT
 difficulty: hard
-published: false
+published: true
 header:
     teaser: "assets/images/selectHard.png"
     overlay_color: "#000"
@@ -54,7 +54,7 @@ The `WHERE` clause supports several comparison operators:
 | Operator | Description       | Example                     |
 |----------|-------------------|-----------------------------|
 | `=`      | Equals            | `city = 'Chicago'`         |
-| `!=`     | Not equals        | `city != 'Chicago'`        |
+| `<>`     | Not equals        | `city <> 'Chicago'`        |
 | `<`      | Less than         | `age < 30`                 |
 | `>`      | Greater than      | `age > 30`                 |
 | `<=`     | Less than or equal | `age <= 25`               |
