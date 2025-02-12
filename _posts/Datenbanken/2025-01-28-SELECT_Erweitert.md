@@ -11,7 +11,7 @@ tags:
   - ORDER_BY
   - LIMIT
 difficulty: medium
-published: false
+published: true
 header:
     teaser: "assets/images/selectErweitert.png"
     overlay_color: "#000"
