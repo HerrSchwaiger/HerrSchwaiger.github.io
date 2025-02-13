@@ -42,20 +42,22 @@ ORDER BY name ASC;
 
 ### 3. `LIMIT`
 Das Schlüsselwort `LIMIT` begrenzt die Anzahl der zurückgegebenen Ergebnisse.
+Das Schlüsselwort `OFFSET` kann dabei hinzugefügt werden, um nicht die ersten Ergebnisse sondern die nach dem OFFSET abzurufen.
 
 #### Beispiel:
 ```sql
-SELECT * FROM produkte
-LIMIT 3;
+SELECT * FROM produkt
+ORDER BY preis ASC
+LIMIT 3 OFFSET 1;
 ```
-**Erklärung:** Nur die ersten 3 Produkte werden angezeigt.
+**Erklärung:** Nur die 2. bis 4. günstigsten Produkte werden angezeigt.
 
 ### 4. `AND` und `OR`
 Mit `AND` und `OR` können Sie mehrere Bedingungen kombinieren, um gezielt Daten auszuwählen.
 
 #### Beispiel mit `AND`:
 ```sql
-SELECT * FROM kunden
+SELECT * FROM kunde
 WHERE land = 'Deutschland' AND status = 'Aktiv';
 ```
 **Erklärung:** Es werden nur aktive Kunden aus Deutschland angezeigt.

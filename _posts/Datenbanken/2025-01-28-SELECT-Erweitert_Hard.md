@@ -104,6 +104,23 @@ WHERE department = 'Finance' OR department = 'Marketing';
 ```
 **Explanation:** Employees from either the Finance or Marketing departments are returned.
 
+#### Nested conditions
+
+More advanced conditions can be created by using parentheses:
+```sql
+SELECT * FROM table
+WHERE (x AND y) OR (z AND y);
+```
+
+#### Example
+```sql
+SELECT * FROM product
+WHERE (price < 200 AND price > 100) OR (price < 100 AND sale = TRUE);
+```
+
+To select all products with a price between 100 and 200 or less than 100 but currently in sale.
+
+
 ## Summary
 Advanced SQL `SELECT` functions provide greater control over data queries:
 

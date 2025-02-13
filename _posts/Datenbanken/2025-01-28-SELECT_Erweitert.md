@@ -56,19 +56,21 @@ ORDER BY name ASC;
 
 ### 3. `LIMIT`: Ergebnisse begrenzen
 `LIMIT` beschränkt die Anzahl der zurückgegebenen Datensätze.
+`OFFSET` verschiebt die abgerufenen Zeilen um den abstand.
 
 #### Syntax:
 ```sql
 SELECT * FROM tabelle
-LIMIT anzahl;
+LIMIT anzahl OFFSET abstand;
 ```
 
 #### Beispiel:
 ```sql
-SELECT * FROM produkte
-LIMIT 5;
+SELECT * FROM produkt
+ORDER BY preis ASC
+LIMIT 5 OFFSET 5;
 ```
-**Erklärung:** Nur die ersten 5 Produkte aus der Tabelle werden zurückgegeben.
+**Erklärung:** Nur die 6. - 10. günstigsten Produkte werden abgerufen.
 
 ### 4. Kombination von `ORDER BY` und `LIMIT`
 Die beiden Schlüsselwörter können kombiniert werden, um eine sortierte und begrenzte Ergebnisliste zu erstellen.
