@@ -9,7 +9,7 @@ tags:
   - SQL
   - SELECT
 difficulty: easy
-published: true
+published: false
 header:
     teaser: "assets/images/selectEasy.png"
     overlay_color: "#000"

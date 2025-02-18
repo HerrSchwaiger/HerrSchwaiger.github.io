@@ -8,6 +8,7 @@ tags:
 - SQL
 - INSERT INTO
 difficulty: easy
+published: false
 header:
     teaser: "assets/images/insertIntoEasy.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe

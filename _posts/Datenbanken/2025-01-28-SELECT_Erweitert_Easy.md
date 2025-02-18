@@ -11,7 +11,7 @@ tags:
   - ORDER_BY
   - LIMIT
 difficulty: easy
-published: true
+published: false
 header:
     teaser: "assets/images/selectErweitertEasy.png"
     overlay_color: "#000"
