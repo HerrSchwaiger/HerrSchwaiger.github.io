@@ -8,7 +8,7 @@ difficulty: medium
 tags:
 - SQL
 - INSERT INTO
-published: false
+published: true
 header:
     teaser:  "assets/images/insertInto.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
