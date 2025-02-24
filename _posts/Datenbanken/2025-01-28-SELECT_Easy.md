@@ -13,10 +13,10 @@ tags:
 difficulty: easy
 published: true
 header:
-    teaser: "assets/images/selectEasy.png"
+    teaser: "assets/images/selectErweitertEasy.png"
     overlay_color: "#000"
     overlay_filter: "0.7"
-    overlay_image: /assets/images/selectEasy.png"
+    overlay_image: /assets/images/selectErweitertEasy.png"
 ---
 
 Der `SELECT`-Befehl in SQL dient dazu, Daten aus einer Datenbank abzufragen. Hier lernst du die einfachste Form der Abfrage kennen.

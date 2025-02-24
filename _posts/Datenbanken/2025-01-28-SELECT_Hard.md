@@ -13,10 +13,10 @@ tags:
 difficulty: hard
 published: true
 header:
-    teaser: "assets/images/selectHard.png"
+    teaser: "assets/images/selectErweitertHard.png"
     overlay_color: "#000"
     overlay_filter: "0.7"
-    overlay_image: /assets/images/selectHard.png
+    overlay_image: /assets/images/selectErweitertHard.png
 ---
 
 The `SELECT` statement in SQL is a foundational command used to retrieve data from a database. While the basics of `SELECT` are straightforward, mastering its advanced features is essential for crafting efficient and powerful queries. This post will dive deeper into its capabilities, focusing on advanced filtering and introducing the `LIMIT` clause for controlling result sets.
