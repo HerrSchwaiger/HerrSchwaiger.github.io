@@ -1,7 +1,7 @@
 ---
 layout: single
 title: SQL-Cheatsheet
-date: 2024-12-16
+date: 2025-02-25
 permalink: /Datenbanken/sql-cheatsheet
 categories:
   - Datenbanken
