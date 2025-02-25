@@ -30,14 +30,6 @@ Erstellen von Datenbanken.
 CREATE DATABASE databaseName;
 ```
 
-### Beispiel
-
-Der folgende Befehl erstellt eine neue Datenbank namens testDb;
-
-```sql
-CREATE DATABASE testDb;
-```
-
 ## CREATE TABLE
 
 Erstellen von Tabellen.
@@ -51,15 +43,80 @@ CREATE TABLE tabellenName (
 );
 ```
 
-### Beispiel
-Der folgende Befehl erstellt eine neue Tabelle namens **Person** mit den Spalten ID, Vorname und Geburtsdatum.
+### Fremdschlüssel
+
+Erstellen von Tabellen mit Fremdschlüssel.
 
 ```sql
-CREATE TABLE Person (
-    ID INTEGER,
-    Vorname VARCHAR(50),
-    Geburtsdatum DATE
-)
+CREATE TABLE tabellenName (
+    spaltenName datentyp,
+    fk_Spalte datentyp,
+    FOREIGN KEY (fk_Spalte) f_tabellenName(ID)
+);
 ```
 
-Eine Erklärung zu den SQL-Datentypen finden Sie unter dem Tag [Datentypen](/tags/#sql-datentypen)
+Die Spalte `fk_Spalte` referenziert nun die Spalte `ID` der Tabelle `f_tabellenName`.
+
+## ALTER TABLE
+
+Verändern der Tabellenstruktur.
+
+### Syntax
+```sql
+-- Hinzufügen einer Spalte
+ALTER TABLE tabellenName
+ADD COLUMN spaltenName datentyp;
+
+-- Entfernen einer Spalte
+ALTER TABLE tabellenName
+DROP COLUMN spaltenName;
+
+-- Ändern einer Spaltendefinition
+ALTER TABLE tabellenName
+MODIFY COLUMN spaltenName datentyp;
+```
+
+## INSERT INTO
+
+Einfügen von Daten.
+
+### Syntax
+
+```sql
+INSERT INTO tabellenName (spalte1, spalte2)
+VALUES (wert1_1, wert1_2),
+       (wert2_1, wert2_2);
+```
+
+## DELETE
+
+Löschen von Daten.
+
+### Syntax
+
+```sql
+DELETE FROM tabellenName
+WHERE bedingung;
+```
+## UPDATE
+
+Verändern von Daten.
+
+### Syntax
+
+```sql
+UPDATE tabellenName
+SET spaltenName = wert1
+WHERE bedingung;
+```
+
+## SELECT
+
+Abrufen von Daten.
+
+### Syntax
+```sql
+SELECT spalte1, spalte2,...
+FROM tabellenName
+WHERE bedingung;
+```

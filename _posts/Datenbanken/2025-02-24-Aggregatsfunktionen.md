@@ -9,7 +9,7 @@ tags:
   - SQL
   - Aggregatsfunktionen
 difficulty: medium
-published: true
+published: false
 header:
     teaser: "assets/images/aggregatsfunktionen.png"
     overlay_color: "#000"
