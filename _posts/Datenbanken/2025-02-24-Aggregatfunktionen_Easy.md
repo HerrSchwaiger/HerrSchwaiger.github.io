@@ -11,10 +11,10 @@ tags:
 difficulty: easy
 published: true
 header:
-    teaser: "assets/images/Aggregatfunktionen_Easy.png"
+    teaser: "assets/images/aggregatfunktionen_Easy.png"
     overlay_color: "#000"
     overlay_filter: "0.7"
-    overlay_image: /assets/images/Aggregatfunktionen_Easy.png
+    overlay_image: /assets/images/aggregatfunktionen_Easy.png
 ---
 
 Aggregatfunktionen in SQL helfen uns, Daten aus einer Tabelle zusammenzufassen. Diese Funktionen sind besonders nützlich, um große Datenmengen zu analysieren und wichtige Kennzahlen herauszufinden. In diesem Post lernen wir die grundlegenden Aggregatfunktionen in MariaDB kennen und sehen uns einige Beispiele an.

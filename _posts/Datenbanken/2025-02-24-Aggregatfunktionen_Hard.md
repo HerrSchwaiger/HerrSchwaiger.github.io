@@ -11,10 +11,10 @@ tags:
 difficulty: hard
 published: true
 header:
-    teaser: "assets/images/Aggregatfunktionen_Hard.png"
+    teaser: "assets/images/aggregatfunktionen_Hard.png"
     overlay_color: "#000"
     overlay_filter: "0.7"
-    overlay_image: /assets/images/Aggregatfunktionen_Hard.png
+    overlay_image: /assets/images/aggregatfunktionen_Hard.png
 ---
 
 Aggregate functions in SQL are powerful tools that allow you to aggregate and summarize data from a table. These functions are particularly useful for analyzing large datasets and extracting key metrics. In this post, we will explore the fundamental aggregate functions in MariaDB and illustrate their usage with examples.
