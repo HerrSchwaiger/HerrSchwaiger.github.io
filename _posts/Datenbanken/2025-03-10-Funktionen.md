@@ -82,7 +82,7 @@ Berechnet die Differenz zwischen zwei Datumsangaben in der angegebenen Zeiteinhe
 #### Beispiel:
 
 ```sql
-SELECT TIMESTAMPDIFF(YEAR, einführungsdatum, CURDATE()) AS Produktalter
+SELECT TIMESTAMPDIFF(YEAR, einfuehrungsdatum, CURDATE()) AS Produktalter
 FROM produkte;
 ```
 

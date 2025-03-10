@@ -64,7 +64,28 @@ FROM produkte;
 
 **Erklärung:** Diese Abfrage berechnet den Gesamtwert des Lagerbestands für jedes Produkt. Der Alias `Gesamtwert` macht das Ergebnis leichter lesbar.
 
-### 2. ROUND: Werte runden
+### 2. TIMESTAMPDIFF: Differenz zwischen zwei Datumsangaben berechnen
+
+Berechnet die Differenz zwischen zwei Datumsangaben in der angegebenen Zeiteinheit.
+
+#### Beispiel:
+
+```sql
+SELECT TIMESTAMPDIFF(YEAR, einfuehrungsdatum, CURDATE()) AS Produktalter
+FROM produkte;
+```
+
+**Erwartete Ausgabe:**
+
+| Produktalter |
+|--------------|
+| 2            |
+| 1            |
+| 3            |
+
+**Erklärung:** Diese Abfrage berechnet das Alter jedes Produkts basierend auf dem Einführungsdatum und dem aktuellen Datum. `CURDATE()` gibt das aktuelle Datum zurück. Der Alias `Produktalter` macht das Ergebnis verständlicher.
+
+### 3. ROUND: Werte runden
 
 **Syntax:**
 
@@ -96,7 +117,7 @@ FROM produkte;
 
 **Erklärung:** Diese Abfrage rundet den Preis jedes Produkts auf zwei Dezimalstellen. Der Alias `GerundeterPreis` gibt der gerundeten Spalte einen verständlichen Namen.
 
-### 3. CONCAT_WS: Zeichenketten mit Trennzeichen verknüpfen
+### 4. CONCAT_WS: Zeichenketten mit Trennzeichen verknüpfen
 
 **Syntax:**
 
