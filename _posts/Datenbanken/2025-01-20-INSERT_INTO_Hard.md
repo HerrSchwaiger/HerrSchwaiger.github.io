@@ -10,10 +10,10 @@ tags:
 difficulty: hard
 published: true
 header:
-    teaser: "assets/images/insertIntoHard.png"
+    teaser: "assets/images/insert_into_hard.jpg"
     overlay_color: "#000" # Background overlay color
     overlay_filter: "0.7" # Transparency of the overlay
-    overlay_image: /assets/images/insertIntoHard.png # Background image
+    overlay_image: /assets/images/insert_into_hard.jpg # Background image
 ---
 
 The SQL command `INSERT INTO` is a core element for adding data to a table. This article provides an in-depth guide, including advanced options like the use of `SET` for assigning values to columns.

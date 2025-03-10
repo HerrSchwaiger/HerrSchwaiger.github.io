@@ -10,10 +10,10 @@ tags:
 - INSERT INTO
 published: true
 header:
-    teaser:  "assets/images/insertInto.png"
+    teaser:  "assets/images/insert_into.jpg"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
     overlay_filter: "0.7" # Transparenz des Overlays
-    overlay_image: /assets/images/insertInto.png # Hintergrundbild
+    overlay_image: /assets/images/insert_into.jpg # Hintergrundbild
 ---
 
 Der Befehl `INSERT INTO` ist einer der Grundpfeiler von SQL und ermöglicht das Einfügen neuer Daten in eine Tabelle. In diesem Artikel lernst du die Grundlagen, Anwendungsbeispiele und wichtige Tipps zur Nutzung von `INSERT INTO` kennen.

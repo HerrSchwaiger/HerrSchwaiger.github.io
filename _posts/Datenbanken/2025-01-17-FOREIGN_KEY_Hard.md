@@ -10,10 +10,10 @@ tags:
   - SQL
 difficulty: "hard"
 header:
-    teaser:  "assets/images/ForeignKeyHard.png"
+    teaser:  "assets/images/foreign_key_hard.jpg"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
     overlay_filter: "0.7" # Transparenz des Overlays
-    overlay_image: /assets/images/ForeignKeyHard.png # Hintergrundbild
+    overlay_image: /assets/images/foreign_key_hard.jpg # Hintergrundbild
 ---
 
 A `FOREIGN KEY` is a critical component of relational databases, ensuring that relationships between tables remain valid. It enforces **referential integrity**, preventing orphaned records and maintaining data consistency.

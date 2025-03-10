@@ -10,10 +10,10 @@ tags:
   - SQL
 difficulty: "medium"
 header:
-    teaser:  "assets/images/createTable.png"
+    teaser:  "assets/images/create_table.jpg"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
     overlay_filter: "0.7" # Transparenz des Overlays
-    overlay_image: /assets/images/createTable.png # Hintergrundbild
+    overlay_image: /assets/images/create_table.jpg # Hintergrundbild
 ---
 Die SQL-Anweisung `CREATE TABLE` ist eine der grundlegendsten Operationen, um eine Datenbankstruktur aufzubauen. Mit ihr werden Tabellen erstellt, die später Daten aufnehmen können. In diesem Beitrag beschäftigen wir uns mit vier wichtigen Konzepten: **PRIMARY KEY**, **AUTO INCREMENT** und **NOT NULL**. Diese Elemente sind essenziell, um Daten konsistent und relational zu speichern.
 

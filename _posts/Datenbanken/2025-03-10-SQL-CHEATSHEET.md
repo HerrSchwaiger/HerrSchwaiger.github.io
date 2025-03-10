@@ -1,7 +1,7 @@
 ---
 layout: single
 title: SQL-Cheatsheet
-date: 2025-02-25
+date: 2025-03-10
 permalink: /Datenbanken/sql-cheatsheet
 categories:
   - Datenbanken
@@ -10,10 +10,10 @@ tags:
 words_per_minute: 170
 difficulty: "easy"
 header:
-  teaser: assets/images/cheatsheet.png
+  teaser: assets/images/cheatsheet.jpg
   overlay_color: "#000"
   overlay_filter: "0.7"
-  overlay_image: /assets/images/cheatsheet.png
+  overlay_image: /assets/images/cheatsheet.jpg
 toc: "true"
 toc_label: Inhalt
 ---

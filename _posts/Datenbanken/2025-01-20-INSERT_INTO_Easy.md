@@ -10,10 +10,10 @@ tags:
 difficulty: easy
 published: true
 header:
-    teaser: "assets/images/insertIntoEasy.png"
+    teaser: "assets/images/insert_into_easy.jpg"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
     overlay_filter: "0.7" # Transparenz des Overlays
-    overlay_image: /assets/images/insertIntoEasy.png # Hintergrundbild
+    overlay_image: /assets/images/insert_into_easy.jpg # Hintergrundbild
 ---
 
 Der SQL-Befehl `INSERT INTO` fügt neue Daten in eine Tabelle ein. 

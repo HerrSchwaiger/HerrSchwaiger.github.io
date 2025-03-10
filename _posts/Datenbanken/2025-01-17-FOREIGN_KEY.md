@@ -10,10 +10,10 @@ tags:
   - SQL
 difficulty: "medium"
 header:
-    teaser:  "assets/images/ForeignKey.png"
+    teaser:  "assets/images/foreign_key.jpg"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
     overlay_filter: "0.7" # Transparenz des Overlays
-    overlay_image: /assets/images/ForeignKey.png # Hintergrundbild
+    overlay_image: /assets/images/foreign_key.jpg # Hintergrundbild
 ---
 
 Ein `FOREIGN KEY` (Fremdschlüssel) stellt sicher, dass Werte in einer Tabelle nur dann eingefügt werden können, wenn sie in einer anderen Tabelle existieren. Dies ist ein zentraler Bestandteil der **referenziellen Integrität** in relationalen Datenbanken.

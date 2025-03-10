@@ -10,10 +10,10 @@ tags:
   - SQL
 difficulty: "hard"
 header:
-    teaser:  "assets/images/createTableHard.png"
+    teaser:  "assets/images/create_table_hard.jpg"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
     overlay_filter: "0.7" # Transparenz des Overlays
-    overlay_image: /assets/images/createTableHard.png # Hintergrundbild
+    overlay_image: /assets/images/create_table_hard.jpg # Hintergrundbild
 ---
 
 The `CREATE TABLE` statement in SQL is fundamental for defining the structure of a database. Beyond basic table creation, advanced features like `PRIMARY KEY`, `UNIQUE KEY`, `NOT NULL`, `AUTO INCREMENT`,  `CREATE TABLE LIKE`, and `CREATE TABLE SELECT` enable developers to efficiently design complex database schemas and manage data with greater flexibility.

@@ -10,10 +10,10 @@ tags:
   - SQL
 difficulty: "easy"
 header:
-    teaser:  "assets/images/ForeignKeyEasy.png"
+    teaser:  "assets/images/foreign_key_easy.jpg"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
     overlay_filter: "0.7" # Transparenz des Overlays
-    overlay_image: /assets/images/ForeignKeyEasy.png # Hintergrundbild
+    overlay_image: /assets/images/foreign_key_easy.jpg # Hintergrundbild
 ---
 
 Ein `FOREIGN KEY` (Fremdschlüssel) stellt eine Beziehung zwischen zwei Tabellen her und gewährleistet, dass Werte in einer Spalte nur existierende Werte aus einer anderen Tabelle enthalten. Dies verbessert die Datenintegrität und vermeidet inkonsistente oder ungültige Daten.
