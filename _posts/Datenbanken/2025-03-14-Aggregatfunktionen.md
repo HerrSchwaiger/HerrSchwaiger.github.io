@@ -54,10 +54,10 @@ SELECT aggregatfunktion(DISTINCT spaltenname)
 FROM tabellenname;
 ```
 
-**Beispiel Tabelle**
+**Beispiel Tabelle:**  
 Ab jetzt nutzen wir eine Tabelle `bestellung` mit den Spalten `id`, `produkt`, `menge` und `preis`.
 
-## 1. COUNT: Anzahl der Zeilen zählen
+## 1. COUNT
 Die `COUNT`-Funktion zählt die Anzahl der Zeilen. 
 
 **Beispiel Tabelle:**
@@ -71,7 +71,7 @@ WHERE Menge > 2;
 {: .notice--info}
 Mit `COUNT(spaltenname)` lässt sich die Anzahl der Zeilen zählen die nicht `NULL` in der Spalte `spaltenname` ist.
 
-## 2. AVG: Durchschnittswert berechnen
+## 2. AVG
 Die `AVG`-Funktion berechnet den Durchschnittswert einer Spalte. Sie kann nur auf **numerische Werte** angewendet werden.
 
 **Beispiel:**
@@ -84,7 +84,7 @@ FROM bestellung;
 {: .notice--info}
 Die `AVG`-Funktion ignoriert alle `NULL` Werte.
 
-## 3. SUM: Summe berechnen
+## 3. SUM
 Die `SUM`-Funktion berechnet die Summe einer Spalte. Sie kann nur auf numerische Werte angewendet werden.
 
 **Beispiel:**
@@ -97,7 +97,7 @@ FROM bestellung;
 {: .notice--info}
 Die `SUM`-Funktion ignoriert alle `NULL` Werte.
 
-## 4. MIN und MAX: Minimal- und Maximalwerte ermitteln
+## 4. MIN und MAX
 Die `MIN`- und `MAX`-Funktionen ermitteln den kleinsten bzw. größten Wert in einer Spalte.
 
 **Beispiel:**

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Aggregatfunktionen in SQL"
-date: 2025-03-14 00:00:01
+date: 2025-03-11 00:00:01
 permalink: /Datenbanken/Aggregatfunktionen-Easy/
 categories:
   - Datenbanken
@@ -15,73 +15,57 @@ header:
     overlay_color: "#000"
     overlay_filter: "0.7"
     overlay_image: /assets/images/aggregate_functions_easy.jpg
+
+toc: true
+toc_label: "Inhalt"
 ---
 
-Aggregatfunktionen in SQL helfen uns, Daten aus einer Tabelle zusammenzufassen. Diese Funktionen sind besonders nützlich, um große Datenmengen zu analysieren und wichtige Kennzahlen herauszufinden. In diesem Post lernen wir die grundlegenden Aggregatfunktionen in MariaDB kennen und sehen uns einige Beispiele an.
 
-## Grundsätzliche Syntax von Aggregatfunktionen
-Aggregatfunktionen werden in der `SELECT`-Anweisung verwendet, um die Werte einer Spalte zusammenzufassen. Die grundlegende Syntax sieht so aus:
+Aggregatfunktionen in SQL sind leistungsstarke Werkzeuge, die es ermöglichen, Daten aus einer Tabelle zu aggregieren bzw. zusammenzufassen. Diese Funktionen sind besonders nützlich für die Analyse großer Datensätze und die Extraktion wichtiger Kennzahlen. In diesem Post werden wir die grundlegenden Aggregatfunktionen in MariaDB erkunden und deren Anwendung anhand von Beispielen veranschaulichen.
 
-```sql
-SELECT aggregatfunktion(spaltenname)
-FROM tabellenname;
-```
+**Beispiel Tabelle:**  
+Ab jetzt nutzen wir eine Tabelle `bestellung` mit den Spalten `id`, `produkt`, `menge` und `preis`.
 
-- `aggregatfunktion` gibt an, wie die Daten zusammengefasst werden sollen (z.B. `SUM`, `AVG`, `COUNT`, `MIN`, `MAX`).
-- `spaltenname` ist die Spalte, auf die die Aggregatfunktion angewendet wird.
-- `tabellenname` ist die Tabelle, aus der die Daten kommen.
+## 1. COUNT
+Die `COUNT`-Funktion zählt die Anzahl der Zeilen. 
 
-### Beispiel Tabelle
-Ab jetzt nutzen wir eine Tabelle `bestellung` mit den Spalten `id`, `produkt`, `menge` und `preis`. 
-
-## Erweiterte Funktionen von Aggregatfunktionen
-Neben den grundlegenden Aggregatfunktionen gibt es auch einige erweiterte Funktionen, die uns helfen, Daten gezielt zu filtern und zusammenzufassen.
-
-### 1. COUNT: Anzahl der Zeilen zählen
-Die `COUNT`-Funktion zählt die Anzahl der Zeilen in einer Spalte. 
-#### Beispiel:
+**Beispiel Tabelle:**
 ```sql
 SELECT COUNT(*) AS anzahlBestellung
 FROM bestellung;
 ```
-**Erklärung:** Diese Abfrage zählt die Gesamtanzahl der Zeilen in der Tabelle `bestellung`.
+**Erklärung:** Diese Abfrage zählt die Anzahl der Bestellungen.
 
-Um alle unterschiedlichen Werte einer Spalte zu zählen, muss das Keyword `DISTINCT` hinzugefügt werden:
-```sql
-SELECT COUNT(DISTINCT produkt)
-FROM bestellung
-```
-**Erklärung:** Diese Abfrage zählt die Gesamtzahl aller unterschiedlichen Produkte in der Tabelle `bestellung`.
 
-### 2. AVG: Durchschnittswert berechnen
-Die `AVG`-Funktion berechnet den Durchschnittswert einer Spalte. Sie kann nur auf Zahlen angewendet werden.
+## 2. AVG
+Die `AVG`-Funktion berechnet den Durchschnittswert einer Spalte. Sie kann nur auf **numerische Werte** angewendet werden.
 
-#### Beispiel:
+**Beispiel:**
 ```sql
 SELECT AVG(preis) AS durchschnittspreis
 FROM bestellung;
 ```
-**Erklärung:** Diese Abfrage berechnet den durchschnittlichen Preis aller bestellten Produkte.
+**Erklärung:** Diese Abfrage berechnet den durchschnittlichen Preis aller verkauften Produkte.
 
-### 3. SUM: Summe berechnen
-Die `SUM`-Funktion berechnet die Summe einer Spalte. Sie kann nur auf Zahlen angewendet werden.
+## 3. SUM
+Die `SUM`-Funktion berechnet die Summe einer Spalte. Sie kann nur auf numerische Werte angewendet werden.
 
-#### Beispiel:
+**Beispiel:**
 ```sql
 SELECT SUM(menge) AS gesamtmenge
 FROM bestellung;
 ```
 **Erklärung:** Diese Abfrage berechnet die gesamte Anzahl an bestellten Produkten.
 
-### 4. MIN und MAX: Minimal- und Maximalwerte ermitteln
+## 4. MIN und MAX
 Die `MIN`- und `MAX`-Funktionen ermitteln den kleinsten bzw. größten Wert in einer Spalte.
 
-#### Beispiel:
+**Beispiel:**
 ```sql
 SELECT MIN(preis) AS minPreis, MAX(preis) AS maxPreis
 FROM bestellung;
 ```
-**Erklärung:** Diese Abfrage ermittelt den niedrigsten und höchsten Preis aller Bestellungen.
+**Erklärung:** Diese Abfrage ermittelt den niedrigsten und höchsten Preis aller verkauften Produkte.
 
 ## Zusammenfassung
-Aggregatfunktionen in SQL sind nützliche Werkzeuge, um Daten aus einer Tabelle zusammenzufassen. Mit den grundlegenden Aggregatfunktionen wie `SUM`, `AVG`, `COUNT`, `MIN` und `MAX` können wir komplexe Datenanalysen durchführen und wichtige Kennzahlen herausfinden.
+Aggregatfunktionen in SQL sind leistungsstarke Werkzeuge, die es ermöglichen, Daten aus einer Tabelle zu aggregieren und zusammenzufassen. Mit den grundlegenden Aggregatfunktionen wie `SUM`, `AVG`, `COUNT`, `MIN` und `MAX` können Sie komplexe Datenanalysen durchführen und wichtige Kennzahlen extrahieren.

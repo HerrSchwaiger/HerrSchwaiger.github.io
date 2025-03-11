@@ -15,6 +15,8 @@ header:
     overlay_color: "#000"
     overlay_filter: "0.7"
     overlay_image: /assets/images/aggregate_functions_hard.jpg
+
+toc: true
 ---
 
 Aggregate functions in SQL are powerful tools that allow you to aggregate or summarize data from a table. These functions are particularly useful for analyzing large datasets and extracting key metrics. In this post, we will explore the basic aggregate functions in MariaDB and illustrate their application with examples.
@@ -51,10 +53,10 @@ SELECT aggregate_function(DISTINCT column_name)
 FROM table_name;
 ```
 
-**Example Table**
+**Example Table:**  
 From now on, we will use a table `order` with the columns `id`, `product`, `quantity`, and `price`.
 
-## 1. COUNT: Count the Number of Rows
+## 1. COUNT
 The `COUNT` function counts the number of rows in the table or a column.
 
 **Example Table:**
@@ -68,7 +70,7 @@ WHERE quantity > 2;
 {: .notice--info}
 `COUNT(column_name)` counts the number of rows that are not `NULL` in the specified column.
 
-## 2. AVG: Calculate the Average Value
+## 2. AVG
 The `AVG` function calculates the average value of a column. It can only be applied to **numeric values**.
 
 **Example:**
@@ -81,7 +83,7 @@ FROM order;
 {: .notice--info}
 The `AVG` function ignores all `NULL` values.
 
-## 3. SUM: Calculate the Sum
+## 3. SUM
 The `SUM` function calculates the sum of a column. It can only be applied to numeric values.
 
 **Example:**
@@ -94,7 +96,7 @@ FROM order;
 {: .notice--info}
 The `SUM` function ignores all `NULL` values.
 
-## 4. MIN and MAX: Determine Minimum and Maximum Values
+## 4. MIN and MAX
 The `MIN` and `MAX` functions determine the smallest and largest values in a column, respectively.
 
 **Example:**
