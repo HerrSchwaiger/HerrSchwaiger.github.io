@@ -4,7 +4,7 @@ title: "Use Case Diagramm"
 date: 2025-01-14 00:00:01
 permalink: /Anwendungsentwicklung/Use-Case-Easy/
 categories: Anwendungsentwicklung
-tags: [Use-Case-Diagramm, UML]
+tags: [Use Case Diagramm, UML]
 difficulty: easy
 header:
     teaser: "/assets/images/useCaseEasy.png"

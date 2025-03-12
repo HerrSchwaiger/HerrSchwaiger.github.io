@@ -8,7 +8,7 @@ categories:
     - Anwendungsentwicklung
 tags:
     - UML
-    - Use-Case-Diagramm
+    - Use Case Diagramm
 header:
     teaser:  "assets/images/use-case.png"
     overlay_color: "#000" # Hintergrund-Overlay-Farbe
