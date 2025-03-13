@@ -21,6 +21,19 @@ toc: true
 
 Aggregate functions in SQL are powerful tools that allow you to aggregate or summarize data from a table. These functions are particularly useful for analyzing large datasets and extracting key metrics. In this post, we will explore the basic aggregate functions in MariaDB and illustrate their application with examples.
 
+<style>
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+<figure>
+  <img src="/assets/images/Aggregierung.png" width="300" class="center"/>
+  <figcaption>Fig1: Aggregate functions summarize multiple values to just a single one.</figcaption>
+</figure>
+
 ## Basic Syntax of Aggregate Functions
 Aggregate functions are used in the `SELECT` statement and summarize the values of a column into a single value. The basic syntax is:
 
@@ -75,7 +88,7 @@ The `AVG` function calculates the average value of a column. It can only be appl
 
 **Example:**
 ```sql
-SELECT AVG(price) AS durchschnittsprice
+SELECT AVG(price) AS averagePrice
 FROM order;
 ```
 **Explanation:** This query calculates the average price of all sold products.
@@ -88,7 +101,7 @@ The `SUM` function calculates the sum of a column. It can only be applied to num
 
 **Example:**
 ```sql
-SELECT SUM(quantity) AS gesamtquantity
+SELECT SUM(quantity) AS totalQuantity
 FROM order;
 ```
 **Explanation:** This query calculates the total quantity of ordered products.
@@ -101,7 +114,7 @@ The `MIN` and `MAX` functions determine the smallest and largest values in a col
 
 **Example:**
 ```sql
-SELECT MIN(price) AS minprice, MAX(price) AS maxprice
+SELECT MIN(price) AS minPrice, MAX(price) AS maxPrice
 FROM order;
 ```
 **Explanation:** This query determines the lowest and highest prices of all sold products.

@@ -23,6 +23,19 @@ toc_label: "Inhalt"
 
 Aggregatfunktionen in SQL sind leistungsstarke Werkzeuge, die es ermöglichen, Daten aus einer Tabelle zu aggregieren bzw. zusammenzufassen. Diese Funktionen sind besonders nützlich für die Analyse großer Datensätze und die Extraktion wichtiger Kennzahlen. In diesem Post werden wir die grundlegenden Aggregatfunktionen in MariaDB erkunden und deren Anwendung anhand von Beispielen veranschaulichen.
 
+<style>
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+<figure>
+  <img src="/assets/images/Aggregierung.png" width="300" class="center"/>
+  <figcaption>Fig1: Aggregatfunktionen fassen mehrere Werte zu einem einzigen Wert zusammen.</figcaption>
+</figure>
+
 **Beispiel Tabelle:**  
 Ab jetzt nutzen wir eine Tabelle `bestellung` mit den Spalten `id`, `produkt`, `menge` und `preis`.
 
