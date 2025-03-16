@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Aggregate Functions in SQL"
-date: 2025-03-11 00:00:03
+date: 2025-03-16 00:00:03
 permalink: /Datenbanken/Aggregatfunktionen-Hard/
 categories:
   - Datenbanken
@@ -67,7 +67,7 @@ FROM table_name;
 ```
 
 **Example Table:**  
-From now on, we will use a table `order` with the columns `id`, `product`, `quantity`, and `price`.
+From now on, we will use a table `order` with the columns `id`, `product`, `quantity` and `price`.
 
 ## 1. COUNT
 The `COUNT` function counts the number of rows in the table or a column.
