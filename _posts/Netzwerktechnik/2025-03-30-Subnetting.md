@@ -44,7 +44,7 @@ Subnetting ist der Prozess der Aufteilung eines IP-Netzwerks in kleinere, logisc
 
 <figure>
     <img src="/assets/images/IP_address_2.png" width="400"/>
-    <figcaption>Fig1: Erhöhen des Netzanteil um 2 Bit</figcaption>
+    <figcaption>Fig1: Erhöhen des Netzanteils um 2 Bit</figcaption>
 </figure>
 
 Da der Netzanteil nun um zwei Bits länger ist lassen sich damit $$ 2^2 = 4 $$ neue Netze bilden:
@@ -66,22 +66,23 @@ Der Adressbereich **172.16.0.0/16** soll in **15** Subnetze aufgeteilt werden.
 
     | Subnetz Nr. | Netzwerk-Adresse | Broadcast-Adresse |
     | ----------- | ---------------- | ----------------- |
-    | 1           | 172.16.16.0      | 172.16.31.255     |
-    | 2           | 172.16.32.0      | 172.16.47.255     |
-    | 3           | 172.16.48.0      | 172.16.63.255     |
+    | 1           | 172.16.0.0       | 172.16.15.255     |
+    | 2           | 172.16.16.0      | 172.16.31.255     |
+    | 3           | 172.16.32.0      | 172.16.47.255     |
     | ...         | ...              | ...               |
     | 14          | 172.16.208.0     | 172.16.223.255    |
     | 15          | 172.16.224.0     | 172.16.239.255    |
     | 16          | 172.16.240.0     | 172.16.255.255    |
+
 
 Der Unterschied zwischen zwei Netzwerkadressen beträgt hier genau **16**. Das ist kein Zufall sondern lässt sich in der **binären** Darstellung einfach erklären:
 
 
 | Subnetz Nr. | Netzwerk-Adresse Dezimal | Netzwerk-Adresse Binär                  |
 | ----------- | ------------------------ | --------------------------------------- |
-| 1           | 172.16.16.0              | 10101100.00010000.<span style="color:limegreen">**0001**</span>0000.00000000 |
-| 2           | 172.16.32.0              | 10101100.00010000.<span style="color:limegreen">**0010**</span>0000.00000000 |
-| 3           | 172.16.48.0              | 10101100.00010000.<span style="color:limegreen">**0011**</span>0000.00000000 |
+| 1           | 172.16.0.0              | 10101100.00010000.<span style="color:limegreen">**0000**</span>0000.00000000 |
+| 2           | 172.16.16.0              | 10101100.00010000.<span style="color:limegreen">**0001**</span>0000.00000000 |
+| 3           | 172.16.32.0              | 10101100.00010000.<span style="color:limegreen">**0010**</span>0000.00000000 |
 | ...         | ...                      | ...                                     |
 | 14          | 172.16.208.0             | 10101100.00010000.<span style="color:limegreen">**1101**</span>0000.00000000 |
 | 15          | 172.16.224.0             | 10101100.00010000.<span style="color:limegreen">**1110**</span>0000.00000000 |
