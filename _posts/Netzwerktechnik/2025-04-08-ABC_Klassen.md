@@ -1,0 +1,276 @@
+---
+layout: single
+title: "IPv4-Netzklassen (TODO)"
+date: 2025-04-08 00:00:02
+permalink: /Netzwerktechnik/ABC/
+categories:
+  - Netzwerktechnik
+tags:
+  - IP
+  - ABC
+difficulty: medium
+published: true
+header:
+    teaser: "assets/images/abc.jpg"
+    overlay_color: "#000"
+    overlay_filter: "0.7"
+    overlay_image: /assets/images/abc.jpg
+
+toc: true
+toc_label: "Inhalt"
+---
+
+In der Welt der Netzwerke und IP-Adressierung spielen die ABC-IPv4-Klassen eine wichtige Rolle. Diese Klassen wurden ursprünglich entwickelt, um die Verwaltung von IP-Adressen zu vereinfachen und die Effizienz bei der Zuweisung von Adressen zu verbessern. In diesem Blog-Post werden wir die Klassen A, B und C genauer betrachten und ihre Eigenschaften erläutern.
+
+## Klasse A
+
+<!-- <table border="1">
+  <tr>
+  <td style="background-color: lightcoral;"> Präfix </td>
+    <td colspan="7" style="background-color: lightblue;">Netzwerkbits</td>
+    <td colspan="24" style="background-color: lightgreen;">Hostbits</td>
+  </tr>
+  <tr>
+    <td style="background-color: lightcoral;">0</td>
+    <td style="background-color: lightblue;">1</td>
+    <td style="background-color: lightblue;">2</td>
+    <td style="background-color: lightblue;">3</td>
+    <td style="background-color: lightblue;">4</td>
+    <td style="background-color: lightblue;">5</td>
+    <td style="background-color: lightblue;">6</td>
+    <td style="background-color: lightblue;">7</td>
+    <td style="background-color: lightgreen;">8</td>
+    <td style="background-color: lightgreen;">9</td>
+    <td style="background-color: lightgreen;">10</td>
+    <td style="background-color: lightgreen;">11</td>
+    <td style="background-color: lightgreen;">12</td>
+    <td style="background-color: lightgreen;">13</td>
+    <td style="background-color: lightgreen;">14</td>
+    <td style="background-color: lightgreen;">15</td>
+    <td style="background-color: lightgreen;">16</td>
+    <td style="background-color: lightgreen;">17</td>
+    <td style="background-color: lightgreen;">18</td>
+    <td style="background-color: lightgreen;">19</td>
+    <td style="background-color: lightgreen;">20</td>
+    <td style="background-color: lightgreen;">21</td>
+    <td style="background-color: lightgreen;">22</td>
+    <td style="background-color: lightgreen;">23</td>
+    <td style="background-color: lightgreen;">24</td>
+    <td style="background-color: lightgreen;">25</td>
+    <td style="background-color: lightgreen;">26</td>
+    <td style="background-color: lightgreen;">27</td>
+    <td style="background-color: lightgreen;">28</td>
+    <td style="background-color: lightgreen;">29</td>
+    <td style="background-color: lightgreen;">30</td>
+    <td style="background-color: lightgreen;">31</td>
+  </tr>
+</table> -->
+
+<table style="border-collapse: collapse; border: 1px solid black;">
+  <tr>
+    <td colspan="8" style="background-color: lightgray;">Präfix ?</td>
+    <td colspan="12" style="background-color: lightgray;">Netzwerkbits ?</td>
+    <td colspan="12" style="background-color: lightgray;">Hostbits ?</td>
+  </tr>
+  <tr>
+    <td style="background-color: lightgray;">0</td>
+    <td style="background-color: lightgray;">1</td>
+    <td style="background-color: lightgray;">2</td>
+    <td style="background-color: lightgray;">3</td>
+    <td style="background-color: lightgray;">4</td>
+    <td style="background-color: lightgray;">5</td>
+    <td style="background-color: lightgray;">6</td>
+    <td style="background-color: lightgray;">7</td>
+    <td style="background-color: lightgray;">8</td>
+    <td style="background-color: lightgray;">9</td>
+    <td style="background-color: lightgray;">10</td>
+    <td style="background-color: lightgray;">11</td>
+    <td style="background-color: lightgray;">12</td>
+    <td style="background-color: lightgray;">13</td>
+    <td style="background-color: lightgray;">14</td>
+    <td style="background-color: lightgray;">15</td>
+    <td style="background-color: lightgray;">16</td>
+    <td style="background-color: lightgray;">17</td>
+    <td style="background-color: lightgray;">18</td>
+    <td style="background-color: lightgray;">19</td>
+    <td style="background-color: lightgray;">20</td>
+    <td style="background-color: lightgray;">21</td>
+    <td style="background-color: lightgray;">22</td>
+    <td style="background-color: lightgray;">23</td>
+    <td style="background-color: lightgray;">24</td>
+    <td style="background-color: lightgray;">25</td>
+    <td style="background-color: lightgray;">26</td>
+    <td style="background-color: lightgray;">27</td>
+    <td style="background-color: lightgray;">28</td>
+    <td style="background-color: lightgray;">29</td>
+    <td style="background-color: lightgray;">30</td>
+    <td style="background-color: lightgray;">31</td>
+  </tr>
+</table>
+
+Klasse-A-Netze sind für große Organisationen mit einer hohen Anzahl an Geräten konzipiert. Hier sind einige wichtige Merkmale:
+
+|Eigenschaft | Wert |
+|------------|------|
+| Präfix | 0 |
+| Adressbereich | ? bis ? |
+| Netzmaske | 255.0.0.0 |
+| Anzahl mögliche Netze | ? |
+| Hosts pro Netz | 16.777.214 |
+| Entsprechender CIDR-Suffix  |/? |
+
+## Klasse B
+
+<table border="1" style="border-collapse: collapse; border: 1px solid black;">
+  <tr>
+    <td colspan="2" style="background-color: lightcoral; border-right: 1px solid black;">Präfix</td>
+    <td colspan="14" style="background-color: lightblue; border-right: 1px solid black;">Netzwerkbits</td>
+    <td colspan="16" style="background-color: lightgreen;">Hostbits</td>
+  </tr>
+  <tr>
+    <td style="background-color: lightcoral;">0</td>
+    <td style="background-color: lightcoral; border-right: 1px solid black;">1</td>
+    <td style="background-color: lightblue;">2</td>
+    <td style="background-color: lightblue;">3</td>
+    <td style="background-color: lightblue;">4</td>
+    <td style="background-color: lightblue;">5</td>
+    <td style="background-color: lightblue;">6</td>
+    <td style="background-color: lightblue;">7</td>
+    <td style="background-color: lightblue;">8</td>
+    <td style="background-color: lightblue;">9</td>
+    <td style="background-color: lightblue;">10</td>
+    <td style="background-color: lightblue;">11</td>
+    <td style="background-color: lightblue;">12</td>
+    <td style="background-color: lightblue;">13</td>
+    <td style="background-color: lightblue;">14</td>
+    <td style="background-color: lightblue; border-right: 1px solid black;">15</td>
+    <td style="background-color: lightgreen;">16</td>
+    <td style="background-color: lightgreen;">17</td>
+    <td style="background-color: lightgreen;">18</td>
+    <td style="background-color: lightgreen;">19</td>
+    <td style="background-color: lightgreen;">20</td>
+    <td style="background-color: lightgreen;">21</td>
+    <td style="background-color: lightgreen;">22</td>
+    <td style="background-color: lightgreen;">23</td>
+    <td style="background-color: lightgreen;">24</td>
+    <td style="background-color: lightgreen;">25</td>
+    <td style="background-color: lightgreen;">26</td>
+    <td style="background-color: lightgreen;">27</td>
+    <td style="background-color: lightgreen;">28</td>
+    <td style="background-color: lightgreen;">29</td>
+    <td style="background-color: lightgreen;">30</td>
+    <td style="background-color: lightgreen;">31</td>
+  </tr>
+</table>
+
+Klasse-B-Netze sind für mittelgroße Organisationen gedacht, die eine moderate Anzahl an Geräten benötigen. Hier sind die Details:
+
+|Eigenschaft | Wert |
+|------------|------|
+| Präfix | ? |
+| Adressbereich | 192.0.0.0 bis ? |
+| Netzmaske | ? |
+| Anzahl mögliche Netze | ? |
+| Hosts pro Netz | ? |
+| Entsprechender CIDR-Suffix  |/? |
+
+## Klasse C
+
+<!-- <table border="1" style="border-collapse: collapse; border: 1px solid black;">
+  <tr>
+    <td colspan="3" style="background-color: lightcoral; border-right: 1px solid black;">Präfix</td>
+    <td colspan="21" style="background-color: lightblue; border-right: 1px solid black;">Netzwerkbits</td>
+    <td colspan="8" style="background-color: lightgreen;">Hostbits</td>
+  </tr>
+  <tr>
+    <td style="background-color: lightcoral;">0</td>
+    <td style="background-color: lightcoral;">1</td>
+    <td style="background-color: lightcoral; border-right: 1px solid black;">2</td>
+    <td style="background-color: lightblue;">3</td>
+    <td style="background-color: lightblue;">4</td>
+    <td style="background-color: lightblue;">5</td>
+    <td style="background-color: lightblue;">6</td>
+    <td style="background-color: lightblue;">7</td>
+    <td style="background-color: lightblue;">8</td>
+    <td style="background-color: lightblue;">9</td>
+    <td style="background-color: lightblue;">10</td>
+    <td style="background-color: lightblue;">11</td>
+    <td style="background-color: lightblue;">12</td>
+    <td style="background-color: lightblue;">13</td>
+    <td style="background-color: lightblue;">14</td>
+    <td style="background-color: lightblue;">15</td>
+    <td style="background-color: lightblue;">16</td>
+    <td style="background-color: lightblue;">17</td>
+    <td style="background-color: lightblue;">18</td>
+    <td style="background-color: lightblue;">19</td>
+    <td style="background-color: lightblue;">20</td>
+    <td style="background-color: lightblue;">21</td>
+    <td style="background-color: lightblue;">22</td>
+    <td style="background-color: lightblue; border-right: 1px solid black;">23</td>
+    <td style="background-color: lightgreen;">24</td>
+    <td style="background-color: lightgreen;">25</td>
+    <td style="background-color: lightgreen;">26</td>
+    <td style="background-color: lightgreen;">27</td>
+    <td style="background-color: lightgreen;">28</td>
+    <td style="background-color: lightgreen;">29</td>
+    <td style="background-color: lightgreen;">30</td>
+    <td style="background-color: lightgreen;">31</td>
+  </tr>
+</table> -->
+
+<table style="border-collapse: collapse; border: 1px solid black;">
+  <tr>
+    <td colspan="8" style="background-color: lightgray;">Präfix ?</td>
+    <td colspan="12" style="background-color: lightgray;">Netzwerkbits ?</td>
+    <td colspan="12" style="background-color: lightgray;">Hostbits ?</td>
+  </tr>
+  <tr>
+    <td style="background-color: lightgray;">0</td>
+    <td style="background-color: lightgray;">1</td>
+    <td style="background-color: lightgray;">2</td>
+    <td style="background-color: lightgray;">3</td>
+    <td style="background-color: lightgray;">4</td>
+    <td style="background-color: lightgray;">5</td>
+    <td style="background-color: lightgray;">6</td>
+    <td style="background-color: lightgray;">7</td>
+    <td style="background-color: lightgray;">8</td>
+    <td style="background-color: lightgray;">9</td>
+    <td style="background-color: lightgray;">10</td>
+    <td style="background-color: lightgray;">11</td>
+    <td style="background-color: lightgray;">12</td>
+    <td style="background-color: lightgray;">13</td>
+    <td style="background-color: lightgray;">14</td>
+    <td style="background-color: lightgray;">15</td>
+    <td style="background-color: lightgray;">16</td>
+    <td style="background-color: lightgray;">17</td>
+    <td style="background-color: lightgray;">18</td>
+    <td style="background-color: lightgray;">19</td>
+    <td style="background-color: lightgray;">20</td>
+    <td style="background-color: lightgray;">21</td>
+    <td style="background-color: lightgray;">22</td>
+    <td style="background-color: lightgray;">23</td>
+    <td style="background-color: lightgray;">24</td>
+    <td style="background-color: lightgray;">25</td>
+    <td style="background-color: lightgray;">26</td>
+    <td style="background-color: lightgray;">27</td>
+    <td style="background-color: lightgray;">28</td>
+    <td style="background-color: lightgray;">29</td>
+    <td style="background-color: lightgray;">30</td>
+    <td style="background-color: lightgray;">31</td>
+  </tr>
+</table>
+
+Klasse-C-Netze sind ideal für kleine Unternehmen oder Abteilungen, die nur wenige Geräte benötigen. Hier sind die Eigenschaften:
+
+|Eigenschaft | Wert |
+|------------|------|
+| Präfix | ? |
+| Adressbereich | ? bis 223.255.255.255 |
+| Netzmaske | ? |
+| Anzahl mögliche Netze | 2.097.152 |
+| Hosts pro Netz | ? |
+| Entsprechender CIDR-Suffix  |/24 |
+
+## Fazit
+
+Die ABC-IPv4-Klassen bieten eine strukturierte Möglichkeit, IP-Adressen basierend auf der Größe und den Anforderungen eines Netzwerks zuzuweisen. Obwohl diese Klassen heute weniger relevant sind, da moderne Netzwerke CIDR (Classless Inter-Domain Routing) verwenden, bieten sie immer noch wertvolle Einblicke in die Grundlagen der IP-Adressierung.

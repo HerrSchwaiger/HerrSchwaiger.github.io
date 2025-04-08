@@ -8,7 +8,7 @@ categories:
 tags:
   - Subnetting
 difficulty: medium
-published: true
+published: false
 header:
     teaser: "assets/images/subnetting.jpg"
     overlay_color: "#000"
