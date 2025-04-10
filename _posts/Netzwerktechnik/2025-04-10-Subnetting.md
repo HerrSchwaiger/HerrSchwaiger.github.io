@@ -1,14 +1,14 @@
 ---
 layout: single
 title: "Subnetting"
-date: 2025-03-30 00:00:02
+date: 2025-04-10 00:00:02
 permalink: /Netzwerktechnik/Subnetting/
 categories:
   - Netzwerktechnik
 tags:
   - Subnetting
 difficulty: medium
-published: false
+published: true
 header:
     teaser: "assets/images/subnetting.jpg"
     overlay_color: "#000"
@@ -18,12 +18,11 @@ header:
 toc: true
 toc_label: "Inhalt"
 ---
+Subnetting ist ein grundlegendes Konzept in der Netzwerktechnik, das es Netzwerkadministratoren ermöglicht, ein einzelnes Netzwerk in mehrere kleinere Netzwerke, sogenannte Subnetze, zu unterteilen. Dieser Prozess hilft dabei, die Effizienz und Sicherheit von Netzwerken zu verbessern. In diesem Blogpost werden wir die Grundlagen von Subnetting erklären und praktische Beispiele durchgehen, um das Verständnis zu vertiefen.
 
 <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-  
-Subnetting ist ein grundlegendes Konzept in der Netzwerktechnik, das es Netzwerkadministratoren ermöglicht, ein einzelnes Netzwerk in mehrere kleinere Netzwerke, sogenannte Subnetze, zu unterteilen. Dieser Prozess hilft dabei, die Effizienz und Sicherheit von Netzwerken zu verbessern. In diesem Blogpost werden wir die Grundlagen von Subnetting erklären und praktische Beispiele durchgehen, um das Verständnis zu vertiefen.
 
 ## Was ist Subnetting?
 
@@ -54,7 +53,7 @@ Da der Netzanteil nun um zwei Bits länger ist lassen sich damit $$ 2^2 = 4 $$ n
     <figcaption>Fig2: Subnetting mit zwei zusätzlichen Netzbits</figcaption>
 </figure>
 
-Dabei entspricht ein Hostanteil aus **nur Nullen**immer der Netzadresse eines Subnetzes, während ein Hostanteil aus **auschließlich Einsen** dem Broadcast entspricht. Damit bleiben innerhalb eines Subnetzes $$ 2^{32-L'}-2 $$ **nutzbare IP-Adressen**, wobei $$L'$$ die neue Präfixlänge ist.
+Dabei entspricht ein Hostanteil aus **nur Nullen** immer der Netzadresse eines Subnetzes, während ein Hostanteil aus **auschließlich Einsen** dem Broadcast entspricht. Damit bleiben innerhalb eines Subnetzes $$ 2^{32-L'}-2 $$ **nutzbare IP-Adressen**, wobei $$L'$$ die neue Präfixlänge ist.
 
 ## Beispiel
 
