@@ -10,10 +10,10 @@ tags:
 difficulty: easy
 published: true
 header:
-    teaser: "assets/images/Routing_easy.jpg"
+    teaser: "assets/images/routing_easy.jpg"
     overlay_color: "#000"
     overlay_filter: "0.7"
-    overlay_image: /assets/images/Routing_easy.jpg
+    overlay_image: /assets/images/routing_easy.jpg
 
 toc: true
 toc_label: "Inhalt"
