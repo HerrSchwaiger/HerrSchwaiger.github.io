@@ -8,7 +8,7 @@ categories:
 tags:
   - Subnetting
 difficulty: medium
-published: false
+published: true
 header:
     teaser: "assets/images/subnetting.jpg"
     overlay_color: "#000"
@@ -23,6 +23,12 @@ Subnetting ist ein grundlegendes Konzept in der Netzwerktechnik, das es Netzwerk
 <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+
+<label id="sliderValue" for="subnetSlider">Hostanteil Länge (Bits): </label>
+<input type="range" id="subnetSlider" min="24" max="30" value="24" class="slider">
+<div class="result" id="result"></div>
+
+<script src="/assets/js/subnetCalculator.js"></script>
 
 ## Was ist Subnetting?
 
@@ -77,12 +83,12 @@ Der Adressbereich **172.16.0.0/16** soll in **15** Subnetze aufgeteilt werden.
 Der Unterschied zwischen zwei Netzwerkadressen beträgt hier genau **16**. Das ist kein Zufall sondern lässt sich in der **binären** Darstellung einfach erklären:
 
 
-| Subnetz Nr. | Netzwerk-Adresse Dezimal | Netzwerk-Adresse Binär                  |
-| ----------- | ------------------------ | --------------------------------------- |
-| 1           | 172.16.0.0              | 10101100.00010000.<span style="color:limegreen">**0000**</span>0000.00000000 |
+| Subnetz Nr. | Netzwerk-Adresse Dezimal | Netzwerk-Adresse Binär                                                       |
+| ----------- | ------------------------ | ---------------------------------------------------------------------------- |
+| 1           | 172.16.0.0               | 10101100.00010000.<span style="color:limegreen">**0000**</span>0000.00000000 |
 | 2           | 172.16.16.0              | 10101100.00010000.<span style="color:limegreen">**0001**</span>0000.00000000 |
 | 3           | 172.16.32.0              | 10101100.00010000.<span style="color:limegreen">**0010**</span>0000.00000000 |
-| ...         | ...                      | ...                                     |
+| ...         | ...                      | ...                                                                          |
 | 14          | 172.16.208.0             | 10101100.00010000.<span style="color:limegreen">**1101**</span>0000.00000000 |
 | 15          | 172.16.224.0             | 10101100.00010000.<span style="color:limegreen">**1110**</span>0000.00000000 |
 | 16          | 172.16.240.0             | 10101100.00010000.<span style="color:limegreen">**1111**</span>0000.00000000 |
