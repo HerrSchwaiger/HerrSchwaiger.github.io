@@ -24,12 +24,6 @@ Subnetting ist ein grundlegendes Konzept in der Netzwerktechnik, das es Netzwerk
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
-<label id="sliderValue" for="subnetSlider">Hostanteil Länge (Bits): </label>
-<input type="range" id="subnetSlider" min="24" max="30" value="24" class="slider">
-<div class="result" id="result"></div>
-
-<script src="/assets/js/subnetCalculator.js"></script>
-
 ## Was ist Subnetting?
 
 <style>
@@ -60,6 +54,23 @@ Da der Netzanteil nun um zwei Bits länger ist lassen sich damit $$ 2^2 = 4 $$ n
 </figure>
 
 Dabei entspricht ein Hostanteil aus **nur Nullen** immer der Netzadresse eines Subnetzes, während ein Hostanteil aus **auschließlich Einsen** dem Broadcast entspricht. Damit bleiben innerhalb eines Subnetzes $$ 2^{32-L'}-2 $$ **nutzbare IP-Adressen**, wobei $$L'$$ die neue Präfixlänge ist.
+
+## Interaktives Tool
+
+Gewinnen Sie ein Gefühl für das Subnetting mit diesem interaktiven Tool.
+Hierbei kann die Präfixlänge beliebig zwischen 24 und 30 Bit verändert werden.
+Die farbigen Boxen darunter repräsentieren die dabei entstehenden Subnetze. Als Ausgangspunkt dient ein Netzwerk mit einer Präfixlänge von 24. Probieren Sie es einfach mal aus!
+
+<label id="sliderValue" for="subnetSlider"> Präfixlänge (Bits): </label>
+
+<input type="range" id="subnetSlider" class="slider" min="24" max="30" value="24">
+<div class="result" id="result"></div>
+
+<script src="/assets/js/subnetCalculator.js"></script>
+
+{: .notice--info}
+**Vertiefungsfrage:**
+Warum ist der maximal Wert für die Präfixlänge 30?
 
 ## Beispiel
 

@@ -13,7 +13,7 @@ function updateSubnetInfo() {
     const subNetworkBits = networkBits - 24;
     const hostBits = 32 - networkBits;
 
-    document.getElementById('sliderValue').textContent = `Hostanteil Länge (Bits): ` + networkBits;
+    document.getElementById('sliderValue').textContent = `Präfixlänge (Bits): ` + networkBits;
 
     const numberOfSubNetworks = Math.pow(2, subNetworkBits);
     const hostsPerSubNetwork = Math.pow(2, hostBits) - 2; // -2 für Netzwerk- und Broadcast-Adresse
@@ -52,6 +52,15 @@ function updateSubnetInfo() {
     //resultHtml += '</div>';
 
     document.getElementById('result').innerHTML = resultHtml;
+    
+    // Update the slider background gradient
+    const slider = document.getElementById('subnetSlider');
+    const sliderValue = slider.value;
+    const sliderMax = slider.max;
+    const sliderMin = slider.min;
+    const sliderRange = sliderMax - sliderMin;
+    const sliderPercentage = ((sliderValue - sliderMin) / sliderRange) * 100;
+    slider.style.background = `linear-gradient(to right, #0092ca ${sliderPercentage}%, #d3d3d3 ${sliderPercentage}%)`;
 }
 
 // Initialaufruf, um die Anzeige beim Laden der Seite zu aktualisieren
