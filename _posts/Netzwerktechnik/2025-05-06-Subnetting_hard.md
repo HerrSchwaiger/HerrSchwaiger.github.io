@@ -42,25 +42,24 @@ Subnetting is a fundamental concept in networking that allows network administra
 }
 </style>
 <figure>
-    <img src="/assets/images/IP_address.png" width="400"/>
+    <img src="/assets/images/IP_address_eng.png" width="400"/>
     <figcaption>Fig1: Structure of the Subnet Mask</figcaption>
 </figure>
 
 Subnetting is the process of dividing an IP network into smaller, logical subnets by modifying the subnet mask. A subnet mask determines which part of the IP address identifies the network and which part identifies the host. A larger host portion allows for more hosts within a subnet, while a smaller host portion allows for more subnets. For example, increasing the network portion by two bits and decreasing the host portion by two bits results in the following change to the subnet mask:
 
 <figure>
-    <img src="/assets/images/IP_address_2.png" width="400"/>
+    <img src="/assets/images/IP_address_2_eng.png" width="400"/>
     <figcaption>Fig2: Increasing the Network Portion by 2 Bits</figcaption>
 </figure>
 
-With the network portion now longer by two bits, it is possible to create $$ 2^2 = 4 $$ new networks:
+With the network portion now longer by two bits, it is possible to create $2^2 = 4$ new networks.
+Because of the network and broadcast address we are left with $$ 2^{32-L'}-2 $$ **usable IP addresses** within a subnet, where $L'$ is the new prefix length.
 
-<figure>
-    <img src="/assets/images/Subnetting.png" width="400"/>
-    <figcaption>Fig3: Subnetting with Two Additional Network Bits</figcaption>
-</figure>
-
-In this scenario, a host portion consisting of **all zeros** always corresponds to the network address of a subnet, while a host portion consisting of **all ones** corresponds to the broadcast address. This leaves $$ 2^{32-L'}-2 $$ **usable IP addresses** within a subnet, where $$L'$$ is the new prefix length.
+{: .notice--warning}
+**Warning!**
+If the network portion is increased beyond the borders of one octet, both affected octets are increased while counting. 
+This is a rather rare case. An example can be found [here](https://jodies.de/ipcalc?host=172.16.0.0&mask1=14&mask2=18).
 
 ## Interactive Tool
 
