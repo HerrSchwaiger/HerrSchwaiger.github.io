@@ -1,14 +1,14 @@
 ---
 layout: single
 title: "Subnetting"
-date: 2025-04-10 00:00:03
+date: 2025-05-06 00:00:03
 permalink: /Netzwerktechnik/Subnetting_hard/
 categories:
   - Netzwerktechnik
 tags:
   - Subnetting
 difficulty: hard
-published: false
+published: true
 header:
     teaser: "assets/images/subnetting_hard.jpg"
     overlay_color: "#000"
@@ -18,8 +18,14 @@ header:
 toc: true
 toc_label: "Contents"
 ---
+
 Subnetting is a fundamental concept in networking that allows network administrators to divide a single network into multiple smaller networks, known as subnets. This process enhances the efficiency and security of networks. In this blog post, we will delve into the intricacies of subnetting, providing detailed explanations and practical examples to deepen your understanding.
 
+<script>
+    window.jekyllData = {
+        difficulty: "{{ page.difficulty | escape }}",
+    };
+</script>
 
 <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -44,17 +50,32 @@ Subnetting is the process of dividing an IP network into smaller, logical subnet
 
 <figure>
     <img src="/assets/images/IP_address_2.png" width="400"/>
-    <figcaption>Fig1: Increasing the Network Portion by 2 Bits</figcaption>
+    <figcaption>Fig2: Increasing the Network Portion by 2 Bits</figcaption>
 </figure>
 
 With the network portion now longer by two bits, it is possible to create $$ 2^2 = 4 $$ new networks:
 
 <figure>
     <img src="/assets/images/Subnetting.png" width="400"/>
-    <figcaption>Fig2: Subnetting with Two Additional Network Bits</figcaption>
+    <figcaption>Fig3: Subnetting with Two Additional Network Bits</figcaption>
 </figure>
 
 In this scenario, a host portion consisting of **all zeros** always corresponds to the network address of a subnet, while a host portion consisting of **all ones** corresponds to the broadcast address. This leaves $$ 2^{32-L'}-2 $$ **usable IP addresses** within a subnet, where $$L'$$ is the new prefix length.
+
+## Interactive Tool
+
+Would you like to get a feel for subnetting? Try out our interactive tool! This tool allows you to adjust the prefix length between 24 and 30 bits and observe how the subnets adapt accordingly. The starting point is a network with a prefix length of 24. The colored boxes below represent the resulting subnets.
+
+<label id="sliderValue" for="subnetSlider">Prefix Length (Bits):</label>
+
+<input type="range" id="subnetSlider" class="slider" min="24" max="30" value="24">
+<div class="result" id="result"></div>
+
+<script src="/assets/js/subnetCalculator.js"></script>
+
+{: .notice--info}
+**Deep Dive Question:**
+Why is the maximum value for the prefix length 30?
 
 ## Example
 

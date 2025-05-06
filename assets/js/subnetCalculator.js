@@ -13,7 +13,11 @@ function updateSubnetInfo() {
     const subNetworkBits = networkBits - 24;
     const hostBits = 32 - networkBits;
 
-    document.getElementById('sliderValue').textContent = `Präfixlänge (Bits): ` + networkBits;
+    if (window.jekyllData.difficulty == 'hard') {
+        document.getElementById('sliderValue').textContent = `Prefix Length (Bits): ` + networkBits;
+    } else {
+        document.getElementById('sliderValue').textContent = `Präfixlänge (Bits): ` + networkBits;
+    }
 
     const numberOfSubNetworks = Math.pow(2, subNetworkBits);
     const hostsPerSubNetwork = Math.pow(2, hostBits) - 2; // -2 für Netzwerk- und Broadcast-Adresse
