@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             frequencyText.setAttribute("y", svgHeight - 5);
             frequencyText.setAttribute("text-anchor", "middle");
             frequencyText.setAttribute("font-size", "10px");
+            frequencyText.setAttribute("class", "frequency-label");
             frequencyText.setAttribute("fill", "black");
             frequencyText.textContent = (frequencyBands[currentBand].start + i * frequencyBands[currentBand].step_size).toString();
             svg.appendChild(frequencyText);
