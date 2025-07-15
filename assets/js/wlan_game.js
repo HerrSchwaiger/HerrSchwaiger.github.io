@@ -145,8 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
             semicircles.push({ x: nearestTickX, y, r, color: 'green' });
         }
 
-        // Redraw the frequency range and check for overlaps
-        drawFrequencyRange();
         checkOverlaps();
     });
 
