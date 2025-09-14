@@ -3,9 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: splash
-title: "Willkommen bei ByteConnect"
+title: "Willkommen bei Trausnitz Games"
 image: "assets/images/logo.png"
-excerpt: "Ihr Partner für IT-Expertise."
+excerpt: "Indie-Spielestudio für textbasierte Adventures."
 date: 2024-11-29
 header:
   overlay_color: "#000" # Hintergrund-Overlay-Farbe
@@ -13,32 +13,32 @@ header:
   overlay_image: /assets/images/Background.png # Hintergrundbild
 
 feature_row:
-  - image_path: /assets/images/datenbank.png
-    alt: "Datenbank-Lösungen"
-    title: "Datenbank-Lösungen"
-    excerpt: "Optimale Speicherung und Organisation Ihrer Daten – für schnellen Zugriff und hohe Skalierbarkeit."
-    url: "/Datenbanken/"
+  - image_path: /assets/images/programmierung.png
+    alt: "Programmierung"
+    title: "Programmierung"
+    excerpt: "Von der ersten Codezeile bis zur fertigen Spielmechanik – kreativ, innovativ und spielerisch."
+    url: "/Programmierung/"
     btn_label: "Mehr erfahren"
     btn_class: "btn--primary"
-  - image_path: /assets/images/anwendungsentwicklung.png
-    alt: "Anwendungsentwicklung"
-    title: "Anwendungsentwicklung"
-    excerpt: "Von der ersten Codezeile bis zur fertigen Softwarelösung – praxisnah, kreativ und zukunftsorientiert."
-    url: "/Anwendungsentwicklung/"
+  - image_path: /assets/images/softwarentwurf.png
+    alt: "Softwarentwurf"
+    title: "Softwarentwurf"
+    excerpt: "Durchdachte Architektur und Design für unsere textbasierten Adventure-Spiele."
+    url: "/Softwarentwurf/"
     btn_label: "Mehr erfahren"
     btn_class: "btn--primary"
-  - image_path: /assets/images/netzwerktechnik.png
-    alt: "Netzwerktechnik"
-    title: "Netzwerktechnik"
-    excerpt: "Von der Einrichtung moderner Infrastrukturen bis zur Optimierung von Datenströmen – effizient, sicher und zukunftsorientiert"
-    url: "/Netzwerktechnik/"
+  - image_path: /assets/images/webentwicklung.png
+    alt: "Webentwicklung"
+    title: "Webentwicklung"
+    excerpt: "Moderne Web-Technologien für die Präsentation und den Vertrieb unserer Spiele."
+    url: "/Webentwicklung/"
     btn_label: "Mehr erfahren"
     btn_class: "btn--primary"
 ---
 
-# Willkommen im ByteConnect-Intranet
+# Willkommen im Trausnitz Games-Intranet
 
-Hier finden Sie alle wichtigen Informationen, Blog-Posts und Ressourcen rund um IT-Themen.
+Hier finden Sie alle wichtigen Informationen, Blog-Posts und Ressourcen rund um die Spieleentwicklung.
 
 {% include feature_row %}
 

@@ -1,10 +1,10 @@
 ---
 layout: single
-title: Über ByteConnect
+title: Über Trausnitz Games
 permalink: /about/
 ---
 
-**ByteConnect GmbH** ist eine rein fiktive IT-Firma, die für schulische Zwecke im Rahmen des Informatikunterrichts entwickelt wurde. Diese Website dient als Beispiel für ein Intranet und stellt eine Grundlage für handlungsorientiertes Lernen dar.
+**Trausnitz Games** ist ein rein fiktives Indie-Spielestudio, das für schulische Zwecke im Rahmen des Informatikunterrichts entwickelt wurde. Diese Website dient als Beispiel für ein Intranet und stellt eine Grundlage für handlungsorientiertes Lernen dar.
 
 ## Zweck der Website
 

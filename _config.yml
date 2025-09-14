@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ByteConnect
-email: schwaiger@bsinfo.eu
+title: Trausnitz Games
+email: info@trausnitz-games.de
 description: >- # this means to ignore newlines until "baseurl:"
-  "(Schulprojekt, nicht real!) Ein IT-Dienstleister aus München – spezialisiert auf Cloud-Computing, IT-Sicherheit und Softwareentwicklung."
+  "Ein kleines Indie-Spielestudio aus Bayern, das sich auf textbasierte Adventure-Spiele spezialisiert hat."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  herrschwaiger
@@ -32,10 +32,10 @@ remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 locale: "de-DE"
 
-title: "ByteConnect"
+title: "Trausnitz Games"
 subtitle: "Intranet"
-name: "ByteConnect GmbH"
-description: "Ein IT-Dienstleister aus München – spezialisiert auf Cloud-Computing, IT-Sicherheit und Softwareentwicklung."
+name: "Trausnitz Games"
+description: "Ein kleines Indie-Spielestudio aus Bayern, das sich auf textbasierte Adventure-Spiele spezialisiert hat."
 logo: "assets/images/logo.png"
 
 include: ["_pages"]
