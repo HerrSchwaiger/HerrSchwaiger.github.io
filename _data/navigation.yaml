@@ -1,7 +1,9 @@
 main:
-  - title: "Tickets"
-    url: "/Tickets/"
+  - title: "Version"
+    url: "/version/"
     id: "tickets-link"
+  - title: "Game"
+    url: "/game/"
   - title: "About"
     url: /about/
   - title: "Tags"
