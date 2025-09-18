@@ -2,10 +2,37 @@
 layout: single
 title: "Code Versionen"
 permalink: /version/
-header:
-  teaser: /assets/images/version.png
-  image: /assets/images/version.png
 ---
+
+## Version updaten
+
+<form id="version-form">
+  <h3>🚀 Code-Version</h3>
+
+
+  <div>
+    <label for="demo-topic"><strong>Thema:</strong></label><br>
+    <select id="demo-topic">
+      {% for tag in site.tags %}
+        <option value="{{ tag[0] | slugify }}">{{ tag[0] }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div>
+    <label for="demo-code"><strong>Code:</strong></label><br>
+    <textarea id="demo-code" rows="10" placeholder="Java Code hier einfügen..."></textarea>
+  </div>
+
+  <div>
+    <label for="demo-notes"><strong>Was wurde geändert:</strong></label><br>
+    <input type="text" id="demo-notes" placeholder="z.B. Ausgabetext geändert">
+  </div>
+
+  <a href="#" onclick="addLiveVersion(); return false;" class="btn btn--primary">
+    Version updaten
+  </a>
+</form>
 
 ## Aktueller Code-Stand
 
@@ -25,6 +52,17 @@ window.versionsData = {{ site.data.versions.versions | jsonify }};
 <!-- Prism.js Bibliotheken -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<style>
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.temp-version {
+  position: relative;
+}
+</style>
 
 
 

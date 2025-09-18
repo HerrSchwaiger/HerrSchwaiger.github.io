@@ -141,6 +141,98 @@ class VersionManager {
             }
         });
     }
+
+    // Live Version hinzufügen (temporär für Demo)
+    addLiveVersion(topicValue, topicName, code, change) {
+        const today = new Date().toLocaleDateString('de-DE');
+
+        // Neue temporäre ID generieren
+        const newId = Math.max(...this.versions.map(v => v.id), 0) + 1;
+
+        const newVersion = {
+            id: newId,
+            date: today,
+            topic: topicName,
+            topic_link: topicValue,
+            change: change,
+            code: code
+        };
+
+        // Zu Versionen hinzufügen
+        this.versions.unshift(newVersion); // Am Anfang einfügen
+
+        // Diff zur vorherigen Version berechnen
+        const previousVersion = this.versions[1]; // Die nächste Version in der Liste
+        const diff = this.calculateDiff(code, previousVersion ? previousVersion.code : '');
+
+        // Version rendern
+        const tempElement = document.createElement('div');
+        tempElement.className = 'version-entry temp-version';
+
+        tempElement.innerHTML = `
+            <div>
+                <h3>${newVersion.topic} - ${newVersion.change}</h3>
+                <p><strong>Datum:</strong> ${newVersion.date} | <strong>Thema:</strong> <a href="#${newVersion.topic_link}">${newVersion.topic}</a> | <strong>Änderung:</strong> ${newVersion.change}</p>
+            </div>
+
+            <a href="#" id="toggle-btn-${newVersion.id}" onclick="versionManager.toggleVersion(${newVersion.id}); return false;" class="btn btn--primary">
+                📊 Änderungen anzeigen
+            </a>
+
+            <div class="code-version" data-version="${newVersion.id}">
+                <div class="code-view">
+                    <pre><code class="language-java">${this.escapeHtml(newVersion.code)}</code></pre>
+                </div>
+
+                <div class="diff-view" style="display: none;">
+                    <pre><code class="language-diff">${this.escapeHtml(diff)}</code></pre>
+                </div>
+            </div>
+
+            <hr>
+        `;
+
+        // Am Anfang des Containers einfügen
+        this.container.insertBefore(tempElement, this.container.firstChild);
+
+        // Prism.js highlighting
+        if (window.Prism) {
+            Prism.highlightAllUnder(tempElement);
+        }
+
+        // Scroll zur neuen Version
+        tempElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        return newId;
+    }
+
+}
+
+// Live Version hinzufügen - Globale Funktion für Form
+function addLiveVersion() {
+    const topicSelect = document.getElementById('demo-topic');
+    const topicValue = topicSelect.value;
+    const topicName = topicSelect.options[topicSelect.selectedIndex].text;
+    const code = document.getElementById('demo-code').value;
+    const change = document.getElementById('demo-notes').value || 'Live Demo Änderung';
+
+    if (!code.trim()) {
+        alert('Bitte Code eingeben!');
+        return;
+    }
+
+    if (!topicValue) {
+        alert('Bitte Thema auswählen!');
+        return;
+    }
+
+    if (versionManager) {
+        versionManager.addLiveVersion(topicValue, topicName, code, change);
+
+        // Form zurücksetzen
+        document.getElementById('demo-code').value = '';
+        document.getElementById('demo-notes').value = '';
+    }
 }
 
 // Globale Instanz
