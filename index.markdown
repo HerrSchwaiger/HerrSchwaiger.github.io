@@ -8,8 +8,8 @@ image: "assets/images/logo.png"
 excerpt: "Indie-Spielestudio für textbasierte Adventures."
 date: 2024-11-29
 header:
-  overlay_color: "#000" # Hintergrund-Overlay-Farbe
-  overlay_filter: "0.5" # Transparenz des Overlays
+  #overlay_color: "#000" # Hintergrund-Overlay-Farbe
+  #overlay_filter: "0.5" # Transparenz des Overlays
   overlay_image: /assets/images/Background.png # Hintergrundbild
 
 feature_row:
@@ -20,11 +20,11 @@ feature_row:
     url: "/Programmierung/"
     btn_label: "Mehr erfahren"
     btn_class: "btn--primary"
-  - image_path: /assets/images/softwarentwurf.png
-    alt: "Softwarentwurf"
-    title: "Softwarentwurf"
+  - image_path: /assets/images/softwareentwurf.png
+    alt: "Softwareentwurf"
+    title: "Softwareentwurf"
     excerpt: "Durchdachte Architektur und Design für unsere textbasierten Adventure-Spiele."
-    url: "/Softwarentwurf/"
+    url: "/Softwareentwurf/"
     btn_label: "Mehr erfahren"
     btn_class: "btn--primary"
   - image_path: /assets/images/webentwicklung.png
@@ -35,8 +35,6 @@ feature_row:
     btn_label: "Mehr erfahren"
     btn_class: "btn--primary"
 ---
-
-# Willkommen im Trausnitz Games-Intranet
 
 Hier finden Sie alle wichtigen Informationen, Blog-Posts und Ressourcen rund um die Spieleentwicklung.
 
