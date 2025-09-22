@@ -27,11 +27,11 @@ feature_row:
     url: "/Softwareentwurf/"
     btn_label: "Mehr erfahren"
     btn_class: "btn--primary"
-  - image_path: /assets/images/webentwicklung.png
-    alt: "Webentwicklung"
-    title: "Webentwicklung"
-    excerpt: "Moderne Web-Technologien für die Präsentation und den Vertrieb unserer Spiele."
-    url: "/Webentwicklung/"
+  - image_path: /assets/images/soft_skills.png
+    alt: "Soft Skills"
+    title: "Soft Skills"
+    excerpt: "Soft Skills für das Berufsleben"
+    url: "/Soft_Skills/"
     btn_label: "Mehr erfahren"
     btn_class: "btn--primary"
 ---
