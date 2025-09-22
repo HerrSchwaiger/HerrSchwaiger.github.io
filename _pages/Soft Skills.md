@@ -8,4 +8,4 @@ header:
   teaser: /assets/images/soft_skills.png
 ---
 
-Hier finden Sie alle Beiträge rund um das Thema Soft Skills bei Trausnitz Games.
+Entwickle die zwischenmenschlichen und kommunikativen Fähigkeiten, die in der modernen Arbeitswelt über deinen Erfolg entscheiden - von Business-Etikette bis hin zu Teamführung.
