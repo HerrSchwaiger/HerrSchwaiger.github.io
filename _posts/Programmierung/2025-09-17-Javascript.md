@@ -10,10 +10,10 @@ tags:
 difficulty: medium
 published: true
 header:
-  teaser: "assets/images/JavaScript-Logo.png"
+  teaser: "assets/images/Javascript-Logo.png"
   overlay_color: "#000"
   overlay_filter: "0.7"
-  overlay_image: /assets/images/JavaScript-Logo.png
+  overlay_image: /assets/images/Javascript-Logo.png
 toc: true
 toc_label: "Contents"
 ---
