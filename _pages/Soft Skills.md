@@ -1,7 +1,7 @@
 ---
 layout: category
 title: "Soft Skills"
-permalink: /soft_skills/
+permalink: /Soft_Skills/
 taxonomy: Soft Skills
 entries_layout: grid
 header:
