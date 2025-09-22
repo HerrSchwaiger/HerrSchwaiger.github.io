@@ -86,3 +86,5 @@ Paradoxerweise benötigt die "einfache" Sprache JavaScript oft komplexe **Build-
 **Lernressourcen:**
 - [JavaScript.info](https://javascript.info/) - Modernes JavaScript-Tutorial
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) - Tiefgehende JavaScript-Buchreihe
+
+[Padlet](https://padlet.com/timschwaiger/programmiersprachen-auswahl-3t9jf1ko5kpzal7j)
