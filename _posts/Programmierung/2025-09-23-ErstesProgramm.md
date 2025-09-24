@@ -64,7 +64,7 @@ Anders als viele Skriptsprachen hat Java keine eingebauten Methoden, die einfach
 public class HelloWorld {
   public static void main( String[] args ) {
     // Start des Programms
-    System.out.println("Hallo World");
+    System.out.println("Hello World");
     // Ende des Programms
   }
 }
