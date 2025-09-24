@@ -25,6 +25,9 @@ Ihr Einstieg in Java: Entdecken Sie, wie aus ein paar Zeilen Code ein ausführba
 Ein Java-Programm zu erstellen ist wie das Schreiben eines Rezepts für den Computer. Sie schreiben Anweisungen in einer Sprache, die der Computer mit etwas Hilfe verstehen kann - in unserem Fall Java. Diese Anweisungen werden in einer Textdatei mit der Endung `.java` gespeichert.
 Erstellen Sie für Ihr erstes Programm eine Datei namens `HelloWorld.java`.
 
+{: .notice--primary}
+öffnen Sie die Datei mit dem Programm **Notepad ++**
+
 ## Der Rahmen: Die Compilationseinheit
 
 In Java können Sie nicht einfach Anweisungen in eine Datei schreiben und diese dem Compiler übergeben. Ihre Anweisungen müssen in einen Rahmen gepackt werden. Dieser Rahmen ist eine Klasse mit ihren Methoden und Variablen.
@@ -88,6 +91,9 @@ javac HelloWorld.java
 ```
 
 Dabei entsteht eine `.class`-Datei mit dem kompilierten Bytecode. Wenn Fehler im Code sind, erhalten Sie Fehlermeldungen und keine `.class`-Datei wird erstellt.
+
+{: .notice--primary}
+Öffnen Sie mithilfe der Tastenkombination `Win` + `R` und durch die Eingabe von "cmd" die Kommandozeile Ihres Rechners. Hier können Sie den obigen Befehl eingeben.
 
 ### Ausführung mit java
 Die **Java Virtual Machine (JVM)** führt den Bytecode aus:
