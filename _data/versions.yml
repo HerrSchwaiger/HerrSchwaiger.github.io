@@ -1,2 +1,15 @@
 versions:
- 
+  - id: 1
+    date: "24.09.2025"
+    topic: "Erstes Programm"
+    topic_link: https://herrschwaiger.github.io/Programmierung/das_erste_java_programm/
+    change: "Erste Version erstellt"
+    code: |
+      public class Crowns 
+      {
+          public static void main(String [] args)
+          {
+              System.out.println("Willkommen zu Crowns");
+
+          }
+      }

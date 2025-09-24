@@ -33,7 +33,7 @@ class VersionManager {
         versionElement.innerHTML = `
             <div>
                 <h3>${version.topic} - ${version.change}</h3>
-                <p><strong>Datum:</strong> ${version.date} | <strong>Thema:</strong> <a href="#${version.topic_link}">${version.topic}</a> | <strong>Änderung:</strong> ${version.change}</p>
+                <p><strong>Datum:</strong> ${version.date} | <strong>Thema:</strong> <a href="${version.topic_link}">${version.topic}</a> | <strong>Änderung:</strong> ${version.change}</p>
             </div>
 
             <a href="#" id="toggle-btn-${version.id}" onclick="versionManager.toggleVersion(${version.id}); return false;" class="btn btn--primary" style="margin-bottom: 10px;">
