@@ -62,6 +62,36 @@ window.versionsData = {{ site.data.versions.versions | jsonify }};
 .temp-version {
   position: relative;
 }
+
+.code-view pre,
+.diff-view pre {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.code-view pre::-webkit-scrollbar,
+.diff-view pre::-webkit-scrollbar {
+  width: 8px;
+}
+
+.code-view pre::-webkit-scrollbar-track,
+.diff-view pre::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.code-view pre::-webkit-scrollbar-thumb,
+.diff-view pre::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.code-view pre::-webkit-scrollbar-thumb:hover,
+.diff-view pre::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 </style>
 
 
