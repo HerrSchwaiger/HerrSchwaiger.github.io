@@ -1,83 +1,83 @@
 versions:
-  - id: 1
-    date: "24.09.2025"
-    topic: "Erstes Programm"
-    topic_link: https://herrschwaiger.github.io/Programmierung/das_erste_java_programm/
-    change: "Erste Version erstellt"
-    code: |
-      public class Crowns 
-      {
-          public static void main(String [] args)
-          {
-            System.out.println("Willkommen zu Crowns");
+  # - id: 1
+  #   date: "24.09.2025"
+  #   topic: "Erstes Programm"
+  #   topic_link: https://herrschwaiger.github.io/Programmierung/das_erste_java_programm/
+  #   change: "Erste Version erstellt"
+  #   code: |
+  #     public class Crowns 
+  #     {
+  #         public static void main(String [] args)
+  #         {
+  #           System.out.println("Willkommen zu Crowns");
 
-          }
-      }
-  - id: 2
-    date: "25.09.2025"
-    topic: "Datentypen"
-    topic_link: https://herrschwaiger.github.io/tags/#datentypen
-    change: "Charaktererstellung hinzugefügt"
-    code: |
-      public class Crowns 
-      {
-         public static void main(String [] args)
-          {
-            System.out.println("Willkommen zu Crowns");
+  #         }
+  #     }
+  # - id: 2
+  #   date: "25.09.2025"
+  #   topic: "Datentypen"
+  #   topic_link: https://herrschwaiger.github.io/tags/#datentypen
+  #   change: "Charaktererstellung hinzugefügt"
+  #   code: |
+  #     public class Crowns 
+  #     {
+  #        public static void main(String [] args)
+  #         {
+  #           System.out.println("Willkommen zu Crowns");
             
-            // String Attribute
-            String charaktername;
-            String klasse = "Krieger";
+  #           // String Attribute
+  #           String charaktername;
+  #           String klasse = "Krieger";
             
-            // boolean Attribute  
-            boolean istLebendig = true;
-            boolean hatWaffe;
+  #           // boolean Attribute  
+  #           boolean istLebendig = true;
+  #           boolean hatWaffe;
             
-            // int Attribute
-            int stufe = 1;
-            int staerke;
+  #           // int Attribute
+  #           int stufe = 1;
+  #           int staerke;
             
-            // double Attribute
-            double bewegungsgeschwindigkeit = 2.5;
-            double koerpergroesse;
+  #           // double Attribute
+  #           double bewegungsgeschwindigkeit = 2.5;
+  #           double koerpergroesse;
             
-            // char Attribute
-            char gesinnung = 'G';
-            char geschlecht;
+  #           // char Attribute
+  #           char gesinnung = 'G';
+  #           char geschlecht;
             
-            Scanner eingabe = new Scanner(System.in);
+  #           Scanner eingabe = new Scanner(System.in);
             
-            // String Eingabe
-            System.out.print("Charaktername eingeben: ");
-            charaktername = eingabe.nextLine();
+  #           // String Eingabe
+  #           System.out.print("Charaktername eingeben: ");
+  #           charaktername = eingabe.nextLine();
             
-            // boolean Eingabe
-            System.out.print("Hat Waffe? (true/false): ");
-            hatWaffe = eingabe.nextBoolean();
+  #           // boolean Eingabe
+  #           System.out.print("Hat Waffe? (true/false): ");
+  #           hatWaffe = eingabe.nextBoolean();
             
-            // int Eingabe
-            System.out.print("Stärke eingeben (1-20): ");
-            staerke = eingabe.nextInt();
+  #           // int Eingabe
+  #           System.out.print("Stärke eingeben (1-20): ");
+  #           staerke = eingabe.nextInt();
             
-            // double Eingabe
-            System.out.print("Körpergröße in Metern eingeben: ");
-            koerpergroesse = eingabe.nextDouble();
+  #           // double Eingabe
+  #           System.out.print("Körpergröße in Metern eingeben: ");
+  #           koerpergroesse = eingabe.nextDouble();
             
-            // char Eingaben
-            System.out.print("Geschlecht eingeben (M/W/D): ");
-            geschlecht = eingabe.next().charAt(0);
+  #           // char Eingaben
+  #           System.out.print("Geschlecht eingeben (M/W/D): ");
+  #           geschlecht = eingabe.next().charAt(0);
             
-            System.out.println("\n=== DEIN CHARAKTER ===");
-            System.out.println("Name: " + charaktername);
-            System.out.println("Klasse: " + klasse);
-            System.out.println("Stufe: " + stufe);
-            System.out.println("Stärke: " + staerke);
-            System.out.println("Ist lebendig: " + istLebendig);
-            System.out.println("Hat Waffe: " + hatWaffe);
-            System.out.println("Bewegungsgeschwindigkeit: " + bewegungsgeschwindigkeit + " m");
-            System.out.println("Körpergröße: " + koerpergroesse + " m");
-            System.out.println("Gesinnung: " + gesinnung);
-            System.out.println("Geschlecht: " + geschlecht);
-            System.out.println("=====================");
-        }
-      }
+  #           System.out.println("\n=== DEIN CHARAKTER ===");
+  #           System.out.println("Name: " + charaktername);
+  #           System.out.println("Klasse: " + klasse);
+  #           System.out.println("Stufe: " + stufe);
+  #           System.out.println("Stärke: " + staerke);
+  #           System.out.println("Ist lebendig: " + istLebendig);
+  #           System.out.println("Hat Waffe: " + hatWaffe);
+  #           System.out.println("Bewegungsgeschwindigkeit: " + bewegungsgeschwindigkeit + " m");
+  #           System.out.println("Körpergröße: " + koerpergroesse + " m");
+  #           System.out.println("Gesinnung: " + gesinnung);
+  #           System.out.println("Geschlecht: " + geschlecht);
+  #           System.out.println("=====================");
+  #       }
+  #     }

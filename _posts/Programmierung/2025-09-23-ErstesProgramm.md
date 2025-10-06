@@ -8,7 +8,7 @@ categories:
 tags:
     - Erstes Programm
 difficulty: medium
-published: true
+published: false
 header:
     teaser: "assets/images/start.png"
     overlay_filter: "0.2"

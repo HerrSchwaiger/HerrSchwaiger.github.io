@@ -8,7 +8,7 @@ categories:
 tags:
  - Datentypen
 difficulty: medium
-published: true
+published: false
 header:
   teaser: "assets/images/zeichen_datentypen.png"
   overlay_color: "#000"
