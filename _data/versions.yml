@@ -81,3 +81,17 @@ versions:
   #           System.out.println("=====================");
   #       }
   #     }
+- id: 1
+  date: "07.10.2025"
+  topic: "Erstes Programm"
+  topic_link: https://herrschwaiger.github.io/Programmierung/das_erste_java_programm/
+  change: "Erste Version erstellt"
+  code: |
+    public class Avernus 
+    {
+        public static void main(String [] args)
+        {
+          System.out.println("Willkommen in Avernus");
+
+        }
+    }

@@ -8,7 +8,7 @@ categories:
 tags:
  - Datentypen
 difficulty: medium
-published: false
+published: true
 header:
   teaser: "assets/images/datentypen_numerisch.png"
   overlay_color: "#000"
