@@ -87,11 +87,52 @@ versions:
   topic_link: https://herrschwaiger.github.io/Programmierung/das_erste_java_programm/
   change: "Erste Version erstellt"
   code: |
-    public class Avernus 
+    public class Avernus
     {
-        public static void main(String [] args)
-        {
+      public static void main(String[] args)
+      {
           System.out.println("Willkommen in Avernus");
 
         }
+    }
+- id: 2
+  date: "09.10.2025"
+  topic: "Datentypen"
+  topic_link: https://herrschwaiger.github.io/tags/#datentypen
+  change: "Charaktererstellung"
+  code: |
+    public class Avernus
+    {
+      public static void main(String[] args)
+      {
+          System.out.println("Willkommen in Avernus");
+          
+          String charakterName;
+          boolean istLebendig = true;
+          double geschwindigkeit = 12.4;
+          int stufe = 1;
+          String klasse = "Krieger";
+          char gesinnung = 'G';
+          double koerpergroesse = 1.8;
+          boolean hatWaffe = true;
+          int staerke = 1;
+          char geschlecht = 'M';
+          
+          System.out.println("Dein Leben: " + istLebendig);
+          System.out.println("Deine geschwindigkeit: " + geschwindigkeit);
+          System.out.println("Deine Klasse: " + klasse);
+          System.out.println("Deine gesinnung: " + gesinnung);
+          System.out.println("Deine koerpergroesse: " + koerpergroesse);
+          System.out.println("Waffe? " + hatWaffe);
+          System.out.println("Deine staerke: " + staerke);
+          System.out.println("Deine stufe: " + stufe);
+          System.out.println("Deine geschlecht: " + geschlecht);
+          
+          Scanner scanner = new Scanner(System.in);
+          System.out.println("Gib deinen Namen ein");
+          charakterName = scanner.nextLine();
+          
+          System.out.println("Dein Name: " + charakterName);               
+      }
+      
     }
