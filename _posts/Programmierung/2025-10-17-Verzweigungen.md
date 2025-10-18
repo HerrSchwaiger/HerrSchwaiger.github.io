@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Verzweigungen"
-date: 2025-10-17
+date: 2025-10-17 00:02
 permalink: /Programmierung/Verzweigungen_medium/
 categories:
  - Programmierung
@@ -13,7 +13,7 @@ published: true
 header:
   teaser: "assets/images/verzweigungen.png"
   overlay_color: "#000"
-  overlay_filter: "0.7"
+  overlay_filter: "0.2"
   overlay_image: /assets/images/verzweigungen.png
 toc: true
 toc_label: "Contents"
