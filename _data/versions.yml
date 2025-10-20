@@ -101,6 +101,8 @@ versions:
   topic_link: https://herrschwaiger.github.io/tags/#datentypen
   change: "Charaktererstellung"
   code: |
+    import java.util.Scanner;
+
     public class Avernus
     {
       public static void main(String[] args)
@@ -136,3 +138,123 @@ versions:
       }
       
     }
+- id: 3
+  date: "20.10.2025"
+  topic: "Verzweigungen"
+  topic_link: https://herrschwaiger.github.io/tags/#verzweigungen
+  change: "Das eiserne Tor Szenario"
+  code: |
+    import java.util.Scanner;
+
+    public class Avernus
+    {
+      public static void main(String[] args)
+      {
+          System.out.println("Willkommen in Avernus");
+          
+          String charakterName;
+          boolean istLebendig = true;
+          double geschwindigkeit = 12.4;
+          int stufe = 1;
+          String klasse = "Krieger";
+          char gesinnung = 'G';
+          double koerpergroesse = 1.8;
+          boolean hatWaffe = true;
+          int staerke = 1;
+          char geschlecht = 'M';
+          
+          System.out.println("Dein Leben: " + istLebendig);
+          System.out.println("Deine geschwindigkeit: " + geschwindigkeit);
+          System.out.println("Deine Klasse: " + klasse);
+          System.out.println("Deine gesinnung: " + gesinnung);
+          System.out.println("Deine koerpergroesse: " + koerpergroesse);
+          System.out.println("Waffe? " + hatWaffe);
+          System.out.println("Deine staerke: " + staerke);
+          System.out.println("Deine stufe: " + stufe);
+          System.out.println("Deine geschlecht: " + geschlecht);
+          
+          Scanner scanner = new Scanner(System.in);
+          System.out.println("Gib deinen Namen ein");
+          charakterName = scanner.nextLine();
+          
+          System.out.println("Dein Name: " + charakterName);
+          
+          if(klasse.equals("Krieger")) {
+              System.out.println("Du holst Anlauf und rammst gegen das Tor...");
+          } else if (klasse.equals("Magier")) {
+              System.out.println("Du sprichst einen Zauberspruch. KLICK! Das Schloss öffnet sich!");
+          } else {
+              System.out.println("Du findest keinen Weg durch das Tor");
+          }
+    
+        }
+        
+    }
+- id: 4
+  date: "20.10.2025"
+  topic: "Verzweigungen"
+  topic_link: https://herrschwaiger.github.io/tags/#verzweigungen
+  change: "Das eiserne Tor Szenario mit Extra"
+  code: |
+    import java.util.Scanner;
+
+    public class Avernus
+    {
+      public static void main(String[] args)
+      {
+          System.out.println("Willkommen in Avernus");
+          
+          String charakterName;
+          boolean istLebendig = true;
+          double geschwindigkeit = 12.4;
+          int stufe = 1;
+          String klasse = "Krieger";
+          char gesinnung = 'G';
+          double koerpergroesse = 1.8;
+          boolean hatWaffe = true;
+          int staerke = 1;
+          char geschlecht = 'M';
+          int lebenspunkte = 20;
+          
+          System.out.println("Dein Leben: " + istLebendig);
+          System.out.println("Deine geschwindigkeit: " + geschwindigkeit);
+          System.out.println("Deine Klasse: " + klasse);
+          System.out.println("Deine gesinnung: " + gesinnung);
+          System.out.println("Deine koerpergroesse: " + koerpergroesse);
+          System.out.println("Waffe? " + hatWaffe);
+          System.out.println("Deine staerke: " + staerke);
+          System.out.println("Deine stufe: " + stufe);
+          System.out.println("Deine geschlecht: " + geschlecht);
+          
+          Scanner scanner = new Scanner(System.in);
+          System.out.println("Gib deinen Namen ein");
+          charakterName = scanner.nextLine();
+          
+          System.out.println("Dein Name: " + charakterName);
+          
+          if(klasse.equals("Krieger")) {
+            System.out.println("Du holst Anlauf und rammst gegen das Tor...");
+            if (staerke >= 18 ) {
+                System.out.println("KRACH! Das Tor splittert und fliegt auf!");
+                System.out.println("Du betrittst den Friedhof");
+            } else if (staerke >= 14) {
+                System.out.println("Die Tür gibt nach, aber deine Schulter schmerzt!");
+                lebenspunkte -= 3;
+                System.out.println("TP: " + lebenspunkte);
+                System.out.println("Du betrittst den Friedhof");
+            } else {
+                System.out.println("AUA! Das Tor hält stand. Du bist zu schwach!");
+                lebenspunkte--;
+                System.out.println("TP: " + lebenspunkte);
+            }
+        } else if (klasse.equals("Magier")) {
+            System.out.println("Du sprichst einen Zauberspruch. KLICK! Das Schloss öffnet sich!");
+        } else {
+            System.out.println("Du findest keinen Weg durch das Tor");
+        }
+    
+        }
+        
+    }
+
+
