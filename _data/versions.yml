@@ -107,23 +107,23 @@ versions:
       let geschlecht = '';
 
       // String Eingabe
-      game.print("Charaktername eingeben: ");
+      game.println("Charaktername eingeben: ");
       charaktername = await game.input("String");
 
       // boolean Eingabe
-      game.print("Hat Waffe? (true/false): ");
+      game.println("Hat Waffe? (true/false): ");
       hatWaffe = await game.input("boolean");
 
       // int Eingabe
-      game.print("Stärke eingeben (1-20): ");
+      game.println("Stärke eingeben (1-20): ");
       staerke = await game.input("int");
 
       // double Eingabe
-      game.print("Körpergröße in Metern eingeben: ");
+      game.println("Körpergröße in Metern eingeben: ");
       koerpergroesse = await game.input("double");
 
       // char Eingaben
-      game.print("Geschlecht eingeben (M/W/D): ");
+      game.println("Geschlecht eingeben (M/W/D): ");
       geschlecht = await game.input("char");
 
       game.println("\n=== DEIN CHARAKTER ===");

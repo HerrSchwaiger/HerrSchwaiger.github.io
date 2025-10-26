@@ -139,7 +139,6 @@ class GameEngine {
 
     // Zeige Eingabe im Output
     this.println(`${value}`);
-    this.println('');
 
     // Deaktiviere Eingabe
     const inputField = document.getElementById('game-input');
