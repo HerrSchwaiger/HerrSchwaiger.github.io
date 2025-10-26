@@ -9,7 +9,7 @@ tags:
  - Verzweigungen
  - Kontrollstrukturen
 difficulty: easy
-published: true
+published: false
 header:
   teaser: "assets/images/verzweigungen_easy.png"
   overlay_color: "#000"

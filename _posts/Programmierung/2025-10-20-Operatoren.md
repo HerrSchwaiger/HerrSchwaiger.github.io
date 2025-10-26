@@ -9,7 +9,7 @@ tags:
  - Operatoren
  - Kontrollstrukturen
 difficulty: medium
-published: true
+published: false
 header:
   teaser: "assets/images/Operatoren.png"
   overlay_color: "#000"
