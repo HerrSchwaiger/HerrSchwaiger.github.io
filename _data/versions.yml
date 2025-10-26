@@ -5,7 +5,7 @@ versions:
     topic_link: https://herrschwaiger.github.io/Programmierung/das_erste_java_programm/
     change: "Erste Version erstellt"
     code: |
-      public class Crowns 
+      public class Crowns
       {
           public static void main(String [] args)
           {
@@ -13,60 +13,62 @@ versions:
 
           }
       }
+    js_code: |
+      game.println("Willkommen zu Crowns");
   - id: 2
     date: "25.09.2025"
     topic: "Datentypen"
     topic_link: https://herrschwaiger.github.io/tags/#datentypen
     change: "Charaktererstellung hinzugefügt"
     code: |
-      public class Crowns 
+      public class Crowns
       {
          public static void main(String [] args)
           {
             System.out.println("Willkommen zu Crowns");
-            
+
             // String Attribute
             String charaktername;
             String klasse = "Krieger";
-            
-            // boolean Attribute  
+
+            // boolean Attribute
             boolean istLebendig = true;
             boolean hatWaffe;
-            
+
             // int Attribute
             int stufe = 1;
             int staerke;
-            
+
             // double Attribute
             double bewegungsgeschwindigkeit = 2.5;
             double koerpergroesse;
-            
+
             // char Attribute
             char gesinnung = 'G';
             char geschlecht;
-            
+
             Scanner eingabe = new Scanner(System.in);
-            
+
             // String Eingabe
             System.out.print("Charaktername eingeben: ");
             charaktername = eingabe.nextLine();
-            
+
             // boolean Eingabe
             System.out.print("Hat Waffe? (true/false): ");
             hatWaffe = eingabe.nextBoolean();
-            
+
             // int Eingabe
             System.out.print("Stärke eingeben (1-20): ");
             staerke = eingabe.nextInt();
-            
+
             // double Eingabe
             System.out.print("Körpergröße in Metern eingeben: ");
             koerpergroesse = eingabe.nextDouble();
-            
+
             // char Eingaben
             System.out.print("Geschlecht eingeben (M/W/D): ");
             geschlecht = eingabe.next().charAt(0);
-            
+
             System.out.println("\n=== DEIN CHARAKTER ===");
             System.out.println("Name: " + charaktername);
             System.out.println("Klasse: " + klasse);
@@ -81,6 +83,61 @@ versions:
             System.out.println("=====================");
         }
       }
+    js_code: |
+      game.println("Willkommen zu Crowns");
+
+      // String Attribute
+      let charaktername = "";
+      let klasse = "Krieger";
+
+      // boolean Attribute
+      let istLebendig = true;
+      let hatWaffe = false;
+
+      // int Attribute
+      let stufe = 1;
+      let staerke = 0;
+
+      // double Attribute
+      let bewegungsgeschwindigkeit = 2.5;
+      let koerpergroesse = 0.0;
+
+      // char Attribute
+      let gesinnung = 'G';
+      let geschlecht = '';
+
+      // String Eingabe
+      game.print("Charaktername eingeben: ");
+      charaktername = await game.input("String");
+
+      // boolean Eingabe
+      game.print("Hat Waffe? (true/false): ");
+      hatWaffe = await game.input("boolean");
+
+      // int Eingabe
+      game.print("Stärke eingeben (1-20): ");
+      staerke = await game.input("int");
+
+      // double Eingabe
+      game.print("Körpergröße in Metern eingeben: ");
+      koerpergroesse = await game.input("double");
+
+      // char Eingaben
+      game.print("Geschlecht eingeben (M/W/D): ");
+      geschlecht = await game.input("char");
+
+      game.println("\n=== DEIN CHARAKTER ===");
+      game.println("Name: " + charaktername);
+      game.println("Klasse: " + klasse);
+      game.println("Stufe: " + stufe);
+      game.println("Stärke: " + staerke);
+      game.println("Ist lebendig: " + istLebendig);
+      game.println("Hat Waffe: " + hatWaffe);
+      game.println("Bewegungsgeschwindigkeit: " + bewegungsgeschwindigkeit + " m");
+      game.println("Körpergröße: " + koerpergroesse + " m");
+      game.println("Gesinnung: " + gesinnung);
+      game.println("Geschlecht: " + geschlecht);
+      game.println("=====================");
 # - id: 1
 #   date: "07.10.2025"
 #   topic: "Erstes Programm"
