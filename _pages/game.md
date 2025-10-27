@@ -14,8 +14,8 @@ permalink: /game/
 }
 
 #game-output {
-  background: #000;
-  color: #0f0;
+  background: #mix(#000, 252a34, 15%) !default;
+  color: #00adb5;
   padding: 15px;
   border-radius: 4px;
   min-height: 300px;
@@ -37,7 +37,7 @@ permalink: /game/
   flex: 1;
   background: #2d2d2d;
   color: #fff;
-  border: 1px solid #444;
+  border: 1px solid #eaeaea;
   padding: 10px;
   border-radius: 4px;
   font-family: 'Courier New', monospace;
@@ -46,12 +46,12 @@ permalink: /game/
 
 #game-input:focus {
   outline: none;
-  border-color: #0f0;
+  border-color: #00adb5;
 }
 
 .game-btn {
-  background: #0f0;
-  color: #000;
+  background: #00adb5;
+  color: #eaeaea;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
@@ -61,12 +61,12 @@ permalink: /game/
 }
 
 .game-btn:hover {
-  background: #0c0;
+  background: #00adb5;
 }
 
 .game-btn:disabled {
   background: #555;
-  color: #888;
+  color: #eaeaea;
   cursor: not-allowed;
 }
 
@@ -75,19 +75,19 @@ permalink: /game/
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 15px;
-  color: #aaa;
+  color: #eaeaea;
   font-size: 12px;
 }
 
 #version-info h3 {
   margin: 0 0 5px 0;
-  color: #0f0;
+  color: #00adb5;
   font-size: 14px;
 }
 
 .loading {
   text-align: center;
-  color: #0f0;
+  color: #00adb5;
   font-style: italic;
 }
 </style>
