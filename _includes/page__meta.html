@@ -53,6 +53,13 @@
             <i class="fas fa-circle text-danger" title="Hard"></i>
           </span>
           Schwer
+          {% when "french" %}
+          <span style="display: inline-flex; gap: 2px;">
+            <i class="fas fa-circle" style="color: #0055A4;"></i>
+            <i class="fas fa-circle" style="color: #FFFFFF; text-shadow: 0 0 1px #ccc;"></i>
+            <i class="fas fa-circle" style="color: #EF4135;"></i>
+          </span>
+          Francais
           {% else %}
             {{ context.difficulty }}
         {% endcase %}

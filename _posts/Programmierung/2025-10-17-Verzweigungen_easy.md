@@ -9,7 +9,7 @@ tags:
  - Verzweigungen
  - Kontrollstrukturen
 difficulty: easy
-published: false
+published: true
 header:
   teaser: "assets/images/verzweigungen_easy.png"
   overlay_color: "#000"
@@ -86,20 +86,23 @@ Jetzt wird **immer** eine der beiden Möglichkeiten ausgeführt.
 
 ## Vergleichen mit ==, > und <
 
-Um Bedingungen zu schreiben, brauchen wir Vergleichszeichen:
+Um Bedingungen zu schreiben, brauchen wir **Vergleichsoperatoren**:
 
-| Zeichen | Bedeutung | Beispiel |
-|---------|-----------|----------|
-| `==` | ist gleich | `level == 10` |
-| `>` | größer als | `level > 10` |
-| `<` | kleiner als | `level < 10` |
+| Zeichen | Bedeutung | Beispiel mit Ergebnis true| Beispiel mit Ergebnis false |
+|---------|-----------|----------|----------|
+| `==` | ist gleich | `5 == 5` | `5 == 6 `|
+| `!=` | ist nicht gleich | `5 != 6` | `5 != 5` |
+| `>` | größer als | `7 > 3` | `3 > 7` |
+| `>=` | größer gleich als | `3 >= 3` | `2 >= 3`|
+| `<` | kleiner als | `2 < 8` |`8 < 2`|
+| `<=` | kleiner gleich als | `8 <= 8` |`9 <= 8 `| 
 
 **Beispiel:**
 ```java
-int energie = 50;
+int energie = 75;
 
-if (energie > 30) {
-    System.out.println("Genug Energie!");
+if (energie == 75) {
+    System.out.println("Energie ist genau 75");
 }
 ```
 

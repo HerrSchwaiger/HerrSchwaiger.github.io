@@ -9,7 +9,7 @@ tags:
  - Verzweigungen
  - Kontrollstrukturen
 difficulty: hard
-published: false
+published: true
 header:
   teaser: "assets/images/verzweigungen_hard.png"
   overlay_color: "#000"
@@ -42,7 +42,7 @@ int coins = 100;
 
 if (coins >= 100) {
     System.out.println("Sufficient funds for legendary weapon!");
-    coins -= 100;
+    coins = coins -  100;
 }
 ```
 
@@ -115,14 +115,14 @@ if (score >= 10000) {
 
 Java provides relational operators for comparing primitive data types:
 
-| Operator | Description | Example | Result |
+| Operator | Description | Example true | Example false |
 |----------|-------------|---------|--------|
-| `==` | Equal to | `5 == 5` | `true` |
-| `!=` | Not equal to | `5 != 3` | `true` |
-| `>` | Greater than | `7 > 3` | `true` |
-| `<` | Less than | `2 < 8` | `true` |
-| `>=` | Greater than or equal | `5 >= 5` | `true` |
-| `<=` | Less than or equal | `3 <= 7` | `true` |
+| `==` | Equal to | `5 == 5` | `5 == 6` |
+| `!=` | Not equal to | `5 != 6` | `5 != 5` |
+| `>` | Greater than | `7 > 3` | `3 > 7` |
+| `>=` | Greater than or equal | `3 >= 3` | `2 >= 3`|
+| `<` | Less than | `2 < 8` | `8 < 2`|
+| `<=` | Less than or equal | `8 <= 8` | `9 <= 8 `| 
 
 **Example:**
 ```java

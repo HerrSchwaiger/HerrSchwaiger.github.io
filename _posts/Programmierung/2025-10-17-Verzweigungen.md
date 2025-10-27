@@ -9,7 +9,7 @@ tags:
  - Verzweigungen
  - Kontrollstrukturen
 difficulty: medium
-published: false
+published: true
 header:
   teaser: "assets/images/verzweigungen.png"
   overlay_color: "#000"
@@ -131,15 +131,16 @@ Teste dein Verständnis, Ziehe die level Werte zu den passenden Ausgabe-Werten.
 
 ## Vergleichsoperatoren für Zahlen
 
-Um Bedingungen zu formulieren, brauchen wir **Vergleichsoperatoren**. Hier sind die wichtigsten drei:
+Um Bedingungen zu formulieren, brauchen wir **Vergleichsoperatoren**:
 
-| Operator | Bedeutung | Beispiel |
-|----------|-----------|----------|
-| `==` | ist gleich | `5 == 5` |
-| `>` | größer als | `7 > 3` |
-| `>=` | größer gleich als | `3 >= 3` |
-| `<` | kleiner als | `2 < 8` |
-| `<=` | kleiner gleich als | `5 <= 8` |
+| Operator | Bedeutung | Beispiel true| Beispiel false |
+|----------|-----------|----------|----------|
+| `==` | ist gleich | `5 == 5` | `5 == 6 `|
+| `!=` | ist nicht gleich | `5 != 6` | `5 != 5` |
+| `>` | größer als | `7 > 3` | `3 > 7` |
+| `>=` | größer gleich als | `3 >= 3` | `2 >= 3`|
+| `<` | kleiner als | `2 < 8` |`8 < 2`|
+| `<=` | kleiner gleich als | `8 <= 8` |`9 <= 8 `| 
 
 **Beispiele:**
 ```java
