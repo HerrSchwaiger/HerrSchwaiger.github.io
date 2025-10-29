@@ -138,6 +138,176 @@ versions:
       game.println("Gesinnung: " + gesinnung);
       game.println("Geschlecht: " + geschlecht);
       game.println("=====================");
+  - id: 3
+    date: "29.10.2025"
+    topic: "Verzweigungen"
+    topic_link: https://herrschwaiger.github.io/tags/#verzweigungen
+    change: "Das eiserne Tor - Verzweigungen mit if/else"
+    code: |
+      import java.util.Scanner;
+
+      public class Crowns {
+          public static void main(String[] args) {
+              System.out.println("Hello World!");
+              System.out.println("Willkommen bei Crowns");
+
+              // String Attribute
+              String charaktername;
+              String klasse = "Krieger";
+
+              // boolean Attribute
+              boolean istLebendig = true;
+              boolean hatWaffe;
+
+              // int Attribute
+              int stufe = 1;
+              int staerke;
+              int lebenspunkte = 20;
+
+              // double Attribute
+              double bewegungsgeschwindigkeit = 2.5;
+              double koerpergroesse;
+
+              // char Attribute
+              char gesinnung = 'G';
+              char geschlecht;
+
+              Scanner eingabe = new Scanner(System.in);
+
+              // String Eingabe
+              System.out.print("Charaktername eingeben: ");
+              charaktername = eingabe.nextLine();
+
+              // boolean Eingabe
+              System.out.print("Hat Waffe? (true/false): ");
+              hatWaffe = eingabe.nextBoolean();
+
+              // int Eingabe
+              System.out.print("Stärke eingeben (1-20): ");
+              staerke = eingabe.nextInt();
+
+              // double Eingabe
+              System.out.print("Körpergröße in Metern eingeben: ");
+              koerpergroesse = eingabe.nextDouble();
+
+              // char Eingaben
+              System.out.print("Geschlecht eingeben (M/W/D): ");
+              geschlecht = eingabe.next().charAt(0);
+
+              System.out.println("\n=== DEIN CHARAKTER ===");
+              System.out.println("Name: " + charaktername);
+              System.out.println("Klasse: " + klasse);
+              System.out.println("Stufe: " + stufe);
+              System.out.println("Stärke: " + staerke);
+              System.out.println("Ist lebendig: " + istLebendig);
+              System.out.println("Hat Waffe: " + hatWaffe);
+              System.out.println("Bewegungsgeschwindigkeit: " + bewegungsgeschwindigkeit + " m");
+              System.out.println("Körpergröße: " + koerpergroesse + " m");
+              System.out.println("Gesinnung: " + gesinnung);
+              System.out.println("Geschlecht: " + geschlecht);
+              System.out.println("=====================");
+
+
+              // Situation eisernes Tor
+              if(klasse.equals("Barbar")) {
+                  System.out.println("Du holst Anlauf und rammst gegen das Tor...");
+                  if (staerke >= 18 ) {
+                      System.out.println("KRACH! Das Tor splittert und fliegt auf!");
+                      System.out.println("Du betrittst den Friedhof");
+                  } else if (staerke >= 14) {
+                      System.out.println("Die Tür gibt nach, aber deine Schulter schmerzt!");
+                      lebenspunkte -= 3;
+                      System.out.println("Du betrittst den Friedhof");
+                  } else {
+                      System.out.println("AUA! Das Tor hält stand. Du bist zu schwach!");
+                  }
+              } else if (klasse.equals("Magier")) {
+                  System.out.println("Du sprichst einen Zauberspruch. KLICK! Das Schloss öffnet sich!");
+                  stufe = stufe + 1;
+                  System.out.println("Du betrittst den Friedhof und fühlst dich mächtiger als zuvor.");
+              } else {
+                  System.out.println("Du findest keinen Weg durch das Tor...");
+              }
+          }
+      }
+    js_code: |
+      game.println("Hello World!");
+      game.println("Willkommen bei Crowns");
+
+      // String Attribute
+      let charaktername = "";
+      let klasse = "Krieger";
+
+      // boolean Attribute
+      let istLebendig = true;
+      let hatWaffe = false;
+
+      // int Attribute
+      let stufe = 1;
+      let staerke = 0;
+      let lebenspunkte = 20;
+
+      // double Attribute
+      let bewegungsgeschwindigkeit = 2.5;
+      let koerpergroesse = 0.0;
+
+      // char Attribute
+      let gesinnung = 'G';
+      let geschlecht = '';
+
+      // String Eingabe
+      game.print("Charaktername eingeben: ");
+      charaktername = await game.input("String");
+
+      // boolean Eingabe
+      game.print("Hat Waffe? (true/false): ");
+      hatWaffe = await game.input("boolean");
+
+      // int Eingabe
+      game.print("Stärke eingeben (1-20): ");
+      staerke = await game.input("int");
+
+      // double Eingabe
+      game.print("Körpergröße in Metern eingeben: ");
+      koerpergroesse = await game.input("double");
+
+      // char Eingaben
+      game.print("Geschlecht eingeben (M/W/D): ");
+      geschlecht = await game.input("char");
+
+      game.println("\n=== DEIN CHARAKTER ===");
+      game.println("Name: " + charaktername);
+      game.println("Klasse: " + klasse);
+      game.println("Stufe: " + stufe);
+      game.println("Stärke: " + staerke);
+      game.println("Ist lebendig: " + istLebendig);
+      game.println("Hat Waffe: " + hatWaffe);
+      game.println("Bewegungsgeschwindigkeit: " + bewegungsgeschwindigkeit + " m");
+      game.println("Körpergröße: " + koerpergroesse + " m");
+      game.println("Gesinnung: " + gesinnung);
+      game.println("Geschlecht: " + geschlecht);
+      game.println("=====================");
+
+      // Situation eisernes Tor
+      if (klasse === "Barbar") {
+          game.println("Du holst Anlauf und rammst gegen das Tor...");
+          if (staerke >= 18) {
+              game.println("KRACH! Das Tor splittert und fliegt auf!");
+              game.println("Du betrittst den Friedhof");
+          } else if (staerke >= 14) {
+              game.println("Die Tür gibt nach, aber deine Schulter schmerzt!");
+              lebenspunkte -= 3;
+              game.println("Du betrittst den Friedhof");
+          } else {
+              game.println("AUA! Das Tor hält stand. Du bist zu schwach!");
+          }
+      } else if (klasse === "Magier") {
+          game.println("Du sprichst einen Zauberspruch. KLICK! Das Schloss öffnet sich!");
+          stufe = stufe + 1;
+          game.println("Du betrittst den Friedhof und fühlst dich mächtiger als zuvor.");
+      } else {
+          game.println("Du findest keinen Weg durch das Tor...");
+      }
 # - id: 1
 #   date: "07.10.2025"
 #   topic: "Erstes Programm"

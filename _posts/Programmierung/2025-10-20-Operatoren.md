@@ -59,10 +59,10 @@ int result = 4 * 3; // result = 12
 **Division (/)**
 ```java
 // Werte dividieren:
-int result = 12 / 3; // result = 4
+double result = 5 / 2; // result = 2.5
 
 // Achtung: Bei Ganzzahlen wird abgerundet:
-int result2 = 5 / 2; // result2 = 2 (nicht 2.5!)
+int result_ganzzahl = 5 / 2; // result2 = 2 (nicht 2.5!)
 ```
 
 **Modulo (%)**
