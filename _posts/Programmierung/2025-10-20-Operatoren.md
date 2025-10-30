@@ -7,7 +7,6 @@ categories:
  - Programmierung
 tags:
  - Operatoren
- - Kontrollstrukturen
 difficulty: medium
 published: true
 header:
