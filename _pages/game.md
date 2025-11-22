@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Spiel die aktuelle Version"
+title: "Avernus"
 permalink: /game/
 ---
 
