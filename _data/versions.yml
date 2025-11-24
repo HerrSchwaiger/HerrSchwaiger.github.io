@@ -780,13 +780,13 @@ versions:
                 if (angriffswurf > wolf_RK) {
                     int w_wuerfel = rn.nextInt(8) + 1; // Würfel zwischen 1 und 8
                     int schaden = w_wuerfel + s_bonus;
-                    wolf_TP -= schaden;
-                    if (wolf_TP > 0) {
-                        System.out.println("wolf_TP: " + wolf_TP);
-                    } else {
-                        System.out.println("Der Wolf ist besiegt!");
-                    }   
-                }            
+                    wolf_TP -= schaden; 
+                }
+                if (wolf_TP > 0) {
+                    System.out.println("wolf_TP: " + wolf_TP);
+                } else {
+                    System.out.println("Der Wolf ist besiegt!");
+                }              
             }
         }
     }
@@ -854,12 +854,10 @@ versions:
             let w_wuerfel = Math.floor(Math.random() * 8) + 1; // Würfel zwischen 1 und 8
             let schaden = w_wuerfel + s_bonus;
             wolf_TP -= schaden;
-            if (wolf_TP > 0) {
-                game.println("Der Wolf lebt noch: " + wolf_TP);
-            } else {
-                game.println("Der Wolf ist besiegt!");
-            }
+        }
+        if (wolf_TP > 0) {
+            game.println("Der Wolf lebt noch: " + wolf_TP);
         } else {
-            game.println("Daneben!")
+            game.println("Der Wolf ist besiegt!");
         }
     }
