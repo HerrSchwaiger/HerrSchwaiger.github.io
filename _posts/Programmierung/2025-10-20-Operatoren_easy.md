@@ -135,3 +135,39 @@ boolean verschieden = 5 != 3; // true
    // Richtig:
    if (name.equals("Held")) { }
    ```
+
+### Logische Operatoren
+
+**Logisches nicht**
+Verneinen eines boolean Ausdrucks. Wahr wird zu Falsch und Falsch wird zu Wahr.
+
+```java
+boolean a = true;
+boolean b = !a; // false
+boolean c = !b; // true
+```
+
+**UND-Operator**
+Verknüpfen zweier boolean Werte. Beide müssen Wahr sein damit das Ergebnis Wahr ist, ansonsten Falsch. 
+
+```java
+boolean b1 = true;
+boolean b2 = false;
+boolean b3 = true;
+
+System.out.println(b1 && b3); // true
+System.out.println(b1 && b2); // false
+```
+
+**OR-Operator**
+Verknüpfen zweier boolean Werte. Beide müssen Falsch sein damit das Ergebnis Falsch ist, ansonsten Wahr. 
+
+
+```java
+boolean b1 = true;
+boolean b2 = false;
+boolean b4 = false;
+
+System.out.println(b1 || b2); // true
+System.out.println(b2 || b4); // false
+```

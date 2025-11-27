@@ -198,3 +198,43 @@ if (name1 == name2) { /* May not work as expected! */ }
 // CORRECT:
 if (name1.equals(name2)) { /* Always works correctly */ }
 ```
+
+### Logical Operators
+
+**Logisches nicht**
+```java
+boolean a = true;
+boolean b = !a; // false
+boolean c = !b; // true
+```
+
+**AND-Operator (&&)**
+
+```java
+boolean b1 = true;
+boolean b2 = false;
+boolean b3 = true;
+
+System.out.println(b1 && b3); // true
+System.out.println(b1 && b2); // false
+```
+
+**OR-Operator (||)**
+```java
+boolean b1 = true;
+boolean b2 = false;
+boolean b4 = false;
+
+System.out.println(b1 || b2); // true
+System.out.println(b2 || b4); // false
+```
+
+**XOR-Operator (^)**
+```java
+boolean b1 = true;
+boolean b2 = false;
+boolean b4 = false;
+
+System.out.println(b1 ^ b2); // true
+System.out.println(b1 ^ b3); // false
+```

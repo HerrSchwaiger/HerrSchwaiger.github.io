@@ -140,3 +140,33 @@ x /= 4; // x = 6
 // Modulo: %= entspricht x = x % 3
 x %= 3; // x = 0
 ```
+
+### Logische Operatoren
+
+**Logisches nicht**
+```java
+boolean a = true;
+boolean b = !a; // false
+boolean c = !b; // true
+```
+
+**UND-Operator**
+
+```java
+boolean b1 = true;
+boolean b2 = false;
+boolean b3 = true;
+
+System.out.println(b1 && b3); // true
+System.out.println(b1 && b2); // false
+```
+
+**OR-Operator**
+```java
+boolean b1 = true;
+boolean b2 = false;
+boolean b4 = false;
+
+System.out.println(b1 || b2); // true
+System.out.println(b2 || b4); // false
+```
