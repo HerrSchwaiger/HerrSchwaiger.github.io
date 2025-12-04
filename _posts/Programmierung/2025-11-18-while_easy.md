@@ -8,6 +8,7 @@ categories:
 tags:
  - While
  - Schleifen
+ - Kontrollstrukturen
 difficulty: easy
 published: true
 header:
