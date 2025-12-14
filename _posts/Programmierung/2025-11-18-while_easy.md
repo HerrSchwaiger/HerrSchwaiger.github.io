@@ -10,7 +10,7 @@ tags:
  - Schleifen
  - Kontrollstrukturen
 difficulty: easy
-published: true
+published: false
 header:
   teaser: "assets/images/While_easy.png"
   overlay_filter: "0.2"

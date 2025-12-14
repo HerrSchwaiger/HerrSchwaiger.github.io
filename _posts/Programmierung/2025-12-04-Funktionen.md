@@ -8,7 +8,7 @@ categories:
 tags:
  - Funktionen
 difficulty: medium
-published: true
+published: false
 header:
   teaser: "assets/images/funktion.png"
   overlay_filter: "0.2"
