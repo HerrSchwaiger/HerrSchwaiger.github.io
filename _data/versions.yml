@@ -536,6 +536,139 @@ versions:
               game.println("Kein Treffer");
           }
       }
+  - id: 5
+    date: "15.12.2025"
+    topic: "While"
+    topic_link: https://herrschwaiger.github.io/tags/#while
+    change: "Angriffs Loop"
+    code: |
+        package crowns;
+
+        import java.util.Scanner;
+
+        public class Crowns {
+            public static void main(String[] args) {
+                System.out.println("Hello World!");
+                System.out.println("Willkommen bei Crowns");
+
+                // String Attribute
+                String charaktername;
+                String klasse = "Barbar";
+
+                // boolean Attribute
+                boolean istLebendig = true;
+                boolean hatWaffe;
+
+                // int Attribute
+                int stufe = 1;
+                int staerke;
+                int lebenspunkte = 20;
+
+                // double Attribute
+                double bewegungsgeschwindigkeit = 2.5;
+                double koerpergroesse;
+
+                // char Attribute
+                char gesinnung = 'G';
+                char geschlecht;
+
+                Scanner eingabe = new Scanner(System.in);
+
+                // String Eingabe
+                System.out.print("Charaktername eingeben: ");
+                //charaktername = eingabe.nextLine();
+
+                // boolean Eingabe
+                System.out.print("Hat Waffe? (true/false): ");
+                //hatWaffe = eingabe.nextBoolean();
+
+                // int Eingabe
+                System.out.print("Stärke eingeben (1-20): ");
+                staerke = eingabe.nextInt();
+
+                // double Eingabe
+                System.out.print("Körpergröße in Metern eingeben: ");
+            // koerpergroesse = eingabe.nextDouble();
+
+                // char Eingaben
+                System.out.print("Geschlecht eingeben (M/W/D): ");
+                geschlecht = eingabe.next().charAt(0);
+
+                System.out.println("\n=== DEIN CHARAKTER ===");
+            //  System.out.println("Name: " + charaktername);
+                System.out.println("Klasse: " + klasse);
+                System.out.println("Stufe: " + stufe);
+                System.out.println("Stärke: " + staerke);
+                System.out.println("Ist lebendig: " + istLebendig);
+            // System.out.println("Hat Waffe: " + hatWaffe);
+                System.out.println("Bewegungsgeschwindigkeit: " + bewegungsgeschwindigkeit + " m");
+            // System.out.println("Körpergröße: " + koerpergroesse + " m");
+                System.out.println("Gesinnung: " + gesinnung);
+                System.out.println("Geschlecht: " + geschlecht);
+                System.out.println("=====================");
+
+                boolean imFriedhof = false;
+                
+                // Situation eisernes Tor
+                if(klasse.equals("Barbar")) {
+                    System.out.println("Du holst Anlauf und rammst gegen das Tor...");
+                    if (staerke >= 18 ) {
+                        System.out.println("KRACH! Das Tor splittert und fliegt auf!");
+                        System.out.println("Du betrittst den Friedhof");
+                        imFriedhof = true;
+                    } else if (staerke >= 14) {
+                        System.out.println("Die Tür gibt nach, aber deine Schulter schmerzt!");
+                        lebenspunkte -= 3;
+                        System.out.println("Du betrittst den Friedhof");
+                        imFriedhof = true;
+                    } else {
+                        System.out.println("AUA! Das Tor hält stand. Du bist zu schwach!");
+                    }
+                } else if (klasse.equals("Magier")) {
+                    System.out.println("Du sprichst einen Zauberspruch. KLICK! Das Schloss öffnet sich!");
+                    stufe = stufe + 1;
+                    System.out.println("Du betrittst den Friedhof und fühlst dich mächtiger als zuvor.");
+                    imFriedhof = true;
+                } else {
+                    System.out.println("Du findest keinen Weg durch das Tor...");
+                }
+                
+                if(!imFriedhof) {
+                    double wolf_ruestung = 0.2;
+                    int lebenspunkte_wolf = 20;
+                    
+                    //wiederhole solange der Wolf lebt
+                    while(lebenspunkte_wolf > 0) {
+                        
+                        int wuerfel = (int)( Math.random() *20 ) + 1;
+                        double chance = (double)(wuerfel + staerke) / 100.0;
+                        if (chance > wolf_ruestung) {
+                            System.out.println("Treffer");
+
+                            int schaden = (stufe-1) /2+2;
+                            lebenspunkte_wolf -= schaden;
+                            if (lebenspunkte_wolf <= 0) {
+                                System.out.println("Sieg");
+                            } else {
+                                System.out.println("Oh nein...");
+                            }
+                        } else {
+                            System.out.println("Kein Treffer");
+                        }
+
+                        //Gegenangriff des Wolfs (- 1 HP)
+                        lebenspunkte--;
+                        //Abbruch des Kampfes falls der Spieler stirbt
+                        if(lebenspunkte <= 0) {
+                            System.out.println("Game Over!");
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+
 # - id: 1
 #   date: "07.10.2025"
 #   topic: "Erstes Programm"
