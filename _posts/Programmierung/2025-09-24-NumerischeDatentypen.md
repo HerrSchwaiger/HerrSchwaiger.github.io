@@ -59,7 +59,7 @@ Diese Eigenart teilt sich Java mit praktisch allen Programmiersprachen - es lieg
 **short** liegt zwischen `byte` und `int` und kann Werte von -32.768 bis 32.767 speichern. Er benötigt 16 Bit (2 Byte) Speicher.
 
 ```java
-byte ipv4_1 =  244; // Erstes Byte einer Ipv4 Adresse
+byte note = 1;
 byte temperatur = 25; 
 
 short jahr = 2025;
