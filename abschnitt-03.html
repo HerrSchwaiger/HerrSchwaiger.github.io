@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 Variablen | Java-Einführung</title>
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/prism.min.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/prism-java.min.js"></script>
+<script src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 btn btn-primary" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="d-flex align-items-center px-3" style="height:3.5rem">
+    <button class="btn btn-outline-secondary btn-sm d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#kursbaum" aria-controls="kursbaum">Abschnitte</button>
+    <a class="brand" href="index.html">Java-Einführung <span>AEuP 10</span></a>
+  </div>
+</header>
+<div class="d-lg-flex">
+  <nav class="course-tree offcanvas-lg offcanvas-start" tabindex="-1" id="kursbaum" aria-label="Kursabschnitte">
+    <div class="offcanvas-header d-lg-none">
+      <span class="fw-bold">Abschnitte</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#kursbaum" aria-label="Schließen"></button>
+    </div>
+    <div class="offcanvas-body d-block p-0">
+      <a class="tree-root d-block text-decoration-none" href="index.html">Kursübersicht</a>
+      <ul class="tree">
+<li><a href="abschnitt-00.html"><span class="nr">00</span><span>Vorbereitung</span></a></li>
+<li><a href="abschnitt-01.html"><span class="nr">01</span><span>Was ist Programmieren?</span></a></li>
+<li><a href="abschnitt-02.html"><span class="nr">02</span><span>Erstes Programm</span></a></li>
+<li><a href="abschnitt-03.html" aria-current="page"><span class="nr">03</span><span>Variablen</span></a></li>
+<li><a href="abschnitt-04.html"><span class="nr">04</span><span>Datentypen</span></a></li>
+<li><a href="abschnitt-05.html"><span class="nr">05</span><span>Operatoren</span></a></li>
+<li><a href="abschnitt-06.html"><span class="nr">06</span><span>if/else</span></a></li>
+<li><a href="abschnitt-07.html"><span class="nr">07</span><span>for-Schleife</span></a></li>
+<li><a href="abschnitt-08.html"><span class="nr">08</span><span>while-Schleife</span></a></li>
+<li><a href="abschnitt-09.html"><span class="nr">09</span><span>Funktionen</span></a></li>
+<li><a href="abschnitt-10.html"><span class="nr">10</span><span>Arrays</span></a></li>
+<li><a href="abschnitt-11.html"><span class="nr">11</span><span>Abschlussprojekt</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="content" id="inhalt">
+    <div class="content-inner">
+<div class="page-title"><span class="nr">Abschnitt 3</span><h1>Variablen</h1></div>
+
+<section class="block">
+<h4 class="text-primary">Information</h4>
+
+<p>Damit ein Programm sich Werte merken kann, braucht es <strong>Variablen</strong>. Eine Variable ist ein benannter Speicherplatz im Arbeitsspeicher, in dem ein Wert abgelegt wird. In diesem Abschnitt lernt ihr, wie ihr Variablen anlegt, ihnen Werte gebt und wie sie benannt werden dürfen. <strong>Fülle das Arbeitsblatt anhand des Informationstextes aus.</strong></p>
+
+<h5 class="text-primary mt-4">Was ist eine Variable?</h5>
+
+<p>Stellt euch eine Variable wie eine beschriftete Box im Arbeitsspeicher vor: Die Beschriftung ist der Variablenname, der Inhalt der Box ist der aktuell gespeicherte Wert. Über den Namen könnt ihr jederzeit auf den Inhalt zugreifen oder ihn austauschen.</p>
+
+<svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Variable als beschriftete Box im Speicher">
+  <rect x="40" y="50" width="140" height="70" rx="6" fill="#e7f1ff" stroke="#0d6efd" stroke-width="2"/>
+  <text x="110" y="90" font-size="20" text-anchor="middle" fill="#212529">42</text>
+  <text x="110" y="35" font-size="14" text-anchor="middle" fill="#0d6efd" font-weight="bold">alter</text>
+  <line x1="110" y1="40" x2="110" y2="50" stroke="#0d6efd" stroke-width="2"/>
+
+  <rect x="280" y="50" width="180" height="70" rx="6" fill="#d1e7dd" stroke="#198754" stroke-width="2"/>
+  <text x="370" y="90" font-size="16" text-anchor="middle" fill="#212529">"Landshut"</text>
+  <text x="370" y="35" font-size="14" text-anchor="middle" fill="#198754" font-weight="bold">stadt</text>
+  <line x1="370" y1="40" x2="370" y2="50" stroke="#198754" stroke-width="2"/>
+
+  <text x="250" y="145" font-size="11" text-anchor="middle" fill="#6c757d">Der Name bleibt gleich, der Wert in der Box kann sich ändern</text>
+</svg>
+
+<h5 class="text-primary mt-4">Deklaration, Initialisierung und Zuweisung</h5>
+
+<p>Bevor ihr eine Variable benutzen könnt, müsst ihr sie <strong>deklarieren</strong>: Ihr legt fest, welchen Datentyp sie hat und wie sie heißt. Der allererste Wert, den eine Variable bekommt, heißt <strong>Initialisierung</strong> -- das kann direkt in derselben Zeile wie die Deklaration passieren, muss es aber nicht: Ihr könnt eine Variable auch erst deklarieren und ihr den ersten Wert in einer späteren Zeile geben. Jede weitere Änderung des Werts, nachdem die Variable schon einmal einen Wert hatte, nennt man <strong>Zuweisung</strong>.</p>
+
+<p>Fahrt mit der Maus über die unterstrichenen Stellen im folgenden Code:</p>
+
+<style>
+  .primary-tooltip { --bs-tooltip-bg: var(--bs-primary); }
+  .success-tooltip { --bs-tooltip-bg: var(--bs-success); }
+  .warning-tooltip { --bs-tooltip-bg: var(--bs-warning); }
+</style>
+<pre class="language-java"><span class="border-bottom border-primary-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="primary-tooltip" title="Deklaration: Datentyp und Name, ohne Wert"><code>int alter;</code></span>
+<span class="border-bottom border-success-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="success-tooltip" title="Initialisierung: erster Wert, getrennt von der Deklaration"><code>alter = 16;</code></span>
+<span class="border-bottom border-warning-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="warning-tooltip" title="Deklaration und Initialisierung in einer Zeile"><code>String stadt = "Landshut";</code></span>
+<span class="border-bottom border-primary-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="primary-tooltip" title="Zuweisung: der Wert wird erneut geändert"><code>alter = 17;</code></span></pre>
+
+<p class="mt-3">Wichtig: Bei der Zuweisung entfällt der Datentyp -- der wurde ja schon bei der Deklaration festgelegt und kann sich danach nicht mehr ändern. Eine Variable, die einmal als <code>int</code> deklariert wurde, kann später keinen Text mehr speichern.</p>
+
+<div class="accordion mt-3" id="acc-zuweisung-praxis">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#zuweisung-praxis-body" data-bs-parent="#acc-zuweisung-praxis">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Was passiert beim Überschreiben eines Werts genau?
+      </button>
+    </h2>
+    <div id="zuweisung-praxis-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0">Der alte Wert geht dabei unwiderruflich verloren -- er wird im Speicher einfach durch den neuen Wert ersetzt. Wollt ihr euch einen Wert trotzdem merken, müsst ihr ihn vorher in einer eigenen Variablen zwischenspeichern.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="text-primary mt-4">Namenskonventionen</h5>
+
+<p>Für Variablennamen in Java gelten feste Regeln und zusätzlich eine übliche Schreibweise, an die sich fast alle Java-Programme halten:</p>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Regel</th>
+        <th>Beispiel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Muss mit einem Buchstaben, <code>_</code> oder <code>$</code> beginnen, nicht mit einer Ziffer</td>
+        <td><code>alter</code> erlaubt, <code>3punkte</code> nicht erlaubt</td>
+      </tr>
+      <tr>
+        <td>Darf danach auch Ziffern enthalten</td>
+        <td><code>punkte2</code></td>
+      </tr>
+      <tr>
+        <td>Keine Leerzeichen oder Sonderzeichen wie <code>ä ö ü ß -</code></td>
+        <td><code>hausNummer</code> statt <code>haus nummer</code></td>
+      </tr>
+      <tr>
+        <td>Groß- und Kleinschreibung wird unterschieden</td>
+        <td><code>alter</code> und <code>Alter</code> sind zwei verschiedene Variablen</td>
+      </tr>
+      <tr>
+        <td>Reservierte Wörter (Schlüsselwörter) sind nicht erlaubt</td>
+        <td><code>class</code>, <code>int</code>, <code>if</code> nicht als Name verwendbar</td>
+      </tr>
+      <tr>
+        <td>Übliche Schreibweise: camelCase, beginnt klein</td>
+        <td><code>hausNummer</code> statt <code>HausNummer</code> oder <code>haus_nummer</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<p>Wählt außerdem immer <strong>sprechende Namen</strong>, die erkennen lassen, wofür die Variable steht -- <code>alter</code> ist deutlich besser lesbar als <code>x</code> oder <code>a1</code>.</p>
+
+<div class="accordion mt-3" id="acc-namen-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#namen-zusatz-body" data-bs-parent="#acc-namen-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Andere Sprachen, andere Schreibweisen
+      </button>
+    </h2>
+    <div id="namen-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0">camelCase ist keine Java-Pflicht, sondern eine Konvention. Python-Programme verwenden meist snake_case (<code>haus_nummer</code>), Datenbanken oft ebenfalls. Solange ihr innerhalb eines Projekts konsequent bleibt, funktioniert der Code trotzdem -- aber camelCase ist in der Java-Welt der Standard, an den sich auch alle in diesem Kurs halten.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Platzhalter: H5P-Zuordnungsaufgabe "Gültiger/ungültiger Variablenname" hier einbetten -->
+</section>
+<section class="block">
+<div id="varquiz-app" class="mx-auto">
+<h4 class="text-primary">Erlaubte Variablen-Namen?</h4>
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="text-secondary" id="varquiz-progress">Frage 1 von 7</span>
+  </div>
+  <div class="progress mb-4" style="height: 8px;">
+    <div class="progress-bar bg-primary" id="varquiz-progressbar" style="width: 0%;"></div>
+  </div>
+
+  <div id="varquiz-play-area">
+    <div class="row g-2 mb-4">
+      <div class="col-6">
+        <div id="varquiz-zone-left" class="d-flex align-items-center justify-content-center rounded" style="min-height: 260px; background: #d1e7dd; border: 3px dashed #198754;">
+          <span class="fw-bold text-success fs-4">Erlaubt</span>
+        </div>
+      </div>
+      <div class="col-6">
+        <div id="varquiz-zone-right" class="d-flex align-items-center justify-content-center rounded" style="min-height: 260px; background: #f8d7da; border: 3px dashed #dc3545;">
+          <span class="fw-bold text-danger fs-4">Nicht erlaubt</span>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div id="varquiz-drag-item" class="badge bg-dark p-3" draggable="false" style="font-size: 1.75rem; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none;">
+        <code class="text-white" id="varquiz-drag-item-text">alter</code>
+      </div>
+    </div>
+    <p class="text-center text-secondary mt-3 mb-0 small">Zieht den Namen nach links oder rechts.</p>
+  </div>
+
+  <div id="varquiz-check-area" class="d-none text-center">
+    <p class="text-secondary">Alle Namen einsortiert.</p>
+    <button type="button" class="btn btn-primary btn-lg" id="varquiz-btn-check">Überprüfen</button>
+  </div>
+
+  <div id="varquiz-result-area" class="d-none">
+    <h5 class="text-primary">Ergebnis: <span id="varquiz-result-score"></span></h5>
+    <ul class="list-group mb-3" id="varquiz-result-list"></ul>
+    <div class="text-center">
+      <button type="button" class="btn btn-secondary" id="varquiz-btn-reset">Wiederholen</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var items = [
+    { name: "alter", correct: "left", explanation: "Erfüllt alle Regeln: beginnt mit einem Buchstaben, enthält keine Sonderzeichen." },
+    { name: "hausNummer", correct: "left", explanation: "Erfüllt alle Regeln, zusätzlich in camelCase geschrieben." },
+    { name: "_wert", correct: "left", explanation: "Beginnt mit einem Unterstrich -- das ist als erstes Zeichen erlaubt." },
+    { name: "note2", correct: "left", explanation: "Ziffern sind erlaubt, nur eben nicht als erstes Zeichen." },
+    { name: "2plaetze", correct: "right", explanation: "Beginnt mit einer Ziffer -- das ist nicht erlaubt." },
+    { name: "class", correct: "right", explanation: "class ist ein reserviertes Schlüsselwort und darf nicht als Variablenname verwendet werden." },
+    { name: "haus nummer", correct: "right", explanation: "Enthält ein Leerzeichen -- das ist nicht erlaubt." },
+    { name: "preis-euro", correct: "right", explanation: "Enthält einen Bindestrich -- das ist nicht erlaubt." },
+    { name: "straße", correct: "right", explanation: "Enthält ein Sonderzeichen (ß) -- das ist nicht erlaubt." }
+  ];
+
+  var currentIndex = 0;
+  var answers = [];
+
+  var playArea = document.getElementById("varquiz-play-area");
+  var checkArea = document.getElementById("varquiz-check-area");
+  var resultArea = document.getElementById("varquiz-result-area");
+  var progressLabel = document.getElementById("varquiz-progress");
+  var progressBar = document.getElementById("varquiz-progressbar");
+  var dragItem = document.getElementById("varquiz-drag-item");
+  var dragItemText = document.getElementById("varquiz-drag-item-text");
+  var zoneLeft = document.getElementById("varquiz-zone-left");
+  var zoneRight = document.getElementById("varquiz-zone-right");
+  var btnCheck = document.getElementById("varquiz-btn-check");
+  var btnReset = document.getElementById("varquiz-btn-reset");
+  var resultScore = document.getElementById("varquiz-result-score");
+  var resultList = document.getElementById("varquiz-result-list");
+
+  var dragging = false;
+  var startX = 0;
+  var startY = 0;
+  var offsetX = 0;
+  var offsetY = 0;
+
+  function showItem() {
+    dragItemText.textContent = items[currentIndex].name;
+    dragItem.style.transform = "translate(0px, 0px)";
+    offsetX = 0;
+    offsetY = 0;
+    progressLabel.textContent = "Frage " + (currentIndex + 1) + " von " + items.length;
+    progressBar.style.width = Math.round((currentIndex / items.length) * 100) + "%";
+  }
+
+  function pointerDown(e) {
+    e.preventDefault();
+    dragging = true;
+    dragItem.style.cursor = "grabbing";
+    startX = e.clientX;
+    startY = e.clientY;
+    dragItem.setPointerCapture(e.pointerId);
+  }
+
+  function pointerMove(e) {
+    if (!dragging) return;
+    var dx = e.clientX - startX;
+    var dy = e.clientY - startY;
+    dragItem.style.transform = "translate(" + (offsetX + dx) + "px, " + (offsetY + dy) + "px)";
+  }
+
+  function isInsideRect(x, y, rect) {
+    return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+  }
+
+  function pointerUp(e) {
+    if (!dragging) return;
+    dragging = false;
+    dragItem.style.cursor = "grab";
+
+    var leftRect = zoneLeft.getBoundingClientRect();
+    var rightRect = zoneRight.getBoundingClientRect();
+    var droppedLeft = isInsideRect(e.clientX, e.clientY, leftRect);
+    var droppedRight = isInsideRect(e.clientX, e.clientY, rightRect);
+
+    if (droppedLeft || droppedRight) {
+      answers.push({
+        name: items[currentIndex].name,
+        given: droppedLeft ? "left" : "right",
+        correct: items[currentIndex].correct,
+        explanation: items[currentIndex].explanation
+      });
+      currentIndex = currentIndex + 1;
+      if (currentIndex < items.length) {
+        showItem();
+      } else {
+        playArea.classList.add("d-none");
+        checkArea.classList.remove("d-none");
+        progressLabel.textContent = "Frage " + items.length + " von " + items.length;
+        progressBar.style.width = "100%";
+      }
+    } else {
+      var dx2 = e.clientX - startX;
+      var dy2 = e.clientY - startY;
+      offsetX = offsetX + dx2;
+      offsetY = offsetY + dy2;
+      dragItem.style.transform = "translate(0px, 0px)";
+      offsetX = 0;
+      offsetY = 0;
+    }
+  }
+
+  dragItem.addEventListener("pointerdown", pointerDown);
+  dragItem.addEventListener("pointermove", pointerMove);
+  dragItem.addEventListener("pointerup", pointerUp);
+  dragItem.addEventListener("dragstart", function (e) {
+    e.preventDefault();
+    return false;
+  });
+  document.getElementById("varquiz-app").addEventListener("dragstart", function (e) {
+    e.preventDefault();
+    return false;
+  });
+
+  btnCheck.addEventListener("click", function () {
+    var correctCount = 0;
+    resultList.innerHTML = "";
+    answers.forEach(function (a) {
+      var isCorrect = a.given === a.correct;
+      if (isCorrect) correctCount = correctCount + 1;
+
+      var li = document.createElement("li");
+      li.className = "list-group-item";
+
+      var header = document.createElement("div");
+      header.className = "d-flex justify-content-between align-items-center";
+
+      var nameSpan = document.createElement("span");
+      nameSpan.innerHTML = "<code>" + a.name + "</code>";
+
+      var badge = document.createElement("span");
+      badge.className = "badge " + (isCorrect ? "bg-success" : "bg-danger");
+      badge.textContent = isCorrect ? "Richtig" : "Falsch einsortiert";
+
+      header.appendChild(nameSpan);
+      header.appendChild(badge);
+
+      var explanation = document.createElement("p");
+      explanation.className = "mb-0 mt-1 small text-secondary";
+      explanation.textContent = a.explanation;
+
+      li.appendChild(header);
+      li.appendChild(explanation);
+      resultList.appendChild(li);
+    });
+
+    resultScore.textContent = correctCount + " von " + items.length + " richtig";
+    checkArea.classList.add("d-none");
+    resultArea.classList.remove("d-none");
+  });
+
+  btnReset.addEventListener("click", function () {
+    currentIndex = 0;
+    answers = [];
+    resultArea.classList.add("d-none");
+    checkArea.classList.add("d-none");
+    playArea.classList.remove("d-none");
+    showItem();
+  });
+
+  showItem();
+})();
+</script>
+</section>
+<section class="block">
+<h4 class="text-primary">Programmierung</h4>
+
+<p>Legt für diesen Abschnitt ein Projekt <code>Abschnitt3</code> an (siehe Abschnitt 0). Ihr arbeitet in einer einzigen <code>main</code>-Methode -- der Code für jede Aufgabe wird einfach ans Ende des bisherigen Codes angehängt, nicht ersetzt.</p>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 1 -- Eigene Variablen anlegen</div>
+  <div class="card-body">
+    <p>Deklariert drei Variablen: euren Namen (<code>String</code>), euer Alter (<code>int</code>) und eure Körpergröße in Metern (<code>double</code>). Initialisiert alle drei direkt mit euren echten Werten und gebt sie anschließend aus.</p>
+    <div class="accordion" id="acc-aufgabe1-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe1-tipp" data-bs-parent="#acc-aufgabe1-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wie sieht eine Initialisierung nochmal aus?
+          </button>
+        </h2>
+        <div id="aufgabe1-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Datentyp, Name, Gleichheitszeichen, Wert, Semikolon -- zum Beispiel <code>int alter = 16;</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 2 -- Wert einer Variable ändern</div>
+  <div class="card-body">
+    <p>Deklariert eine neue Variable <code>punkte</code> vom Typ <code>int</code> und initialisiert sie mit <code>0</code>. Gebt den Punktestand aus, weist ihr anschließend den Wert <code>10</code> zu und gebt ihn erneut aus, weist ihr dann den Wert <code>25</code> zu und gebt ihn ein drittes Mal aus.</p>
+    <div class="accordion" id="acc-aufgabe2-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe2-tipp" data-bs-parent="#acc-aufgabe2-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wie oft muss <code class="mx-1">punkte</code> deklariert werden?
+          </button>
+        </h2>
+        <div id="aufgabe2-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Nur einmal, ganz am Anfang. Danach ändert ihr nur noch den Wert per Zuweisung, ohne den Datentyp erneut zu schreiben.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 3 -- Ungültige Namen erkennen</div>
+  <div class="card-body">
+    <p>Versucht nacheinander, folgende Variablen zu deklarieren, und lest jeweils die Fehlermeldung, die NetBeans anzeigt:</p>
+    <pre class="language-java"><code>int 2plätze;
+int class;
+int haus nummer;</code></pre>
+    <p>Notiert euch stichpunktartig, welche Regel jeweils verletzt wurde.</p>
+    <p class="mb-0"><strong>Wichtig:</strong> Löscht jede dieser Zeilen wieder, bevor ihr die nächste ausprobiert bzw. mit der nächsten Aufgabe weitermacht -- sonst lässt sich euer Projekt nicht mehr übersetzen.</p>
+  </div>
+</div>
+
+<div class="accordion mt-4" id="acc-experte-swap">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experte-swap-body" data-bs-parent="#acc-experte-swap">
+        <span class="badge bg-dark me-2">Expertenaufgabe</span> Werte zweier Variablen tauschen -- ohne dritte Variable
+      </button>
+    </h2>
+    <div id="experte-swap-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Deklariert zwei neue <code>int</code>-Variablen <code>a = 5</code> und <code>b = 12</code>. Vertauscht ihre Werte so, dass am Ende <code>a</code> den Wert 12 und <code>b</code> den Wert 5 hat -- und zwar <strong>ohne</strong> eine dritte Hilfsvariable zu verwenden. Gebt vorher und nachher beide Werte aus, um zu prüfen, ob es geklappt hat.</p>
+        <div class="accordion" id="acc-swap-hilfen">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#swap-tipp" data-bs-parent="#acc-swap-hilfen">
+                <span class="badge bg-success me-2">Tipp</span> Welche Rechenoperationen könnten helfen?
+              </button>
+            </h2>
+            <div id="swap-tipp" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p class="mb-0">Überlegt, wie ihr mit Addition und Subtraktion einen Wert vorübergehend in einem einzigen Wert "verstecken" könnt, aus dem sich beide ursprünglichen Werte wieder herausrechnen lassen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<nav class="pager" aria-label="Abschnitte blättern"><a class="prev" href="abschnitt-02.html"><small>Vorheriger Abschnitt</small><strong>02 Erstes Programm</strong></a><a class="next" href="abschnitt-04.html"><small>Nächster Abschnitt</small><strong>04 Datentypen</strong></a></nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>

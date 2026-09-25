@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>07 for-Schleife | Java-Einführung</title>
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/prism.min.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/prism-java.min.js"></script>
+<script src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 btn btn-primary" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="d-flex align-items-center px-3" style="height:3.5rem">
+    <button class="btn btn-outline-secondary btn-sm d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#kursbaum" aria-controls="kursbaum">Abschnitte</button>
+    <a class="brand" href="index.html">Java-Einführung <span>AEuP 10</span></a>
+  </div>
+</header>
+<div class="d-lg-flex">
+  <nav class="course-tree offcanvas-lg offcanvas-start" tabindex="-1" id="kursbaum" aria-label="Kursabschnitte">
+    <div class="offcanvas-header d-lg-none">
+      <span class="fw-bold">Abschnitte</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#kursbaum" aria-label="Schließen"></button>
+    </div>
+    <div class="offcanvas-body d-block p-0">
+      <a class="tree-root d-block text-decoration-none" href="index.html">Kursübersicht</a>
+      <ul class="tree">
+<li><a href="abschnitt-00.html"><span class="nr">00</span><span>Vorbereitung</span></a></li>
+<li><a href="abschnitt-01.html"><span class="nr">01</span><span>Was ist Programmieren?</span></a></li>
+<li><a href="abschnitt-02.html"><span class="nr">02</span><span>Erstes Programm</span></a></li>
+<li><a href="abschnitt-03.html"><span class="nr">03</span><span>Variablen</span></a></li>
+<li><a href="abschnitt-04.html"><span class="nr">04</span><span>Datentypen</span></a></li>
+<li><a href="abschnitt-05.html"><span class="nr">05</span><span>Operatoren</span></a></li>
+<li><a href="abschnitt-06.html"><span class="nr">06</span><span>if/else</span></a></li>
+<li><a href="abschnitt-07.html" aria-current="page"><span class="nr">07</span><span>for-Schleife</span></a></li>
+<li><a href="abschnitt-08.html"><span class="nr">08</span><span>while-Schleife</span></a></li>
+<li><a href="abschnitt-09.html"><span class="nr">09</span><span>Funktionen</span></a></li>
+<li><a href="abschnitt-10.html"><span class="nr">10</span><span>Arrays</span></a></li>
+<li><a href="abschnitt-11.html"><span class="nr">11</span><span>Abschlussprojekt</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="content" id="inhalt">
+    <div class="content-inner">
+<div class="page-title"><span class="nr">Abschnitt 7</span><h1>for-Schleife</h1></div>
+<div class="worksheet"><div class="flex-grow-1"><strong>Arbeitsblatt zu diesem Abschnitt</strong><div class="meta">PDF, 195 KB</div></div><a class="btn btn-primary" href="arbeitsblaetter/07_for_Schleife.pdf" download>Arbeitsblatt herunterladen</a><a class="btn btn-outline-primary" href="arbeitsblaetter/07_for_Schleife.pdf" target="_blank" rel="noopener">Im Browser öffnen</a></div>
+<section class="block">
+<h4 class="text-primary">Information</h4>
+
+<p>Wollt ihr einen Codeblock mehrfach ausführen, ohne ihn mehrfach abzuschreiben, braucht ihr eine <strong>Schleife</strong>. In diesem Abschnitt lernt ihr die <code>for</code>-Schleife kennen, die sich besonders eignet, wenn ihr schon vorher wisst, wie oft ein Codeblock durchlaufen werden soll. <strong>Fülle das Arbeitsblatt anhand des Informationstextes aus.</strong></p>
+
+<h5 class="text-primary mt-4">Die for-Schleife</h5>
+
+<p>Eine <code>for</code>-Schleife fasst drei Dinge in einer einzigen Zeile zusammen: eine Zählvariable, eine Bedingung und eine Änderung der Zählvariable nach jedem Durchlauf.</p>
+
+<style>
+  .primary-tooltip { --bs-tooltip-bg: var(--bs-primary); }
+  .success-tooltip { --bs-tooltip-bg: var(--bs-success); }
+  .warning-tooltip { --bs-tooltip-bg: var(--bs-warning); }
+</style>
+<pre class="language-java"><span class="border-bottom border-primary-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="primary-tooltip" title="Zählvariable: läuft nur einmalig vor dem ersten Durchlauf"><code>for (int i = 0;</code></span> <span class="border-bottom border-success-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="success-tooltip" title="Bedingung: wird vor jedem Durchlauf geprüft"><code>i &lt; 5;</code></span> <span class="border-bottom border-warning-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="warning-tooltip" title="läuft nach jedem Durchlauf, bevor die Bedingung erneut geprüft wird"><code>i = i + 1) {</code></span>
+<code>    System.out.println(i);</code>
+<code>}</code></pre>
+
+<p class="mt-3">Diese Schleife gibt die Zahlen 0, 1, 2, 3, 4 aus. Sobald <code>i</code> gleich 5 ist, ist die Bedingung <code>i &lt; 5</code> nicht mehr erfüllt und die Schleife endet.</p>
+
+<div class="accordion mt-2" id="acc-inkrement-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#inkrement-zusatz-body" data-bs-parent="#acc-inkrement-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Die Kurzschreibweise i++
+      </button>
+    </h2>
+    <div id="inkrement-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0">Statt <code>i = i + 1</code> schreibt man in Java meist kürzer <code>i++</code> -- beides bedeutet genau dasselbe. Ihr werdet <code>i++</code> in fremdem Code sehr häufig sehen, könnt in euren eigenen Lösungen aber gerne bei der ausführlichen Schreibweise bleiben, wenn euch das klarer ist.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="text-primary mt-4">Verschachtelte for-Schleifen</h5>
+
+<p>Genau wie <code>if</code>-Anweisungen lassen sich auch Schleifen ineinander verschachteln. Bei jedem Durchlauf der äußeren Schleife läuft die innere Schleife dann komplett durch.</p>
+
+<pre class="language-java"><code>for (int zeile = 1; zeile &lt;= 3; zeile = zeile + 1) {
+    for (int spalte = 1; spalte &lt;= 3; spalte = spalte + 1) {
+        System.out.println(zeile + " * " + spalte + " = " + (zeile * spalte));
+    }
+}</code></pre>
+
+<p>Für jeden Wert von <code>zeile</code> (1, 2, 3) läuft die innere Schleife komplett mit allen Werten von <code>spalte</code> (1, 2, 3) durch -- insgesamt also 3 mal 3, also 9 Ausgaben.</p>
+
+<h5 class="text-primary mt-4">Schleifen vorzeitig steuern: break und continue</h5>
+
+<p>Mit <code>break</code> könnt ihr eine Schleife sofort komplett verlassen, mit <code>continue</code> nur den aktuellen Durchlauf überspringen und direkt zur Bedingung des nächsten Durchlaufs springen.</p>
+
+<pre class="language-java"><code>for (int i = 0; i &lt; 10; i = i + 1) {
+    if (i == 5) {
+        break;
+    }
+    System.out.println(i);
+}</code></pre>
+
+<p>Diese Schleife gibt nur die Zahlen 0 bis 4 aus -- sobald <code>i</code> gleich 5 ist, wird die Schleife komplett verlassen.</p>
+
+<pre class="language-java"><code>for (int i = 0; i &lt; 5; i = i + 1) {
+    if (i == 2) {
+        continue;
+    }
+    System.out.println(i);
+}</code></pre>
+
+<p class="mt-3">Diese Schleife gibt 0, 1, 3, 4 aus -- bei <code>i == 2</code> wird nur die Ausgabe für diesen einen Durchlauf übersprungen, die Schleife läuft aber weiter.</p>
+
+<div class="accordion mt-2" id="acc-wahl-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wahl-zusatz-body" data-bs-parent="#acc-wahl-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Video: Verschachtelte Schleifen visualisiert
+      </button>
+    </h2>
+    <div id="wahl-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0">Kurzes Video, das anhand einer Animation zeigt, wie oft innere und äußere Schleife bei einer Verschachtelung jeweils durchlaufen werden. <!-- Platzhalter: YouTube-Link der Lehrkraft hier einfügen --></p>
+        <!-- Platzhalter: hier später <div class="ratio ratio-16x9"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO-ID" allowfullscreen></iframe></div> einsetzen --><p class="video-missing mb-0">Das Video wird noch ergänzt.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Platzhalter: H5P-Simulation "Schleifendurchläufe zählen" hier einbetten -->
+</section>
+<section class="block">
+<style>
+  #loopclock-svg .loopclock-hand-i {
+    stroke: var(--bs-info);
+    stroke-width: 4;
+    stroke-linecap: round;
+  }
+  #loopclock-svg .loopclock-hand-j {
+    stroke: var(--bs-primary);
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+  #loopclock-svg .loopclock-hand-k {
+    stroke: var(--bs-success);
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+  #loopclock-svg .loopclock-label-i {
+    fill: var(--bs-info);
+    font-weight: bold;
+  }
+  #loopclock-svg .loopclock-label-j {
+    fill: var(--bs-primary);
+    font-weight: bold;
+  }
+  #loopclock-svg .loopclock-label-k {
+    fill: var(--bs-success);
+    font-weight: bold;
+  }
+  #loopclock-log-box {
+    height: 260px;
+    overflow-y: auto;
+  }
+</style>
+
+<div id="loopclock-app" class="pb-4">
+
+  <h5 class="text-primary">Visualisierung: Verschachtelte for-Schleifen</h5>
+  <p class="text-secondary">Klickt auf "Start"/"Weiter", um die Schleife Schritt für Schritt auszuführen. Der dunkelblaue Zeiger (<code class="mx-1">j</code>) ist die mittlere Schleife und muss einmal komplett herum, bevor sich der hellblaue Zeiger (<code class="mx-1">i</code>) einen Schritt weiterbewegt. Genau wie bei einer Uhr der Minutenzeiger einmal ganz herum muss, bevor der Stundenzeiger weiterspringt.</p>
+
+  <div class="form-check mb-3">
+    <input type="checkbox" class="form-check-input" id="loopclock-toggle-k">
+    <label class="form-check-label" for="loopclock-toggle-k">"Sekundenzeiger" Dritte, innerste Schleife (<code class="mx-1">k</code>, bis 2) hinzufügen </label>
+  </div>
+
+  <pre class="language-java" id="loopclock-code-2"><code>for (int i = 0; i &lt; 3; i++) {
+    for (int j = 0; j &lt; 4; j++) {
+        System.out.println("i = " + i + ", j = " + j);
+    }
+}</code></pre>
+
+  <pre class="language-java d-none" id="loopclock-code-3"><code>for (int i = 0; i &lt; 3; i++) {
+    for (int j = 0; j &lt; 4; j++) {
+        for (int k = 0; k &lt; 2; k++) {
+            System.out.println("i = " + i + ", j = " + j + ", k = " + k);
+        }
+    }
+}</code></pre>
+
+  <div class="row g-4 align-items-start">
+    <div class="col-md-6 text-center">
+      <svg id="loopclock-svg" viewBox="0 0 300 300" style="max-width: 280px;">
+        <circle cx="150" cy="150" r="115" fill="none" stroke="#adb5bd" stroke-width="2"></circle>
+        <circle cx="150" cy="150" r="80" fill="none" stroke="#ced4da" stroke-width="2"></circle>
+        <circle cx="150" cy="150" r="50" fill="none" stroke="#e9ecef" stroke-width="2" id="loopclock-circle-k"></circle>
+        <g id="loopclock-labels-i"></g>
+        <g id="loopclock-labels-j"></g>
+        <g id="loopclock-labels-k"></g>
+        <line id="loopclock-hand-i" class="loopclock-hand-i" x1="150" y1="150" x2="150" y2="45"></line>
+        <line id="loopclock-hand-j" class="loopclock-hand-j" x1="150" y1="150" x2="150" y2="80"></line>
+        <line id="loopclock-hand-k" class="loopclock-hand-k" x1="150" y1="150" x2="150" y2="112"></line>
+        <circle cx="150" cy="150" r="5" fill="#212529"></circle>
+      </svg>
+      <p class="mt-2 mb-0">
+        <span class="badge bg-info">i = <span id="loopclock-value-i">0</span></span>
+        <span class="badge bg-primary">j = <span id="loopclock-value-j">0</span></span>
+        <span class="badge bg-success d-none" id="loopclock-value-k-badge">k = <span id="loopclock-value-k">0</span></span>
+      </p>
+      <p class="mt-2 mb-0">
+        <span class="badge text-bg-light border">Innerste Schleife ausgeführt: <span id="loopclock-counter">0</span> mal</span>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p class="mb-1 text-secondary small">Bisherige Ausgabe:</p>
+      <pre class="bg-light border p-3 rounded" id="loopclock-log-box"><code id="loopclock-log"></code></pre>
+    </div>
+  </div>
+
+  <div class="text-center mt-3">
+    <button type="button" class="btn btn-secondary" id="loopclock-btn-prev">Zurück</button>
+    <button type="button" class="btn btn-primary" id="loopclock-btn-next">Start</button>
+    <button type="button" class="btn btn-outline-secondary" id="loopclock-btn-reset">Reset</button>
+  </div>
+  <p class="text-center text-success fw-bold mt-2 d-none" id="loopclock-done-msg">Schleife beendet -- alle Kombinationen wurden durchlaufen.</p>
+
+</div>
+
+<script>
+(function () {
+  var totalI = 3;
+  var totalJ = 4;
+  var totalK = 2;
+  var mode3 = false;
+  var step = 0;
+
+  var cx = 150;
+  var cy = 150;
+  var labelRadiusI = 115 + 18;
+  var labelRadiusJ = (80 + 115) / 2;
+  var labelRadiusK = (50 + 80) / 2;
+
+  var handI = document.getElementById("loopclock-hand-i");
+  var handJ = document.getElementById("loopclock-hand-j");
+  var handK = document.getElementById("loopclock-hand-k");
+  var circleK = document.getElementById("loopclock-circle-k");
+  var labelsIGroup = document.getElementById("loopclock-labels-i");
+  var labelsJGroup = document.getElementById("loopclock-labels-j");
+  var labelsKGroup = document.getElementById("loopclock-labels-k");
+  var valueI = document.getElementById("loopclock-value-i");
+  var valueJ = document.getElementById("loopclock-value-j");
+  var valueK = document.getElementById("loopclock-value-k");
+  var valueKBadge = document.getElementById("loopclock-value-k-badge");
+  var counter = document.getElementById("loopclock-counter");
+  var log = document.getElementById("loopclock-log");
+  var btnNext = document.getElementById("loopclock-btn-next");
+  var btnPrev = document.getElementById("loopclock-btn-prev");
+  var btnReset = document.getElementById("loopclock-btn-reset");
+  var doneMsg = document.getElementById("loopclock-done-msg");
+  var toggleK = document.getElementById("loopclock-toggle-k");
+  var code2 = document.getElementById("loopclock-code-2");
+  var code3 = document.getElementById("loopclock-code-3");
+
+  function angleForValue(value, total) {
+    return (value / total) * 360;
+  }
+
+  function pointOnCircle(angleDeg, radius) {
+    var angleRad = (angleDeg - 90) * (Math.PI / 180);
+    return {
+      x: cx + radius * Math.cos(angleRad),
+      y: cy + radius * Math.sin(angleRad)
+    };
+  }
+
+  function drawLabels(group, total, radius, cssClass) {
+    if (!group) return;
+    group.innerHTML = "";
+    for (var v = 0; v < total; v = v + 1) {
+      var angle = angleForValue(v, total);
+      var pos = pointOnCircle(angle, radius);
+      var svgNS = "htt" + "p:" + "/" + "/" + "www" + "." + "w3" + ".org" + "/2000/svg";
+      var text = document.createElementNS(svgNS, "text");
+      text.setAttribute("x", pos.x);
+      text.setAttribute("y", pos.y);
+      text.setAttribute("text-anchor", "middle");
+      text.setAttribute("dominant-baseline", "middle");
+      text.setAttribute("font-size", "13");
+      text.setAttribute("class", cssClass);
+      text.textContent = v;
+      group.appendChild(text);
+    }
+  }
+
+  function totalCombos() {
+    return totalI * totalJ * (mode3 ? totalK : 1);
+  }
+
+  function decompose(s) {
+    if (mode3) {
+      var perI = totalJ * totalK;
+      var i = Math.floor(s / perI);
+      var rem = s % perI;
+      var j = Math.floor(rem / totalK);
+      var k = rem % totalK;
+      return { i: i, j: j, k: k };
+    }
+    var i2 = Math.floor(s / totalJ);
+    var j2 = s % totalJ;
+    return { i: i2, j: j2, k: null };
+  }
+
+  function currentIJK() {
+    var s = step > 0 ? step - 1 : 0;
+    return decompose(s);
+  }
+
+  function updateHands() {
+    if (!handI || !handJ) return;
+    var ijk = currentIJK();
+    var angleI = angleForValue(ijk.i, totalI);
+    var angleJ = angleForValue(ijk.j, totalJ);
+    handI.setAttribute("transform", "rotate(" + angleI + " " + cx + " " + cy + ")");
+    handJ.setAttribute("transform", "rotate(" + angleJ + " " + cx + " " + cy + ")");
+    if (mode3 && handK) {
+      var angleK = angleForValue(ijk.k, totalK);
+      handK.setAttribute("transform", "rotate(" + angleK + " " + cx + " " + cy + ")");
+    }
+  }
+
+  function rebuildLog() {
+    var lines = [];
+    for (var s = 0; s < step; s = s + 1) {
+      var ijk = decompose(s);
+      if (mode3) {
+        lines.push("i = " + ijk.i + ", j = " + ijk.j + ", k = " + ijk.k);
+      } else {
+        lines.push("i = " + ijk.i + ", j = " + ijk.j);
+      }
+    }
+    if (log) {
+      log.textContent = lines.join("\n");
+      if (log.parentElement) {
+        log.parentElement.scrollTop = log.parentElement.scrollHeight;
+      }
+    }
+  }
+
+  function updateButtons() {
+    var finished = step >= totalCombos();
+    if (btnNext) {
+      btnNext.disabled = finished;
+      btnNext.textContent = step === 0 ? "Start" : "Weiter";
+    }
+    if (btnPrev) btnPrev.disabled = step <= 0;
+    if (doneMsg) doneMsg.classList.toggle("d-none", !finished);
+  }
+
+  function render() {
+    var ijk = currentIJK();
+    if (valueI) valueI.textContent = ijk.i;
+    if (valueJ) valueJ.textContent = ijk.j;
+    if (valueK) valueK.textContent = mode3 ? ijk.k : 0;
+    if (counter) counter.textContent = step;
+    rebuildLog();
+    updateButtons();
+    try {
+      updateHands();
+    } catch (err) {
+      console.error("loopclock: Uhr-Zeiger konnten nicht aktualisiert werden.", err);
+    }
+  }
+
+  function applyMode() {
+    if (code2) code2.classList.toggle("d-none", mode3);
+    if (code3) code3.classList.toggle("d-none", !mode3);
+    if (handK) handK.classList.toggle("d-none", !mode3);
+    if (circleK) circleK.classList.toggle("d-none", !mode3);
+    if (labelsKGroup) labelsKGroup.classList.toggle("d-none", !mode3);
+    if (valueKBadge) valueKBadge.classList.toggle("d-none", !mode3);
+  }
+
+  btnNext.addEventListener("click", function () {
+    if (step >= totalCombos()) return;
+    step = step + 1;
+    render();
+  });
+
+  btnPrev.addEventListener("click", function () {
+    if (step <= 0) return;
+    step = step - 1;
+    render();
+  });
+
+  btnReset.addEventListener("click", function () {
+    step = 0;
+    render();
+  });
+
+  toggleK.addEventListener("change", function () {
+    mode3 = toggleK.checked;
+    step = 0;
+    applyMode();
+    render();
+  });
+
+  try {
+    drawLabels(labelsIGroup, totalI, labelRadiusI, "loopclock-label-i");
+    drawLabels(labelsJGroup, totalJ, labelRadiusJ, "loopclock-label-j");
+    drawLabels(labelsKGroup, totalK, labelRadiusK, "loopclock-label-k");
+  } catch (err) {
+    console.error("loopclock: Beschriftungen konnten nicht gezeichnet werden.", err);
+  }
+  applyMode();
+  render();
+})();
+</script>
+</section>
+<section class="block">
+<h4 class="text-primary">Programmierung</h4>
+
+<p>Legt für diesen Abschnitt ein Projekt <code>Abschnitt7</code> an (siehe Abschnitt 0). Ihr arbeitet in einer einzigen <code>main</code>-Methode -- der Code für jede Aufgabe wird einfach ans Ende des bisherigen Codes angehängt, nicht ersetzt.</p>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 1 -- Zählen mit for</div>
+  <div class="card-body">
+    <p>Gebt mit einer <code>for</code>-Schleife die Zahlen von 1 bis 10 aus, jede in einer eigenen Zeile.</p>
+    <div class="accordion" id="acc-aufgabe1-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe1-tipp" data-bs-parent="#acc-aufgabe1-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wo fängt die Zählvariable an?
+          </button>
+        </h2>
+        <div id="aufgabe1-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Da ihr bei 1 statt bei 0 beginnen sollt, startet die Zählvariable mit <code>int i = 1</code>, und die Bedingung lautet <code>i &lt;= 10</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 2 -- Summe und Produkt</div>
+  <div class="card-body">
+    <p>Berechnet mit einer Schleife sowohl die Summe als auch das Produkt aller ganzen Zahlen von 1 bis 10 und gebt beide Ergebnisse aus.</p>
+    <div class="accordion mt-2" id="acc-aufgabe2-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe2-tipp" data-bs-parent="#acc-aufgabe2-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Mit welchem Startwert beginnt das Produkt?
+          </button>
+        </h2>
+        <div id="aufgabe2-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Die Summe startet sinnvollerweise bei 0, das Produkt aber bei 1 -- würdet ihr das Produkt bei 0 starten, wäre das Endergebnis immer 0.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 3 -- break und continue</div>
+  <div class="card-body">
+    <p>Schreibt eine <code>for</code>-Schleife, die die Zahlen von 1 bis 20 durchgeht. Überspringt mit <code>continue</code> alle Zahlen, die durch 3 teilbar sind, und brecht die Schleife mit <code>break</code> komplett ab, sobald ihr bei 15 angekommen seid. Gebt alle anderen Zahlen aus.</p>
+    <div class="accordion mt-2" id="acc-aufgabe3-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe3-tipp" data-bs-parent="#acc-aufgabe3-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Welche Bedingung kommt zuerst?
+          </button>
+        </h2>
+        <div id="aufgabe3-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Prüft zuerst die <code>break</code>-Bedingung, danach die <code>continue</code>-Bedingung -- beide als eigene <code>if</code>-Anweisung direkt am Anfang der Schleife.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 4 -- Einmaleins-Tabelle</div>
+  <div class="card-body">
+    <p>Gebt mit zwei verschachtelten <code>for</code>-Schleifen das kleine Einmaleins für die Zahlen 1 bis 5 aus -- also alle Ergebnisse von <code>1*1</code> bis <code>5*5</code>, jedes in einer eigenen Zeile im Format <code>zeile * spalte = ergebnis</code>.</p>
+    <div class="accordion mt-2" id="acc-aufgabe4-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe4-tipp" data-bs-parent="#acc-aufgabe4-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wie viele Schleifen brauche ich?
+          </button>
+        </h2>
+        <div id="aufgabe4-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Zwei ineinander verschachtelte <code>for</code>-Schleifen, ganz wie im Beispiel im Informationstext -- eine für die Zeile, eine für die Spalte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 5 -- Ist die Zahl eine Primzahl?</div>
+  <div class="card-body">
+    <p>Eine Primzahl ist eine ganze Zahl größer als 1, die nur durch 1 und sich selbst ohne Rest teilbar ist. Deklariert eine <code>int</code>-Variable <code>zahl</code> und prüft mit einer Schleife, ob sie eine Primzahl ist. Gebt <code>"Primzahl"</code> oder <code>"keine Primzahl"</code> aus. Testet euren Code mit mehreren Zahlen, darunter mindestens eine Primzahl und eine, die keine ist.</p>
+    <div class="accordion mt-2" id="acc-aufgabe5-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe5-tipp" data-bs-parent="#acc-aufgabe5-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wonach müsst ihr in der Schleife suchen?
+          </button>
+        </h2>
+        <div id="aufgabe5-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Überlegt, durch welche Zahlen ihr <code>zahl</code> testweise teilen müsstet, um einen Teiler zu finden, der zeigt, dass sie keine Primzahl ist -- und wie ihr in einer Schleife nach so einem Teiler sucht.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="accordion mt-4" id="acc-experte-perfekt">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experte-perfekt-body" data-bs-parent="#acc-experte-perfekt">
+        <span class="badge bg-dark me-2">Expertenaufgabe</span> Vollkommene Zahlen finden
+      </button>
+    </h2>
+    <div id="experte-perfekt-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Eine Zahl heißt <strong>vollkommen</strong> (perfekt), wenn die Summe all ihrer echten Teiler (also aller Teiler außer der Zahl selbst) genau der Zahl entspricht. Die 6 ist zum Beispiel vollkommen, weil ihre echten Teiler 1, 2 und 3 zusammen 6 ergeben. Schreibt Code, der mit verschachtelten <code>for</code>-Schleifen alle vollkommenen Zahlen zwischen 1 und 1000 findet und ausgibt.</p>
+        <div class="accordion" id="acc-perfekt-hilfen">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#perfekt-tipp" data-bs-parent="#acc-perfekt-hilfen">
+                <span class="badge bg-success me-2">Tipp</span> Wie ist das Problem in Teilprobleme zerlegbar?
+              </button>
+            </h2>
+            <div id="perfekt-tipp" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p class="mb-0">Überlegt euch zunächst, wie ihr für eine einzelne, feste Zahl die Summe ihrer echten Teiler berechnet -- das braucht bereits eine eigene Schleife. Danach überlegt, wie ihr diese Berechnung für jede Zahl von 1 bis 1000 wiederholt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<nav class="pager" aria-label="Abschnitte blättern"><a class="prev" href="abschnitt-06.html"><small>Vorheriger Abschnitt</small><strong>06 if/else</strong></a><a class="next" href="abschnitt-08.html"><small>Nächster Abschnitt</small><strong>08 while-Schleife</strong></a></nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>

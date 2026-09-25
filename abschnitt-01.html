@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>01 Was ist Programmieren? | Java-Einführung</title>
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/prism.min.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/prism-java.min.js"></script>
+<script src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 btn btn-primary" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="d-flex align-items-center px-3" style="height:3.5rem">
+    <button class="btn btn-outline-secondary btn-sm d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#kursbaum" aria-controls="kursbaum">Abschnitte</button>
+    <a class="brand" href="index.html">Java-Einführung <span>AEuP 10</span></a>
+  </div>
+</header>
+<div class="d-lg-flex">
+  <nav class="course-tree offcanvas-lg offcanvas-start" tabindex="-1" id="kursbaum" aria-label="Kursabschnitte">
+    <div class="offcanvas-header d-lg-none">
+      <span class="fw-bold">Abschnitte</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#kursbaum" aria-label="Schließen"></button>
+    </div>
+    <div class="offcanvas-body d-block p-0">
+      <a class="tree-root d-block text-decoration-none" href="index.html">Kursübersicht</a>
+      <ul class="tree">
+<li><a href="abschnitt-00.html"><span class="nr">00</span><span>Vorbereitung</span></a></li>
+<li><a href="abschnitt-01.html" aria-current="page"><span class="nr">01</span><span>Was ist Programmieren?</span></a></li>
+<li><a href="abschnitt-02.html"><span class="nr">02</span><span>Erstes Programm</span></a></li>
+<li><a href="abschnitt-03.html"><span class="nr">03</span><span>Variablen</span></a></li>
+<li><a href="abschnitt-04.html"><span class="nr">04</span><span>Datentypen</span></a></li>
+<li><a href="abschnitt-05.html"><span class="nr">05</span><span>Operatoren</span></a></li>
+<li><a href="abschnitt-06.html"><span class="nr">06</span><span>if/else</span></a></li>
+<li><a href="abschnitt-07.html"><span class="nr">07</span><span>for-Schleife</span></a></li>
+<li><a href="abschnitt-08.html"><span class="nr">08</span><span>while-Schleife</span></a></li>
+<li><a href="abschnitt-09.html"><span class="nr">09</span><span>Funktionen</span></a></li>
+<li><a href="abschnitt-10.html"><span class="nr">10</span><span>Arrays</span></a></li>
+<li><a href="abschnitt-11.html"><span class="nr">11</span><span>Abschlussprojekt</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="content" id="inhalt">
+    <div class="content-inner">
+<div class="page-title"><span class="nr">Abschnitt 1</span><h1>Was ist Programmieren?</h1></div>
+<div class="worksheet"><div class="flex-grow-1"><strong>Arbeitsblatt zu diesem Abschnitt</strong><div class="meta">PDF, 116 KB</div></div><a class="btn btn-primary" href="arbeitsblaetter/01_WasIstProgrammieren.pdf" download>Arbeitsblatt herunterladen</a><a class="btn btn-outline-primary" href="arbeitsblaetter/01_WasIstProgrammieren.pdf" target="_blank" rel="noopener">Im Browser öffnen</a></div>
+<section class="block">
+<h4 class="text-primary">Information</h4>
+
+<p>Ein Computer versteht nur eine einzige Sprache: Folgen von Nullen und Einsen, den <strong>Maschinencode</strong>. Kein Mensch schreibt Programme direkt in dieser Form -- stattdessen schreibt ihr Quellcode in einer Programmiersprache wie Java, die für Menschen lesbar ist. Damit der Computer diesen Code trotzdem ausführen kann, muss er zuerst übersetzt werden. Wie diese Übersetzung funktioniert, ist das Thema dieses Abschnitts. <strong>Fülle das Arbeitsblatt anhand des Informationstextes aus.</strong></p>
+
+<h5 class="text-primary mt-4">Compiler vs. Interpreter</h5>
+
+<p>Es gibt zwei grundsätzliche Wege, wie Quellcode zu einem lauffähigen Programm wird:</p>
+
+<div class="row mb-3">
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-header bg-primary text-white">Compiler</div>
+      <div class="card-body">
+        <p class="card-text">Ein Compiler übersetzt den <strong>gesamten</strong> Quellcode auf einmal in Maschinencode. Erst danach kann das fertige Programm gestartet werden. Das Übersetzen heißt <em>kompilieren</em>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-header bg-secondary text-white">Interpreter</div>
+      <div class="card-body">
+        <p class="card-text">Ein Interpreter liest den Quellcode Zeile für Zeile und führt jede Zeile sofort aus, ohne vorher das gesamte Programm zu übersetzen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<svg viewBox="0 0 720 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vergleich Compiler und Interpreter">
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#495057"/>
+    </marker>
+  </defs>
+
+  <text x="10" y="20" font-size="14" font-weight="bold" fill="#0d6efd">Compiler</text>
+  <rect x="10" y="30" width="110" height="45" rx="6" fill="#e7f1ff" stroke="#0d6efd"/>
+  <text x="65" y="57" font-size="12" text-anchor="middle" fill="#212529">Quellcode</text>
+  <line x1="120" y1="52" x2="165" y2="52" stroke="#495057" stroke-width="2" marker-end="url(#arrow1)"/>
+  <rect x="170" y="30" width="110" height="45" rx="6" fill="#cfe2ff" stroke="#0d6efd"/>
+  <text x="225" y="50" font-size="12" text-anchor="middle" fill="#212529">Compiler</text>
+  <text x="225" y="64" font-size="10" text-anchor="middle" fill="#212529">(übersetzt alles)</text>
+  <line x1="280" y1="52" x2="325" y2="52" stroke="#495057" stroke-width="2" marker-end="url(#arrow1)"/>
+  <rect x="330" y="30" width="130" height="45" rx="6" fill="#d1e7dd" stroke="#198754"/>
+  <text x="395" y="50" font-size="12" text-anchor="middle" fill="#212529">Maschinencode</text>
+  <text x="395" y="64" font-size="10" text-anchor="middle" fill="#212529">(.exe o. ä.)</text>
+  <line x1="460" y1="52" x2="505" y2="52" stroke="#495057" stroke-width="2" marker-end="url(#arrow1)"/>
+  <rect x="510" y="30" width="130" height="45" rx="6" fill="#fff3cd" stroke="#997404"/>
+  <text x="575" y="57" font-size="12" text-anchor="middle" fill="#212529">Ausführung</text>
+
+  <text x="10" y="120" font-size="14" font-weight="bold" fill="#6c757d">Interpreter</text>
+  <rect x="10" y="130" width="110" height="45" rx="6" fill="#e7f1ff" stroke="#0d6efd"/>
+  <text x="65" y="157" font-size="12" text-anchor="middle" fill="#212529">Quellcode</text>
+  <line x1="120" y1="152" x2="165" y2="152" stroke="#495057" stroke-width="2" marker-end="url(#arrow1)"/>
+  <rect x="170" y="130" width="470" height="45" rx="6" fill="#e2e3e5" stroke="#6c757d"/>
+  <text x="405" y="150" font-size="12" text-anchor="middle" fill="#212529">Interpreter liest und führt Zeile 1, dann Zeile 2, dann Zeile 3 ... direkt aus</text>
+  <text x="405" y="164" font-size="10" text-anchor="middle" fill="#212529">kein separater Übersetzungsschritt vorher</text>
+</svg>
+
+<div class="accordion mt-3" id="compVsInterpAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#compVsInterpDetail" data-bs-parent="#compVsInterpAccordion">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Was bedeutet das in der Praxis?
+      </button>
+    </h2>
+    <div id="compVsInterpDetail" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Kompilierte Programme starten in der Regel schneller, weil die Übersetzung schon vorher passiert ist. Interpretierte Programme lassen sich dagegen leichter testen, weil man einzelne Zeilen sofort ausprobieren kann, ohne das ganze Programm neu zu übersetzen. C wird klassischerweise kompiliert, Python klassischerweise interpretiert.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="text-primary mt-4">Maschinencode und Bytecode -- der Sonderfall Java</h5>
+
+<p><strong>Maschinencode</strong> besteht aus Befehlen, die exakt auf einen bestimmten Prozessortyp zugeschnitten sind. Ein für einen Intel-Prozessor kompiliertes Programm läuft deshalb nicht automatisch auf jedem anderen Prozessor. Java geht einen anderen Weg und fügt eine Zwischenstufe ein, den <strong>Bytecode</strong>.</p>
+
+<svg viewBox="0 0 720 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Java Compiler- und Ausführungsweg über Bytecode">
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#495057"/>
+    </marker>
+  </defs>
+  <rect x="10" y="35" width="110" height="45" rx="6" fill="#e7f1ff" stroke="#0d6efd"/>
+  <text x="65" y="55" font-size="12" text-anchor="middle" fill="#212529">Java-Quellcode</text>
+  <text x="65" y="69" font-size="10" text-anchor="middle" fill="#212529">(.java)</text>
+  <line x1="120" y1="57" x2="160" y2="57" stroke="#495057" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="140" y="47" font-size="10" text-anchor="middle" fill="#212529">javac</text>
+  <rect x="165" y="35" width="130" height="45" rx="6" fill="#cfe2ff" stroke="#0d6efd"/>
+  <text x="230" y="55" font-size="12" text-anchor="middle" fill="#212529">Bytecode</text>
+  <text x="230" y="69" font-size="10" text-anchor="middle" fill="#212529">(.class)</text>
+  <line x1="295" y1="57" x2="335" y2="57" stroke="#495057" stroke-width="2" marker-end="url(#arrow2)"/>
+  <rect x="340" y="20" width="150" height="75" rx="6" fill="#d1e7dd" stroke="#198754"/>
+  <text x="415" y="45" font-size="12" text-anchor="middle" fill="#212529">JVM</text>
+  <text x="415" y="60" font-size="10" text-anchor="middle" fill="#212529">Java Virtual</text>
+  <text x="415" y="73" font-size="10" text-anchor="middle" fill="#212529">Machine</text>
+  <text x="415" y="88" font-size="9" text-anchor="middle" fill="#212529">interpretiert / JIT</text>
+  <line x1="490" y1="57" x2="530" y2="57" stroke="#495057" stroke-width="2" marker-end="url(#arrow2)"/>
+  <rect x="535" y="35" width="150" height="45" rx="6" fill="#fff3cd" stroke="#997404"/>
+  <text x="610" y="55" font-size="12" text-anchor="middle" fill="#212529">Maschinencode</text>
+  <text x="610" y="69" font-size="10" text-anchor="middle" fill="#212529">passend zum Gerät</text>
+</svg>
+
+<p class="mt-3">Der Bytecode ist auf keinen bestimmten Prozessor zugeschnitten. Er läuft auf jedem Gerät, für das es eine <strong>JVM</strong> gibt -- der Bytecode selbst muss dafür nicht neu übersetzt werden. Die JVM übernimmt zur Laufzeit die Übersetzung in den Maschinencode des jeweiligen Geräts, teils zeilenweise interpretiert, teils direkt in schnellen Maschinencode übersetzt. Java nutzt also beide Prinzipien: einen Compiler von Quellcode zu Bytecode, und die JVM, die diesen Bytecode ausführt.</p>
+
+<div class="accordion mt-2" id="acc-video-bytecode">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#video-bytecode-body" data-bs-parent="#acc-video-bytecode">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Video: Vom Quellcode zum laufenden Programm
+      </button>
+    </h2>
+    <div id="video-bytecode-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-1">Hier ein kurzes Erklärvideo zum Ablauf Quellcode -&gt; Compiler -&gt; Bytecode -&gt; JVM.</p>
+        <div class="ratio ratio-16x9">
+          <video controls>
+            <source src="medien/JavaCompile.mp4" type="video/mp4"> </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="text-primary mt-4">Vergleich von Programmiersprachen</h5>
+
+<p>Nicht jede Sprache setzt auf dasselbe Prinzip. Die folgende Tabelle vergleicht vier bekannte Sprachen:</p>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Sprache</th>
+        <th>Übersetzungsart</th>
+        <th>Typische Einsatzgebiete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Java</td>
+        <td>Compiler zu Bytecode, dann JVM</td>
+        <td>Unternehmensanwendungen, Android-Apps, Backend-Systeme</td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>Interpreter</td>
+        <td>Datenanalyse, Skripte, Prototypen, KI</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>Compiler zu Maschinencode</td>
+        <td>Betriebssysteme, eingebettete Systeme, Treiber</td>
+      </tr>
+      <tr>
+        <td class="text-nowrap">JavaScript</td>
+        <td>Interpreter / JIT im Browser</td>
+        <td>Interaktive Webseiten</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Platzhalter: H5P-Quiz "Sprache dem Übersetzungsprinzip zuordnen" hier einbetten -->
+
+<div class="accordion mt-4" id="acc-experte-jit">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experte-jit-body" data-bs-parent="#acc-experte-jit">
+        <span class="badge bg-dark me-2">Expertenaufgabe</span> Was macht ein JIT-Compiler in der JVM?
+      </button>
+    </h2>
+    <div id="experte-jit-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Recherchiert, was ein <strong>JIT-Compiler</strong> (Just-in-Time-Compiler) innerhalb der JVM genau macht und warum er ein Kompromiss zwischen den Vorteilen von Compiler und Interpreter ist.</p>
+        <div class="accordion" id="acc-jit-hilfen">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jit-tipp" data-bs-parent="#acc-jit-hilfen">
+                <span class="badge bg-success me-2">Tipp</span> Welchen Nachteil hat reines Interpretieren?
+              </button>
+            </h2>
+            <div id="jit-tipp" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p class="mb-0">Überlegt zunächst, welchen Nachteil reines Interpretieren gegenüber kompiliertem Code hat.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jit-hinweis" data-bs-parent="#acc-jit-hilfen">
+                <span class="badge bg-warning me-2">Hinweis</span> Was bedeutet "just in time"?
+              </button>
+            </h2>
+            <div id="jit-hinweis" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p class="mb-0">JIT steht für "just in time" -- der Compiler übersetzt also nicht vorher alles, sondern erst dann, wenn ein Teil des Bytecodes wirklich gebraucht wird, und merkt sich häufig genutzte Teile.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<nav class="pager" aria-label="Abschnitte blättern"><a class="prev" href="abschnitt-00.html"><small>Vorheriger Abschnitt</small><strong>00 Vorbereitung</strong></a><a class="next" href="abschnitt-02.html"><small>Nächster Abschnitt</small><strong>02 Erstes Programm</strong></a></nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>

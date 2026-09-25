@@ -1,0 +1,109 @@
+/* Schriften lokal eingebunden (keine Anfragen an Google-Server) */
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/atkinson-hyperlegible-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: italic; font-weight: 700; font-display: swap; src: url("../fonts/atkinson-hyperlegible-latin-700-italic.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/jetbrains-mono-latin-700-normal.woff2") format("woff2"); }
+
+:root {
+  --ink: #1d2330;
+  --muted: #5b6474;
+  --panel: #f2f4f7;
+  --rule: #d9dee6;
+  --select: #e3ecfb;
+  --bs-body-font-family: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --bs-font-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --bs-body-color: var(--ink);
+  --bs-body-font-size: 1.0625rem;
+  --bs-body-line-height: 1.6;
+}
+
+body { background: #fff; }
+
+/* Prism-Code nutzt dieselbe Monospace-Schrift */
+code[class*="language-"], pre[class*="language-"] { font-family: var(--bs-font-monospace); font-size: .9rem; }
+pre[class*="language-"] { border-radius: .375rem; }
+kbd { font-family: var(--bs-font-monospace); }
+
+/* ---------- Kopfleiste ---------- */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: #fff;
+  position: sticky; top: 0; z-index: 1030;
+}
+.site-header .brand {
+  font-weight: 700; color: var(--ink); text-decoration: none; font-size: 1.05rem;
+}
+.site-header .brand span { color: var(--muted); font-weight: 400; }
+
+/* ---------- Seitenleiste im Stil eines IDE-Projektbaums ---------- */
+.course-tree {
+  background: var(--panel);
+  border-right: 1px solid var(--rule);
+}
+@media (min-width: 992px) {
+  .course-tree { width: 19rem; flex: 0 0 19rem; position: sticky; top: 3.5rem; height: calc(100vh - 3.5rem); overflow-y: auto; }
+}
+.tree-root {
+  font-family: var(--bs-font-monospace); font-size: .85rem; font-weight: 700;
+  color: var(--ink); padding: 1rem 1rem .5rem;
+}
+.tree-root::before { content: "\25BE\00A0"; color: var(--muted); }
+.tree { list-style: none; margin: 0 0 1.5rem 1.35rem; padding: 0; border-left: 1px dotted #9aa3b2; }
+.tree a {
+  display: flex; gap: .6rem; align-items: baseline;
+  padding: .35rem .75rem .35rem .8rem; margin-right: .75rem;
+  color: var(--ink); text-decoration: none; font-size: .95rem; line-height: 1.35;
+  border-radius: 0 .25rem .25rem 0; position: relative;
+}
+.tree a::before { content: ""; position: absolute; left: 0; top: 50%; width: .5rem; border-top: 1px dotted #9aa3b2; }
+.tree a .nr { font-family: var(--bs-font-monospace); font-size: .8rem; color: var(--muted); flex: 0 0 auto; }
+.tree a:hover { background: #e7eaf0; }
+.tree a[aria-current="page"] { background: var(--select); box-shadow: inset 3px 0 0 var(--bs-primary); font-weight: 700; }
+.tree a[aria-current="page"] .nr { color: var(--bs-primary); }
+.tree a:focus-visible { outline: 2px solid var(--bs-primary); outline-offset: -2px; }
+
+/* ---------- Inhalt ---------- */
+.content { min-width: 0; flex: 1 1 auto; }
+.content-inner { max-width: 54rem; padding: 2.5rem 1.5rem 4rem; }
+@media (min-width: 992px) { .content-inner { padding: 3rem 3.5rem 5rem; } }
+
+.page-title { margin-bottom: 2rem; }
+.page-title .nr { font-family: var(--bs-font-monospace); color: var(--muted); font-size: .95rem; display: block; margin-bottom: .25rem; }
+.page-title h1 { font-weight: 700; font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.15; margin: 0; }
+
+.block + .block { border-top: 1px solid var(--rule); margin-top: 2.75rem; padding-top: 2.75rem; }
+.block h4:first-child { margin-top: 0; }
+
+.worksheet {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  border: 1px solid var(--rule); border-left: 4px solid var(--bs-primary);
+  border-radius: .375rem; padding: .9rem 1.1rem; margin-bottom: 2.5rem; background: #fff;
+}
+.worksheet .meta { color: var(--muted); font-size: .9rem; }
+
+.video-missing { border: 1px dashed var(--rule); border-radius: .375rem; padding: 1rem; color: var(--muted); margin-top: 1rem; }
+
+.pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+.pager a { text-decoration: none; display: block; max-width: 48%; }
+.pager a small { display: block; color: var(--muted); }
+.pager a strong { color: var(--bs-primary); }
+.pager .next { text-align: right; margin-left: auto; }
+
+/* ---------- Startseite ---------- */
+.intro { font-size: 1.15rem; color: var(--muted); max-width: 40rem; }
+.overview { list-style: none; padding: 0; margin: 2.5rem 0 0; border-top: 1px solid var(--rule); }
+.overview li { border-bottom: 1px solid var(--rule); }
+.overview a { display: grid; grid-template-columns: 3rem 1fr; gap: .25rem 1rem; padding: 1.1rem .5rem; text-decoration: none; color: var(--ink); }
+.overview a:hover { background: var(--panel); }
+.overview a:focus-visible { outline: 2px solid var(--bs-primary); outline-offset: -2px; }
+.overview .nr { font-family: var(--bs-font-monospace); color: var(--bs-primary); font-size: 1.1rem; grid-row: span 2; padding-top: .1rem; }
+.overview .name { font-weight: 700; font-size: 1.15rem; }
+.overview .parts { color: var(--muted); font-size: .92rem; }
+
+.site-footer { color: var(--muted); font-size: .85rem; margin-top: 3rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

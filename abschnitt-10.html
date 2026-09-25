@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 Arrays | Java-Einführung</title>
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/prism.min.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/prism-java.min.js"></script>
+<script src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 btn btn-primary" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="d-flex align-items-center px-3" style="height:3.5rem">
+    <button class="btn btn-outline-secondary btn-sm d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#kursbaum" aria-controls="kursbaum">Abschnitte</button>
+    <a class="brand" href="index.html">Java-Einführung <span>AEuP 10</span></a>
+  </div>
+</header>
+<div class="d-lg-flex">
+  <nav class="course-tree offcanvas-lg offcanvas-start" tabindex="-1" id="kursbaum" aria-label="Kursabschnitte">
+    <div class="offcanvas-header d-lg-none">
+      <span class="fw-bold">Abschnitte</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#kursbaum" aria-label="Schließen"></button>
+    </div>
+    <div class="offcanvas-body d-block p-0">
+      <a class="tree-root d-block text-decoration-none" href="index.html">Kursübersicht</a>
+      <ul class="tree">
+<li><a href="abschnitt-00.html"><span class="nr">00</span><span>Vorbereitung</span></a></li>
+<li><a href="abschnitt-01.html"><span class="nr">01</span><span>Was ist Programmieren?</span></a></li>
+<li><a href="abschnitt-02.html"><span class="nr">02</span><span>Erstes Programm</span></a></li>
+<li><a href="abschnitt-03.html"><span class="nr">03</span><span>Variablen</span></a></li>
+<li><a href="abschnitt-04.html"><span class="nr">04</span><span>Datentypen</span></a></li>
+<li><a href="abschnitt-05.html"><span class="nr">05</span><span>Operatoren</span></a></li>
+<li><a href="abschnitt-06.html"><span class="nr">06</span><span>if/else</span></a></li>
+<li><a href="abschnitt-07.html"><span class="nr">07</span><span>for-Schleife</span></a></li>
+<li><a href="abschnitt-08.html"><span class="nr">08</span><span>while-Schleife</span></a></li>
+<li><a href="abschnitt-09.html"><span class="nr">09</span><span>Funktionen</span></a></li>
+<li><a href="abschnitt-10.html" aria-current="page"><span class="nr">10</span><span>Arrays</span></a></li>
+<li><a href="abschnitt-11.html"><span class="nr">11</span><span>Abschlussprojekt</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="content" id="inhalt">
+    <div class="content-inner">
+<div class="page-title"><span class="nr">Abschnitt 10</span><h1>Arrays</h1></div>
+<div class="worksheet"><div class="flex-grow-1"><strong>Arbeitsblatt zu diesem Abschnitt</strong><div class="meta">PDF, 193 KB</div></div><a class="btn btn-primary" href="arbeitsblaetter/10_Arrays.pdf" download>Arbeitsblatt herunterladen</a><a class="btn btn-outline-primary" href="arbeitsblaetter/10_Arrays.pdf" target="_blank" rel="noopener">Im Browser öffnen</a></div>
+<section class="block">
+<h4 class="text-primary">Information</h4>
+
+<p>Bisher konnte jede Variable genau einen Wert speichern. Mit einem <strong>Array</strong> (auf Deutsch manchmal Feld genannt) könnt ihr mehrere Werte desselben Datentyps unter einem einzigen Namen speichern und über eine Position ansprechen. <strong>Fülle das Arbeitsblatt anhand des Informationstextes aus.</strong></p>
+
+<h5 class="text-primary mt-4">Ein Array anlegen</h5>
+
+<p>Es gibt zwei gängige Wege, ein Array zu erstellen:</p>
+
+<style>
+  .primary-tooltip { --bs-tooltip-bg: var(--bs-primary); }
+  .success-tooltip { --bs-tooltip-bg: var(--bs-success); }
+</style>
+<pre class="language-java"><span class="border-bottom border-primary-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="primary-tooltip" title="Legt ein leeres int-Array mit Platz für 5 Werte an, alle zunächst 0"><code>int[] zahlen = new int[5];</code></span>
+<span class="border-bottom border-success-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="success-tooltip" title="Legt ein int-Array direkt mit diesen 5 Werten an"><code>int[] noten = {1, 3, 2, 2, 4};</code></span></pre>
+
+<p class="mt-3">Die eckigen Klammern <code>[]</code> hinter dem Datentyp zeigen, dass es sich um ein Array handelt. Bei der ersten Schreibweise legt ihr nur die Größe fest, alle Werte sind zunächst <code>0</code>. Bei der zweiten Schreibweise gebt ihr die Werte direkt mit an -- die Größe ergibt sich automatisch aus der Anzahl der Werte.</p>
+
+<h5 class="text-primary mt-4">Zugriff über den Index</h5>
+
+<p>Auf einzelne Werte greift ihr über ihre Position zu, den <strong>Index</strong>. Wichtig: In Java beginnt die Zählung bei <code>0</code>, nicht bei <code>1</code>.</p>
+
+<pre class="language-java"><code>int[] noten = {1, 3, 2, 2, 4};
+System.out.println(noten[0]);
+System.out.println(noten[2]);
+noten[1] = 5;
+System.out.println(noten[1]);</code></pre>
+
+<p><code>noten[0]</code> ist die erste Note (<code>1</code>), <code>noten[2]</code> die dritte Note (<code>2</code>). Nach der Zuweisung <code>noten[1] = 5;</code> ist die zweite Note auf <code>5</code> geändert.</p>
+
+<div class="accordion mt-2" id="acc-index-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#index-zusatz-body" data-bs-parent="#acc-index-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Was passiert bei einem ungültigen Index?
+      </button>
+    </h2>
+    <div id="index-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0">Greift ihr auf einen Index zu, den es nicht gibt -- zum Beispiel <code>noten[5]</code> bei einem Array mit nur 5 Werten (gültige Indizes 0 bis 4) -- bricht das Programm zur Laufzeit mit einer <code>ArrayIndexOutOfBoundsException</code> ab. Das ist einer der häufigsten Anfängerfehler bei Arrays, weil der letzte gültige Index immer um 1 kleiner ist als die Array-Länge.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="text-primary mt-4">Die Länge eines Arrays</h5>
+
+<p>Mit <code>.length</code> (ohne runde Klammern, anders als bei Methoden) erfahrt ihr, wie viele Werte ein Array enthält:</p>
+
+<pre class="language-java"><code>int[] noten = {1, 3, 2, 2, 4};
+System.out.println(noten.length);</code></pre>
+
+<p>Diese Ausgabe ist <code>5</code>. Der letzte gültige Index ist demnach <code>noten.length - 1</code>, hier also <code>4</code>.</p>
+
+<h5 class="text-primary mt-4">Arrays mit einer Schleife durchlaufen</h5>
+
+<p>Meist wollt ihr nicht auf einen einzelnen Wert zugreifen, sondern alle Werte eines Arrays der Reihe nach verarbeiten. Dafür eignet sich eine <code>for</code>-Schleife, die über den Index läuft:</p>
+
+<pre class="language-java"><code>int[] noten = {1, 3, 2, 2, 4};
+for (int i = 0; i &lt; noten.length; i = i + 1) {
+    System.out.println(noten[i]);
+}</code></pre>
+
+<p class="mt-3">Die Schleife läuft von <code>0</code> bis <code>noten.length - 1</code> -- also genau über alle gültigen Indizes des Arrays, unabhängig davon, wie lang das Array tatsächlich ist. Deshalb funktioniert dieser Code auch, wenn sich die Länge des Arrays später ändert.</p>
+
+<div class="accordion mt-2" id="acc-foreach-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#foreach-zusatz-body" data-bs-parent="#acc-foreach-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Die kompaktere for-each-Schreibweise
+      </button>
+    </h2>
+    <div id="foreach-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Wenn ihr den Index selbst gar nicht braucht, sondern nur jeden Wert einzeln, gibt es in Java eine kompaktere Schreibweise, die sogenannte for-each-Schleife:</p>
+        <pre class="language-java"><code>for (int note : noten) {
+    System.out.println(note);
+}</code></pre>
+        <p class="mb-0">Das bedeutet sinngemäß "für jeden Wert <code>note</code> in <code>noten</code>". Diese Schreibweise ist kürzer, funktioniert aber nur, wenn ihr wirklich nur lesend auf jeden Wert zugreifen wollt -- den Index selbst kennt ihr dabei nicht.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="accordion mt-2" id="acc-video-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#video-zusatz-body" data-bs-parent="#acc-video-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Video: Arrays im Speicher visualisiert
+      </button>
+    </h2>
+    <div id="video-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0">Kurzes Video, das Arrays und den Indexzugriff bildlich als durchnummerierte Fächer darstellt. <!-- Platzhalter: YouTube-Link der Lehrkraft hier einfügen --></p>
+        <!-- Platzhalter: hier später <div class="ratio ratio-16x9"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO-ID" allowfullscreen></iframe></div> einsetzen --><p class="video-missing mb-0">Das Video wird noch ergänzt.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Platzhalter: H5P-Simulation "Welcher Index liefert welchen Wert?" hier einbetten -->
+</section>
+<section class="block">
+<h4 class="text-primary">Programmierung</h4>
+
+<p>Legt für diesen Abschnitt ein Projekt <code>Abschnitt10</code> an (siehe Abschnitt 0). Ab jetzt schreibt ihr für jede Aufgabe eine eigene Funktion und ruft sie anschließend in <code>main</code> auf.</p>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 1 -- Array ausgeben</div>
+  <div class="card-body">
+    <p>Schreibt eine Funktion <code>gebeArrayAus</code>, die ein <code>int[]</code> als Parameter entgegennimmt und jeden einzelnen Wert in einer eigenen Zeile ausgibt. Ruft sie in <code>main</code> mit einem selbst gewählten Array von mindestens 5 Zahlen auf.</p>
+    <div class="accordion" id="acc-aufgabe1-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe1-tipp" data-bs-parent="#acc-aufgabe1-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wie sieht der Parametertyp für ein Array aus?
+          </button>
+        </h2>
+        <div id="aufgabe1-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0"><code>static void gebeArrayAus(int[] werte) {</code> -- danach eine <code>for</code>-Schleife über <code>werte.length</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 2 -- Summe berechnen</div>
+  <div class="card-body">
+    <p>Schreibt eine Funktion <code>summeArray</code>, die ein <code>int[]</code> als Parameter entgegennimmt und die Summe aller Werte zurückgibt. Ruft sie in <code>main</code> mit demselben oder einem neuen Array auf und gebt das Ergebnis aus.</p>
+    <div class="accordion mt-2" id="acc-aufgabe2-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe2-tipp" data-bs-parent="#acc-aufgabe2-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wo sammelt ihr die Summe?
+          </button>
+        </h2>
+        <div id="aufgabe2-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Legt euch innerhalb der Funktion eine lokale Variable mit Startwert <code>0</code> an und zählt in der Schleife jeden Wert dazu, bevor ihr sie am Ende zurückgebt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 3 -- Größten Wert finden</div>
+  <div class="card-body">
+    <p>Schreibt eine Funktion <code>maximum</code>, die ein <code>int[]</code> als Parameter entgegennimmt und den größten enthaltenen Wert zurückgibt. Ruft sie in <code>main</code> auf und gebt das Ergebnis aus.</p>
+    <div class="accordion mt-2" id="acc-aufgabe3-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe3-tipp" data-bs-parent="#acc-aufgabe3-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Womit startet ihr den Vergleich?
+          </button>
+        </h2>
+        <div id="aufgabe3-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Startet mit dem ersten Element des Arrays (Index 0) als vorläufigem Maximum und vergleicht es der Reihe nach mit allen weiteren Werten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 4 -- Durchschnitt berechnen</div>
+  <div class="card-body">
+    <p>Schreibt eine Funktion <code>durchschnitt</code>, die ein <code>int[]</code> als Parameter entgegennimmt und den Durchschnitt aller Werte als <code>double</code> zurückgibt. Ruft sie in <code>main</code> auf und gebt das Ergebnis aus.</p>
+    <div class="accordion mt-2" id="acc-aufgabe4-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe4-tipp" data-bs-parent="#acc-aufgabe4-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Könnt ihr eine bereits geschriebene Funktion wiederverwenden?
+          </button>
+        </h2>
+        <div id="aufgabe4-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Der Durchschnitt ist die Summe geteilt durch die Anzahl der Werte -- die Summe könnt ihr euch direkt über einen Aufruf eurer Funktion <code>summeArray</code> holen, statt sie erneut zu berechnen. Achtet beim Teilen darauf, dass das Ergebnis ein <code>double</code> sein soll.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 5 -- Ungültigen Index provozieren</div>
+  <div class="card-body">
+    <p>Legt in <code>main</code> testweise ein Array mit 5 Werten an und versucht, auf den Index <code>5</code> zuzugreifen. Lest die Fehlermeldung genau durch und löscht den Testzugriff danach wieder.</p>
+  </div>
+</div>
+
+<div class="accordion mt-4" id="acc-experte-sortieren">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experte-sortieren-body" data-bs-parent="#acc-experte-sortieren">
+        <span class="badge bg-dark me-2">Expertenaufgabe</span> Array sortieren
+      </button>
+    </h2>
+    <div id="experte-sortieren-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Schreibt eine Funktion <code>sortiere</code>, die ein <code>int[]</code> als Parameter entgegennimmt und dessen Werte aufsteigend sortiert (das Array soll also direkt verändert werden, kein neues Array zurückgegeben). Ruft die Funktion in <code>main</code> mit einem unsortierten Array auf, gebt es vorher und nachher mit eurer Funktion <code>gebeArrayAus</code> aus und prüft, ob die Sortierung korrekt war.</p>
+        <div class="accordion" id="acc-sortieren-hilfen">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sortieren-tipp" data-bs-parent="#acc-sortieren-hilfen">
+                <span class="badge bg-success me-2">Tipp</span> Wie könnte ein einfaches Sortierverfahren aussehen?
+              </button>
+            </h2>
+            <div id="sortieren-tipp" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p class="mb-0">Überlegt euch ein Verfahren, das wiederholt benachbarte Elemente vergleicht und vertauscht, wenn sie in der falschen Reihenfolge stehen -- und wie oft ihr das über das ganze Array wiederholen müsst, damit am Ende garantiert alles sortiert ist. Zwei ineinander verschachtelte Schleifen könnten dabei helfen. Der Fachbegriff für ein solches Verfahren lautet "Bubble Sort", falls ihr dazu recherchieren wollt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<nav class="pager" aria-label="Abschnitte blättern"><a class="prev" href="abschnitt-09.html"><small>Vorheriger Abschnitt</small><strong>09 Funktionen</strong></a><a class="next" href="abschnitt-11.html"><small>Nächster Abschnitt</small><strong>11 Abschlussprojekt</strong></a></nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>

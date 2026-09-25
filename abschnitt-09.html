@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>09 Funktionen | Java-Einführung</title>
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/prism.min.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/prism-java.min.js"></script>
+<script src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 btn btn-primary" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="d-flex align-items-center px-3" style="height:3.5rem">
+    <button class="btn btn-outline-secondary btn-sm d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#kursbaum" aria-controls="kursbaum">Abschnitte</button>
+    <a class="brand" href="index.html">Java-Einführung <span>AEuP 10</span></a>
+  </div>
+</header>
+<div class="d-lg-flex">
+  <nav class="course-tree offcanvas-lg offcanvas-start" tabindex="-1" id="kursbaum" aria-label="Kursabschnitte">
+    <div class="offcanvas-header d-lg-none">
+      <span class="fw-bold">Abschnitte</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#kursbaum" aria-label="Schließen"></button>
+    </div>
+    <div class="offcanvas-body d-block p-0">
+      <a class="tree-root d-block text-decoration-none" href="index.html">Kursübersicht</a>
+      <ul class="tree">
+<li><a href="abschnitt-00.html"><span class="nr">00</span><span>Vorbereitung</span></a></li>
+<li><a href="abschnitt-01.html"><span class="nr">01</span><span>Was ist Programmieren?</span></a></li>
+<li><a href="abschnitt-02.html"><span class="nr">02</span><span>Erstes Programm</span></a></li>
+<li><a href="abschnitt-03.html"><span class="nr">03</span><span>Variablen</span></a></li>
+<li><a href="abschnitt-04.html"><span class="nr">04</span><span>Datentypen</span></a></li>
+<li><a href="abschnitt-05.html"><span class="nr">05</span><span>Operatoren</span></a></li>
+<li><a href="abschnitt-06.html"><span class="nr">06</span><span>if/else</span></a></li>
+<li><a href="abschnitt-07.html"><span class="nr">07</span><span>for-Schleife</span></a></li>
+<li><a href="abschnitt-08.html"><span class="nr">08</span><span>while-Schleife</span></a></li>
+<li><a href="abschnitt-09.html" aria-current="page"><span class="nr">09</span><span>Funktionen</span></a></li>
+<li><a href="abschnitt-10.html"><span class="nr">10</span><span>Arrays</span></a></li>
+<li><a href="abschnitt-11.html"><span class="nr">11</span><span>Abschlussprojekt</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="content" id="inhalt">
+    <div class="content-inner">
+<div class="page-title"><span class="nr">Abschnitt 9</span><h1>Funktionen</h1></div>
+<div class="worksheet"><div class="flex-grow-1"><strong>Arbeitsblatt zu diesem Abschnitt</strong><div class="meta">PDF, 175 KB</div></div><a class="btn btn-primary" href="arbeitsblaetter/09_Funktionen.pdf" download>Arbeitsblatt herunterladen</a><a class="btn btn-outline-primary" href="arbeitsblaetter/09_Funktionen.pdf" target="_blank" rel="noopener">Im Browser öffnen</a></div>
+<section class="block">
+<h4 class="text-primary">Information</h4>
+
+<p>Bisher stand euer gesamter Code in der <code>main</code>-Methode. Mit <strong>Funktionen</strong> (in Java auch <strong>Methoden</strong> genannt) könnt ihr Code in benannte, wiederverwendbare Bausteine auslagern, die ihr von überall aus aufrufen könnt -- auch mehrfach, ohne ihn erneut abzuschreiben. <strong>Fülle das Arbeitsblatt anhand des Informationstextes aus.</strong></p>
+
+<h5 class="text-primary mt-4">Eine eigene Methode definieren und aufrufen</h5>
+
+<p>Eine Methode steht neben der <code>main</code>-Methode in derselben Klasse. Sie hat einen Namen, über den sie von <code>main</code> aus aufgerufen werden kann.</p>
+
+<style>
+  .primary-tooltip { --bs-tooltip-bg: var(--bs-primary); }
+  .success-tooltip { --bs-tooltip-bg: var(--bs-success); }
+</style>
+<pre class="language-java"><code>public class Beispiel {
+
+</code><span class="border-bottom border-primary-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="primary-tooltip" title="Methodendefinition: static void, Name, runde Klammern für Parameter (hier leer)"><code>    static void begruessung() {</code></span>
+<code>        System.out.println("Hallo!");</code>
+<code>    }</code>
+
+<code>    public static void main(String[] args) {</code>
+<span class="border-bottom border-success-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="success-tooltip" title="Methodenaufruf: Name gefolgt von runden Klammern"><code>        begruessung();</code></span>
+<code>    }</code>
+<code>}</code></pre>
+
+<p class="mt-3">Beim Aufruf <code>begruessung();</code> springt das Programm zur Methode <code>begruessung</code>, führt deren Code aus und kehrt danach genau an die Stelle zurück, an der sie aufgerufen wurde.</p>
+
+<div class="accordion mt-2" id="acc-static-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#static-zusatz-body" data-bs-parent="#acc-static-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Warum steht vor der Methode "static"?
+      </button>
+    </h2>
+    <div id="static-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0"><code>static</code> hängt mit Klassen und Objekten zusammen, die ihr in diesem Kurs noch nicht im Detail behandelt. Für den Moment reicht es, sich zu merken: Jede Methode, die ihr direkt aus <code>main</code> heraus aufrufen wollt, braucht ebenfalls <code>static</code> davor -- genau wie <code>main</code> selbst. Im anschließenden Pong-Projekt lernt ihr, was dahinter genau steckt.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="text-primary mt-4">Parameter</h5>
+
+<p>Mit <strong>Parametern</strong> könnt ihr einer Methode Werte übergeben, die sie bei ihrer Ausführung verwendet. Beim Aufruf übergebt ihr passende <strong>Argumente</strong> -- die konkreten Werte für diese Parameter.</p>
+
+<pre class="language-java"><code>static void begruesse(String name) {
+    System.out.println("Hallo, " + name + "!");
+}
+
+public static void main(String[] args) {
+    begruesse("Nina");
+    begruesse("Tom");
+}</code></pre>
+
+<p>Der Parameter <code>name</code> gilt nur innerhalb der Methode <code>begruesse</code>. Bei jedem Aufruf könnt ihr ein anderes Argument übergeben, hier einmal <code>"Nina"</code> und einmal <code>"Tom"</code> -- die Methode selbst müsst ihr dafür nur einmal schreiben.</p>
+
+<p class="mt-2">Ihr könnt eine Methode auch mit mehreren Parametern ausstatten, getrennt durch Kommas:</p>
+
+<pre class="language-java"><code>static void begruesse(String name, int alter) {
+    System.out.println("Hallo " + name + ", du bist " + alter + " Jahre alt.");
+}</code></pre>
+
+<h5 class="text-primary mt-4">Rückgabewerte</h5>
+
+<p>Bisher hatten unsere Methoden den Rückgabetyp <code>void</code> -- sie geben also nichts zurück, sondern führen nur Anweisungen aus. Mit einem anderen Rückgabetyp kann eine Methode stattdessen einen Wert berechnen und an die aufrufende Stelle zurückgeben.</p>
+
+<pre class="language-java"><code>static int quadrat(int zahl) {
+    return zahl * zahl;
+}
+
+public static void main(String[] args) {
+    int ergebnis = quadrat(5);
+    System.out.println(ergebnis);
+}</code></pre>
+
+<p>Statt <code>void</code> steht hier <code>int</code> vor dem Methodennamen -- das legt fest, welchen Datentyp der Rückgabewert hat. Mit <code>return</code> wird dieser Wert an die aufrufende Stelle zurückgegeben, hier direkt in die Variable <code>ergebnis</code>. Eine Methode mit Rückgabetyp muss auf jedem möglichen Ausführungspfad ein <code>return</code> erreichen -- sonst meldet der Compiler einen Fehler.</p>
+
+<div class="accordion mt-2" id="acc-return-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#return-zusatz-body" data-bs-parent="#acc-return-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Video: Parameter und Rückgabewerte im Zusammenspiel
+      </button>
+    </h2>
+    <div id="return-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0">Kurzes Video, das mehrere Methoden mit Parametern und Rückgabewerten Schritt für Schritt durchgeht. <!-- Platzhalter: YouTube-Link der Lehrkraft hier einfügen --></p>
+        <!-- Platzhalter: hier später <div class="ratio ratio-16x9"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO-ID" allowfullscreen></iframe></div> einsetzen --><p class="video-missing mb-0">Das Video wird noch ergänzt.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="text-primary mt-4">Scope (Gültigkeitsbereich)</h5>
+
+<p>Variablen, die ihr innerhalb einer Methode deklariert -- auch Parameter -- nennt man <strong>lokale Variablen</strong>. Sie existieren nur innerhalb dieser Methode und sind außerhalb davon unbekannt.</p>
+
+<pre class="language-java"><code>static void zeigeZahl() {
+    int zahl = 42;
+    System.out.println(zahl);
+}
+
+public static void main(String[] args) {
+    zeigeZahl();
+    System.out.println(zahl); // Fehler: zahl ist hier nicht bekannt
+}</code></pre>
+
+<p class="mt-3">Die Variable <code>zahl</code> aus <code>zeigeZahl</code> existiert nur, während diese Methode läuft. Sobald die Methode beendet ist, ist <code>zahl</code> wieder verschwunden -- deshalb schlägt der Zugriff darauf in <code>main</code> fehl. Umgekehrt kann auch <code>main</code> nicht auf lokale Variablen anderer Methoden zugreifen und andere Methoden nicht auf lokale Variablen von <code>main</code>. Der einzige Weg, Werte zwischen Methoden auszutauschen, sind Parameter und Rückgabewerte.</p>
+
+<!-- Platzhalter: H5P-Zuordnungsaufgabe "Parameter, Argument oder Rückgabewert?" hier einbetten -->
+</section>
+<section class="block">
+<h4 class="text-primary">Programmierung</h4>
+
+<p>Legt für diesen Abschnitt ein Projekt <code>Abschnitt9</code> an (siehe Abschnitt 0). Definiert eure Methoden für jede Aufgabe zusätzlich neben <code>main</code> in derselben Datei, und ruft sie dann aus <code>main</code> heraus auf -- der Aufruf in <code>main</code> wird wie gewohnt einfach ans Ende des bisherigen Codes angehängt.</p>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 1 -- Methode ohne Parameter</div>
+  <div class="card-body">
+    <p>Schreibt eine Methode <code>trennlinie</code> ohne Parameter und ohne Rückgabewert, die eine Zeile aus zehn Bindestrichen ausgibt. Ruft sie in <code>main</code> mehrfach an unterschiedlichen Stellen auf.</p>
+    <div class="accordion" id="acc-aufgabe1-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe1-tipp" data-bs-parent="#acc-aufgabe1-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wie sieht der Methodenkopf aus?
+          </button>
+        </h2>
+        <div id="aufgabe1-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0"><code>static void trennlinie() {</code> -- ohne Rückgabewert bleibt es bei <code>void</code>, ohne Parameter bleiben die Klammern leer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 2 -- Methode mit Parameter</div>
+  <div class="card-body">
+    <p>Schreibt eine Methode <code>begruesse</code>, die einen <code>String name</code> als Parameter entgegennimmt und <code>"Hallo, " + name + "!"</code> ausgibt. Ruft sie in <code>main</code> mit mindestens drei verschiedenen Namen auf.</p>
+    <div class="accordion mt-2" id="acc-aufgabe2-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe2-tipp" data-bs-parent="#acc-aufgabe2-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wo steht der Parameter?
+          </button>
+        </h2>
+        <div id="aufgabe2-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">In den runden Klammern des Methodenkopfs, mit Datentyp davor: <code>static void begruesse(String name) {</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 3 -- Methode mit Rückgabewert</div>
+  <div class="card-body">
+    <p>Schreibt eine Methode <code>verdoppeln</code>, die einen <code>int</code>-Parameter entgegennimmt und den doppelten Wert zurückgibt. Ruft sie in <code>main</code> mit mehreren Zahlen auf, speichert das jeweilige Ergebnis in einer Variable und gebt es aus.</p>
+    <div class="accordion mt-2" id="acc-aufgabe3-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe3-tipp" data-bs-parent="#acc-aufgabe3-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Was ändert sich am Methodenkopf?
+          </button>
+        </h2>
+        <div id="aufgabe3-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Statt <code>void</code> steht jetzt <code>int</code> vor dem Methodennamen, und im Methodenrumpf braucht ihr eine <code>return</code>-Anweisung mit dem berechneten Wert.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 4 -- Mehrere Parameter</div>
+  <div class="card-body">
+    <p>Schreibt eine Methode <code>rechteckflaeche</code>, die <code>breite</code> und <code>hoehe</code> (beide <code>double</code>) als Parameter entgegennimmt und die Fläche des Rechtecks zurückgibt. Ruft sie in <code>main</code> mit mindestens zwei verschiedenen Wertepaaren auf und gebt jeweils das Ergebnis aus.</p>
+    <div class="accordion mt-2" id="acc-aufgabe4-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe4-tipp" data-bs-parent="#acc-aufgabe4-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wie trennt man mehrere Parameter?
+          </button>
+        </h2>
+        <div id="aufgabe4-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Durch ein Komma, jeweils mit eigenem Datentyp: <code>static double rechteckflaeche(double breite, double hoehe) {</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 5 -- Scope verstehen</div>
+  <div class="card-body">
+    <p>Nehmt eine eurer bisherigen Methoden mit einer lokalen Variable und versucht testweise, in <code>main</code> direkt auf diese Variable zuzugreifen (zum Beispiel sie dort auszugeben). Lest die Fehlermeldung und löscht den Testzugriff danach wieder.</p>
+  </div>
+</div>
+
+<div class="accordion mt-4" id="acc-experte-ggt">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experte-ggt-body" data-bs-parent="#acc-experte-ggt">
+        <span class="badge bg-dark me-2">Expertenaufgabe</span> Größten gemeinsamen Teiler berechnen
+      </button>
+    </h2>
+    <div id="experte-ggt-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Schreibt eine Methode <code>ggt</code>, die zwei <code>int</code>-Parameter entgegennimmt und ihren größten gemeinsamen Teiler zurückgibt -- die größte Zahl, durch die beide Eingabewerte ohne Rest teilbar sind. Ruft die Methode in <code>main</code> mit mehreren Zahlenpaaren auf, darunter mindestens ein Paar, bei dem der ggT 1 ist.</p>
+        <div class="accordion" id="acc-ggt-hilfen">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ggt-tipp" data-bs-parent="#acc-ggt-hilfen">
+                <span class="badge bg-success me-2">Tipp</span> Wie könnte man systematisch nach dem Teiler suchen?
+              </button>
+            </h2>
+            <div id="ggt-tipp" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p class="mb-0">Eine Möglichkeit ist, mit einer Schleife alle Zahlen bis zum kleineren der beiden Werte durchzugehen und zu prüfen, welche davon Teiler beider Zahlen sind. Es gibt auch schnellere Verfahren -- recherchiert dazu gerne den Begriff "euklidischer Algorithmus", falls ihr eine elegantere Lösung sucht.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<nav class="pager" aria-label="Abschnitte blättern"><a class="prev" href="abschnitt-08.html"><small>Vorheriger Abschnitt</small><strong>08 while-Schleife</strong></a><a class="next" href="abschnitt-10.html"><small>Nächster Abschnitt</small><strong>10 Arrays</strong></a></nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>

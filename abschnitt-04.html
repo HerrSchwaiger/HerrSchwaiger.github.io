@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04 Datentypen | Java-Einführung</title>
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/prism.min.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/prism-java.min.js"></script>
+<script src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 btn btn-primary" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="d-flex align-items-center px-3" style="height:3.5rem">
+    <button class="btn btn-outline-secondary btn-sm d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#kursbaum" aria-controls="kursbaum">Abschnitte</button>
+    <a class="brand" href="index.html">Java-Einführung <span>AEuP 10</span></a>
+  </div>
+</header>
+<div class="d-lg-flex">
+  <nav class="course-tree offcanvas-lg offcanvas-start" tabindex="-1" id="kursbaum" aria-label="Kursabschnitte">
+    <div class="offcanvas-header d-lg-none">
+      <span class="fw-bold">Abschnitte</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#kursbaum" aria-label="Schließen"></button>
+    </div>
+    <div class="offcanvas-body d-block p-0">
+      <a class="tree-root d-block text-decoration-none" href="index.html">Kursübersicht</a>
+      <ul class="tree">
+<li><a href="abschnitt-00.html"><span class="nr">00</span><span>Vorbereitung</span></a></li>
+<li><a href="abschnitt-01.html"><span class="nr">01</span><span>Was ist Programmieren?</span></a></li>
+<li><a href="abschnitt-02.html"><span class="nr">02</span><span>Erstes Programm</span></a></li>
+<li><a href="abschnitt-03.html"><span class="nr">03</span><span>Variablen</span></a></li>
+<li><a href="abschnitt-04.html" aria-current="page"><span class="nr">04</span><span>Datentypen</span></a></li>
+<li><a href="abschnitt-05.html"><span class="nr">05</span><span>Operatoren</span></a></li>
+<li><a href="abschnitt-06.html"><span class="nr">06</span><span>if/else</span></a></li>
+<li><a href="abschnitt-07.html"><span class="nr">07</span><span>for-Schleife</span></a></li>
+<li><a href="abschnitt-08.html"><span class="nr">08</span><span>while-Schleife</span></a></li>
+<li><a href="abschnitt-09.html"><span class="nr">09</span><span>Funktionen</span></a></li>
+<li><a href="abschnitt-10.html"><span class="nr">10</span><span>Arrays</span></a></li>
+<li><a href="abschnitt-11.html"><span class="nr">11</span><span>Abschlussprojekt</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="content" id="inhalt">
+    <div class="content-inner">
+<div class="page-title"><span class="nr">Abschnitt 4</span><h1>Datentypen</h1></div>
+<div class="worksheet"><div class="flex-grow-1"><strong>Arbeitsblatt zu diesem Abschnitt</strong><div class="meta">PDF, 188 KB</div></div><a class="btn btn-primary" href="arbeitsblaetter/04_Datentypen.pdf" download>Arbeitsblatt herunterladen</a><a class="btn btn-outline-primary" href="arbeitsblaetter/04_Datentypen.pdf" target="_blank" rel="noopener">Im Browser öffnen</a></div>
+<section class="block">
+<h4 class="text-primary">Information</h4>
+
+<p>Jede Variable hat einen festen <strong>Datentyp</strong>, der bestimmt, welche Art von Wert sie speichern kann und wie viel Platz dafür im Speicher reserviert wird. In diesem Abschnitt lernt ihr die wichtigsten Datentypen in Java kennen. <strong>Fülle das Arbeitsblatt anhand des Informationstextes aus.</strong></p>
+
+<h5 class="text-primary mt-4">Primitive Datentypen</h5>
+
+<p>Java unterscheidet zwischen wenigen fest eingebauten, sogenannten <strong>primitiven</strong> Datentypen. Die wichtigsten für den Einstieg sind:</p>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Datentyp</th>
+        <th>Speichert</th>
+        <th>Beispielwert</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>int</code></td>
+        <td>ganze Zahlen</td>
+        <td><code>42</code>, <code>-7</code></td>
+      </tr>
+      <tr>
+        <td><code>double</code></td>
+        <td>Kommazahlen</td>
+        <td><code>3.14</code>, <code>-0.5</code></td>
+      </tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td>Wahrheitswerte</td>
+        <td><code>true</code>, <code>false</code></td>
+      </tr>
+      <tr>
+        <td><code>char</code></td>
+        <td>ein einzelnes Zeichen</td>
+        <td><code>'A'</code>, <code>'7'</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Fahrt mit der Maus über die unterstrichenen Stellen im folgenden Code:</p>
+
+<style>
+  .primary-tooltip { --bs-tooltip-bg: var(--bs-primary); }
+  .success-tooltip { --bs-tooltip-bg: var(--bs-success); }
+  .warning-tooltip { --bs-tooltip-bg: var(--bs-warning); }
+  .dark-tooltip { --bs-tooltip-bg: var(--bs-dark); }
+</style>
+<pre class="language-java"><span class="border-bottom border-primary-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="primary-tooltip" title="int speichert eine ganze Zahl"><code>int punkte = 100;</code></span>
+<span class="border-bottom border-success-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="success-tooltip" title="double speichert eine Kommazahl"><code>double preis = 4.99;</code></span>
+<span class="border-bottom border-warning-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="warning-tooltip" title="boolean speichert genau einen von zwei Werten: true oder false"><code>boolean angemeldet = true;</code></span>
+<span class="border-bottom border-dark-subtle border-2" data-bs-toggle="tooltip" data-bs-custom-class="dark-tooltip" title="char speichert genau ein Zeichen in einfachen Anführungszeichen"><code>char note = 'A';</code></span></pre>
+
+<p class="mt-3">Achtet dabei genau auf die Anführungszeichen: Ein <code>char</code>-Wert steht in <strong>einfachen</strong> Anführungszeichen (<code>'A'</code>) und darf nur ein einziges Zeichen enthalten.</p>
+
+<h5 class="text-primary mt-4">String -- ein Sonderfall</h5>
+
+<p><code>String</code> ist kein primitiver Datentyp, sondern speichert eine ganze Zeichenkette aus beliebig vielen Zeichen. Ihr habt <code>String</code> schon in den vorherigen Abschnitten benutzt. Der Unterschied zu <code>char</code>: <code>String</code>-Werte stehen in <strong>doppelten</strong> Anführungszeichen und können auch leer sein oder mehrere Zeichen enthalten.</p>
+
+<div class="row mb-3">
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-header bg-primary text-white">char</div>
+      <div class="card-body">
+        <pre class="language-java"><code>char zeichen = 'J';</code></pre>
+        <p class="card-text mb-0">Genau ein Zeichen, einfache Anführungszeichen.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-header bg-secondary text-white">String</div>
+      <div class="card-body">
+        <pre class="language-java"><code>String wort = "Java";</code></pre>
+        <p class="card-text mb-0">Beliebig viele Zeichen, doppelte Anführungszeichen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="accordion mt-3" id="acc-string-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#string-zusatz-body" data-bs-parent="#acc-string-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Warum ist String eigentlich groß geschrieben?
+      </button>
+    </h2>
+    <div id="string-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0"><code>String</code> ist in Java streng genommen eine Klasse, kein primitiver Datentyp -- deshalb die Großschreibung, so wie bei allen Klassennamen. Für den Einstieg reicht es aber, <code>String</code> einfach wie einen weiteren Datentyp zu benutzen. Mehr zu Klassen lernt ihr später im Kurs.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="text-primary mt-4">Typumwandlung (Casting)</h5>
+
+<p>Manchmal müsst ihr einen Wert von einem Datentyp in einen anderen umwandeln. Das nennt man <strong>Casting</strong>. Bei manchen Umwandlungen kann Java das automatisch erledigen, bei anderen müsst ihr es explizit anfordern.</p>
+
+<pre class="language-java"><code>int ganzzahl = 7;
+double kommazahl = ganzzahl;
+</code></pre>
+
+<p>Diese Richtung -- von <code>int</code> nach <code>double</code> -- funktioniert automatisch, weil dabei keine Information verloren geht: Jede ganze Zahl lässt sich verlustfrei als Kommazahl darstellen.</p>
+
+<pre class="language-java"><code>double preis = 4.99;
+int ganzzahl = (int) preis;
+</code></pre>
+
+<p class="mt-3">Umgekehrt -- von <code>double</code> nach <code>int</code> -- geht die Kommastelle verloren, deshalb müsst ihr das mit <code>(int)</code> vor dem Wert explizit anfordern. Java rundet dabei nicht, sondern schneidet die Nachkommastellen einfach ab: Aus <code>4.99</code> wird <code>4</code>, nicht <code>5</code>.</p>
+
+<div class="accordion mt-3" id="acc-casting-zusatz">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#casting-zusatz-body" data-bs-parent="#acc-casting-zusatz">
+        <span class="badge bg-info me-2">Zusatzinfo</span> Video: Casting an einem Beispiel erklärt
+      </button>
+    </h2>
+    <div id="casting-zusatz-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p class="mb-0">Kurzes Video, das Casting zwischen <code>int</code> und <code>double</code> an mehreren Beispielen zeigt. <!-- Platzhalter: YouTube-Link der Lehrkraft hier einfügen --></p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube-nocookie.com/embed/kFUqkaicfDw" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" title="Casting in Java" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="block">
+<div id="typequiz-app" class="mx-auto">
+<h5 class="text-primary">Übung: Datentyp Zuordnung</h4>
+  <p class="text-secondary">Zieht jeden Wert in die Zone des passenden Datentyps. Passt ein Wert zu keinem der fünf Datentypen, weil er zum Beispiel falsch geschrieben ist, gehört er in die Zone <strong>Error</strong>.</p>
+
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="text-secondary" id="typequiz-progress">Frage 1 von 13</span>
+  </div>
+  <div class="progress mb-4" style="height: 8px;">
+    <div class="progress-bar bg-primary" id="typequiz-progressbar" style="width: 0%;"></div>
+  </div>
+
+  <div id="typequiz-play-area">
+    <div class="row g-2 mb-4" id="typequiz-zones"></div>
+    <div class="d-flex justify-content-center">
+      <div id="typequiz-drag-item" class="badge bg-dark p-3" draggable="false" style="font-size: 1.75rem; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none;">
+        <code class="text-white" id="typequiz-drag-item-text">42</code>
+      </div>
+    </div>
+    <p class="text-center text-secondary mt-3 mb-0 small">Zieht den Wert in die passende Zone.</p>
+  </div>
+
+  <div id="typequiz-check-area" class="d-none text-center">
+    <p class="text-secondary">Alle Werte einsortiert.</p>
+    <button type="button" class="btn btn-primary btn-lg" id="typequiz-btn-check">Überprüfen</button>
+  </div>
+
+  <div id="typequiz-result-area" class="d-none">
+    <h5 class="text-primary">Ergebnis: <span id="typequiz-result-score"></span></h5>
+    <ul class="list-group mb-3" id="typequiz-result-list"></ul>
+    <div class="text-center">
+      <button type="button" class="btn btn-secondary" id="typequiz-btn-reset">Wiederholen</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var zones = [
+    { id: "int", label: "int", classes: "bg-primary-subtle border-primary text-primary-emphasis" },
+    { id: "double", label: "double", classes: "bg-success-subtle border-success text-success-emphasis" },
+    { id: "boolean", label: "boolean", classes: "bg-warning-subtle border-warning text-warning-emphasis" },
+    { id: "char", label: "char", classes: "bg-info-subtle border-info text-info-emphasis" },
+    { id: "String", label: "String", classes: "bg-secondary-subtle border-secondary text-secondary-emphasis" },
+    { id: "Error", label: "Error", classes: "bg-danger-subtle border-danger text-danger-emphasis" }
+  ];
+
+  var items = [
+    { value: "42", correct: "int", explanation: "Eine ganze Zahl ohne Nachkommastellen -> ein int-Wert." },
+    { value: "-15", correct: "int", explanation: "Auch negative ganze Zahlen sind int-Werte." },
+    { value: "3.14", correct: "double", explanation: "Eine Kommazahl mit Punkt als Trennzeichen -- ein double-Wert." },
+    { value: "-0.5", correct: "double", explanation: "Auch negative Kommazahlen sind double-Werte." },
+    { value: "true", correct: "boolean", explanation: "Einer von genau zwei möglichen Wahrheitswerten -> ein boolean-Wert." },
+    { value: "false", correct: "boolean", explanation: "Einer von genau zwei möglichen Wahrheitswerten -> ein boolean-Wert." },
+    { value: "'A'", correct: "char", explanation: "Genau ein Zeichen in einfachen Anführungszeichen -> ein char-Wert." },
+    { value: "'7'", correct: "char", explanation: "Auch eine einzelne Ziffer in einfachen Anführungszeichen ist ein char, kein int." },
+    { value: "\"Hallo\"", correct: "String", explanation: "Text in doppelten Anführungszeichen -> ein String." },
+    { value: "\"\"", correct: "String", explanation: "Auch ein leerer Text in doppelten Anführungszeichen ist ein gültiger String." },
+    { value: "4,6", correct: "Error", explanation: "In Java trennt ein Punkt die Nachkommastellen, kein Komma -> so geschrieben ist das kein gültiger Wert." },
+    { value: "\"test", correct: "Error", explanation: "Das schließende Anführungszeichen fehlt -> der Text ist nicht korrekt abgeschlossen." },
+    { value: "'AB'", correct: "Error", explanation: "Ein char darf nur genau ein einzelnes Zeichen enthalten, hier stehen zwei." }
+  ];
+
+  var currentIndex = 0;
+  var answers = [];
+
+  function shuffle(array) {
+    for (var i = array.length - 1; i > 0; i = i - 1) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+  }
+
+  shuffle(items);
+
+  var zonesContainer = document.getElementById("typequiz-zones");
+  var playArea = document.getElementById("typequiz-play-area");
+  var checkArea = document.getElementById("typequiz-check-area");
+  var resultArea = document.getElementById("typequiz-result-area");
+  var progressLabel = document.getElementById("typequiz-progress");
+  var progressBar = document.getElementById("typequiz-progressbar");
+  var dragItem = document.getElementById("typequiz-drag-item");
+  var dragItemText = document.getElementById("typequiz-drag-item-text");
+  var btnCheck = document.getElementById("typequiz-btn-check");
+  var btnReset = document.getElementById("typequiz-btn-reset");
+  var resultScore = document.getElementById("typequiz-result-score");
+  var resultList = document.getElementById("typequiz-result-list");
+
+  zones.forEach(function (zone) {
+    var col = document.createElement("div");
+    col.className = "col-4";
+    var box = document.createElement("div");
+    box.id = "typequiz-zone-" + zone.id;
+    box.className = "d-flex align-items-center justify-content-center rounded border border-3 fw-bold " + zone.classes;
+    box.style.minHeight = "120px";
+    box.style.fontSize = "1.25rem";
+    box.textContent = zone.label;
+    col.appendChild(box);
+    zonesContainer.appendChild(col);
+  });
+
+  var dragging = false;
+  var startX = 0;
+  var startY = 0;
+  var offsetX = 0;
+  var offsetY = 0;
+
+  function showItem() {
+    dragItemText.textContent = items[currentIndex].value;
+    dragItem.style.transform = "translate(0px, 0px)";
+    offsetX = 0;
+    offsetY = 0;
+    progressLabel.textContent = "Frage " + (currentIndex + 1) + " von " + items.length;
+    progressBar.style.width = Math.round((currentIndex / items.length) * 100) + "%";
+  }
+
+  function isInsideRect(x, y, rect) {
+    return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+  }
+
+  function findDropZone(x, y) {
+    for (var i = 0; i < zones.length; i = i + 1) {
+      var el = document.getElementById("typequiz-zone-" + zones[i].id);
+      var rect = el.getBoundingClientRect();
+      if (isInsideRect(x, y, rect)) {
+        return zones[i].id;
+      }
+    }
+    return null;
+  }
+
+  function pointerDown(e) {
+    e.preventDefault();
+    dragging = true;
+    dragItem.style.cursor = "grabbing";
+    startX = e.clientX;
+    startY = e.clientY;
+    dragItem.setPointerCapture(e.pointerId);
+  }
+
+  function pointerMove(e) {
+    if (!dragging) return;
+    var dx = e.clientX - startX;
+    var dy = e.clientY - startY;
+    dragItem.style.transform = "translate(" + (offsetX + dx) + "px, " + (offsetY + dy) + "px)";
+  }
+
+  function pointerUp(e) {
+    if (!dragging) return;
+    dragging = false;
+    dragItem.style.cursor = "grab";
+
+    var dropZone = findDropZone(e.clientX, e.clientY);
+
+    if (dropZone) {
+      answers.push({
+        value: items[currentIndex].value,
+        given: dropZone,
+        correct: items[currentIndex].correct,
+        explanation: items[currentIndex].explanation
+      });
+      currentIndex = currentIndex + 1;
+      if (currentIndex < items.length) {
+        showItem();
+      } else {
+        playArea.classList.add("d-none");
+        checkArea.classList.remove("d-none");
+        progressLabel.textContent = "Frage " + items.length + " von " + items.length;
+        progressBar.style.width = "100%";
+      }
+    } else {
+      dragItem.style.transform = "translate(0px, 0px)";
+      offsetX = 0;
+      offsetY = 0;
+    }
+  }
+
+  dragItem.addEventListener("pointerdown", pointerDown);
+  dragItem.addEventListener("pointermove", pointerMove);
+  dragItem.addEventListener("pointerup", pointerUp);
+  dragItem.addEventListener("dragstart", function (e) {
+    e.preventDefault();
+    return false;
+  });
+  document.getElementById("typequiz-app").addEventListener("dragstart", function (e) {
+    e.preventDefault();
+    return false;
+  });
+
+  btnCheck.addEventListener("click", function () {
+    var correctCount = 0;
+    resultList.innerHTML = "";
+    answers.forEach(function (a) {
+      var isCorrect = a.given === a.correct;
+      if (isCorrect) correctCount = correctCount + 1;
+
+      var li = document.createElement("li");
+      li.className = "list-group-item";
+
+      var header = document.createElement("div");
+      header.className = "d-flex justify-content-between align-items-center";
+
+      var nameSpan = document.createElement("span");
+      nameSpan.innerHTML = "<code>" + a.value + "</code> &rarr; deine Antwort: " + a.given;
+
+      var badge = document.createElement("span");
+      badge.className = "badge " + (isCorrect ? "bg-success" : "bg-danger");
+      badge.textContent = isCorrect ? "Richtig" : "Richtig wäre: " + a.correct;
+
+      header.appendChild(nameSpan);
+      header.appendChild(badge);
+
+      var explanation = document.createElement("p");
+      explanation.className = "mb-0 mt-1 small text-secondary";
+      explanation.textContent = a.explanation;
+
+      li.appendChild(header);
+      li.appendChild(explanation);
+      resultList.appendChild(li);
+    });
+
+    resultScore.textContent = correctCount + " von " + items.length + " richtig";
+    checkArea.classList.add("d-none");
+    resultArea.classList.remove("d-none");
+  });
+
+  btnReset.addEventListener("click", function () {
+    currentIndex = 0;
+    answers = [];
+    shuffle(items);
+    resultArea.classList.add("d-none");
+    checkArea.classList.add("d-none");
+    playArea.classList.remove("d-none");
+    showItem();
+  });
+
+  showItem();
+})();
+</script>
+</section>
+<section class="block">
+<h4 class="text-primary">Programmierung</h4>
+
+<p>Legt für diesen Abschnitt ein Projekt <code>Abschnitt4</code> an (siehe Abschnitt 0). Ihr arbeitet in einer einzigen <code>main</code>-Methode -- der Code für jede Aufgabe wird einfach ans Ende des bisherigen Codes angehängt, nicht ersetzt.</p>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 1 -- Alle Datentypen einmal verwenden</div>
+  <div class="card-body">
+    <p>Deklariert je eine Variable vom Typ <code>int</code>, <code>double</code>, <code>boolean</code> und <code>char</code> mit selbst gewählten, sinnvollen Werten und gebt alle vier aus.</p>
+    <div class="accordion" id="acc-aufgabe1-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe1-tipp" data-bs-parent="#acc-aufgabe1-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Welche Anführungszeichen bei char?
+          </button>
+        </h2>
+        <div id="aufgabe1-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Einfache Anführungszeichen und genau ein Zeichen, zum Beispiel <code>char note = 'B';</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 2 -- char und String unterscheiden</div>
+  <div class="card-body">
+    <p>Deklariert eine <code>char</code>-Variable mit eurem ersten Buchstaben und eine <code>String</code>-Variable mit eurem vollständigen Vornamen. Gebt beide aus.</p>
+    <div class="accordion mt-2" id="acc-aufgabe2-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe2-tipp" data-bs-parent="#acc-aufgabe2-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Welche Anführungszeichen bei String?
+          </button>
+        </h2>
+        <div id="aufgabe2-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Doppelte Anführungszeichen, zum Beispiel <code>String vorname = "Nina";</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 3 -- Casting ausprobieren</div>
+  <div class="card-body">
+    <p>Deklariert eine <code>double</code>-Variable mit dem Wert <code>9.87</code>. Wandelt sie per Casting in eine <code>int</code>-Variable um und gebt beide Werte aus. Überprüft, ob das Ergebnis eurer Erwartung entspricht.</p>
+    <div class="accordion mt-2" id="acc-aufgabe3-hilfen">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aufgabe3-tipp" data-bs-parent="#acc-aufgabe3-hilfen">
+            <span class="badge bg-success me-2">Tipp</span> Wie schreibt man das Casting nochmal?
+          </button>
+        </h2>
+        <div id="aufgabe3-tipp" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Den Zieltyp in runden Klammern direkt vor den Wert schreiben, zum Beispiel <code>(int) 9.87</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header bg-primary text-white">Aufgabe 4 -- Fehlerhafte Typen erkennen</div>
+  <div class="card-body">
+    <p>Versucht nacheinander folgende Zeilen, notiert euch die jeweilige Fehlermeldung und löscht die Zeile danach wieder, bevor ihr die nächste ausprobiert:</p>
+    <pre class="language-java"><code>char zeichen = "AB";
+int zahl = 4.5;
+boolean wert = 1;</code></pre>
+    <p class="mb-0">Überlegt euch jeweils, warum Java diesen Code ablehnt.</p>
+  </div>
+</div>
+
+<div class="accordion mt-4" id="acc-experte-rundung">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experte-rundung-body" data-bs-parent="#acc-experte-rundung">
+        <span class="badge bg-dark me-2">Expertenaufgabe</span> Richtig runden statt abschneiden
+      </button>
+    </h2>
+    <div id="experte-rundung-body" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Ihr habt gesehen, dass <code>(int)</code> beim Casting die Nachkommastellen einfach abschneidet, statt mathematisch zu runden. Findet einen Weg, eine <code>double</code>-Variable wie <code>4.7</code> so in einen <code>int</code>-Wert umzuwandeln, dass korrekt gerundet wird (also zu <code>5</code>, nicht zu <code>4</code>). Testet euren Ansatz auch mit einem Wert wie <code>4.3</code>, der auf <code>4</code> abgerundet werden muss.</p>
+        <div class="accordion" id="acc-rundung-hilfen">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rundung-tipp" data-bs-parent="#acc-rundung-hilfen">
+                <span class="badge bg-success me-2">Tipp</span> Was müsste vor dem Abschneiden passieren?
+              </button>
+            </h2>
+            <div id="rundung-tipp" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p class="mb-0">Überlegt, was mit dem Wert passieren müsste, bevor ihr ihn abschneidet, damit aus einem Abschneiden ein korrektes Runden wird. Ein Blick in die Java-Dokumentation zur Klasse <code>Math</code> könnte helfen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<nav class="pager" aria-label="Abschnitte blättern"><a class="prev" href="abschnitt-03.html"><small>Vorheriger Abschnitt</small><strong>03 Variablen</strong></a><a class="next" href="abschnitt-05.html"><small>Nächster Abschnitt</small><strong>05 Operatoren</strong></a></nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>
