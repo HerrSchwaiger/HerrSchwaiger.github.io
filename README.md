@@ -1,4 +1,4 @@
-# Java-Einführung (AEuP 10)
+# Java-Einführung (BOS IT Wahlfach)
 
 Statische Kurswebsite, erzeugt aus der Mebis-Sicherung des Kurses `AP10_Java_ScT`.
 
