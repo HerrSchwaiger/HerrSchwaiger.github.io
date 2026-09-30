@@ -107,3 +107,15 @@ kbd { font-family: var(--bs-font-monospace); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* Tooltip-Markierungen im Code: Die *-subtle-Randfarben von Standard-Bootstrap sind auf dem
+   Prism-Hintergrund zu blass (im Mebis-Theme sind sie kräftiger). Daher die vollen Farben. */
+pre [data-bs-toggle="tooltip"] { cursor: help; padding-bottom: 1px; }
+pre [data-bs-toggle="tooltip"].border-primary-subtle { border-color: var(--bs-primary) !important; }
+pre [data-bs-toggle="tooltip"].border-success-subtle { border-color: var(--bs-success) !important; }
+pre [data-bs-toggle="tooltip"].border-warning-subtle { border-color: #e0a800 !important; }
+pre [data-bs-toggle="tooltip"].border-dark-subtle    { border-color: var(--bs-dark) !important; }
+
+/* Prism behandelt <code> innerhalb von <span> (Tooltip-Markierungen, Lückentexte) wie Inline-Code
+   und legt Hintergrund und Innenabstand darüber -- das verdeckte die Unterstreichung. */
+pre code[class*="language-"] { background: none; padding: 0; border-radius: 0; white-space: inherit; }
